@@ -2,123 +2,137 @@ $(document).ready(function () {
 	
 	// Create Data Tabel and Write Table Data
 	// Data table will be created in JSON file
-	// To write Data from JSON file in HTML we will use format "writeData('Object Name]1st Key]2nd Key]...')" which must be in HTML element of class "write_data"
-	// e.g. we have Data Table
-	// var create_data = {
-	// 	"Student Profile":{
-	// 		"Date of Birth":"27/03/1993",
-	// 		"Degree":"MSc",
-	// 		"Address":"Jhelum"
-	// 	},
-	// 	"Student Name":['Ali Haider','Asghar Ali']
+	// To write Data from JSON file in HTML we will use format "writeData('')" which must be in HTML element of class "write_data"
+	// writeData() will create clone of element where we have initiated class="write_data" and then find writeData() and return required value from JSON.
+	// Suppose we have JSON file named
+	// JSON FILE
+	// var main_data = {
+	// 	navbar_url : {
+	// 		Home: "index.html",
+	// 		Download: "download.html"
+	// 	}
 	// }
-	// to write Data we will create HTML element like below
-	// <li class="write_data">
-	// 	writeData('create_data]Student Profile]Degree')
+	// Now to writeData from JSON file in HTML we will work as follow
+	// HTML CODE
+	// <li class="write_data anyotherclass">
+	// 	<a href=writeData("main_data['navbar_url']","value(x)")class=writeData("main_data['navbar_url']","key(x)")>
+	// 		<span>
+	// 			writeData("main_data['navbar_url']","key(0-1)")
+	// 		</span>
+	// 		<span>Anyvalue</span>
+	// 	</a>
 	// </li>
-	// RESULT: 
-	// <li class="write_data">
-	// 	MSc
+	// RETURN IN BROWSER
+	// <li class="write_data anyotherclass">
+	// 	<a href="index.html" class="Home">
+	// 		<span>
+	// 			Home
+	// 		</span>
+	// 		<span>Anyvalue</span>
+	// 	</a>
 	// </li>
-	// or
-	// <span class="write_data">writeData('create_data]Student Name]0')</span>
-	// RESULT;
-	// <li class="write_data">
-	// 	Ali Haider
+	// <li class="write_data anyotherclass">
+	// 	<a href="download.html" class="Download">
+	// 		<span>
+	// 			Download
+	// 		</span>
+	// 		<span>Anyvalue</span>
+	// 	</a>
 	// </li>
-	//	To write all values in child JSON/Array file, we will use "(x).value" and to write all keys we will use "(x).key" and to write key-value pair we will use "(x).pair" e.g. writeData('create_data]Student Name](x).pair'). 
-	//And to write only chosen values from JSON/Array we will use (m-n,p-q,r,s-t,...).key and replace "key" to "value" for values and replace "pair" for key-value pair. e.g. writeData('create_data]Student Profile](0-2,1).value') which will return "27/03/1993", "MSc", "Jhelum" and "MSc" from Student Name. The interesting face is that, using this method we can write also JSON data using Array keys e.g. writeData('create_data]Student Profile](0).value') which will return "27/03/1993" same as from writeData('create_data]Student Profile]Date of Birth').
+	// EXPLANATION OF writeData()
+	// writeData('JSON Object','Option') has two arguments/paramenters  where first argument is to defind 'JSON Object' i.e. which data is required from JSON object. While 2nd parameter is option i.e. how much and which value from JSON object, we request. There are three type of options i.e. "key('Which'),value('Which'),pair('Which')". key()/value()/pair() return JSON object keys/values/key-value-pair which requested. Now these options have again a parameter i.e. how much and which values/keys/pairs are required. x is for returning all keys/values/pairs while for only different values we can write as n-m,p,q,... where n,m,p,q are positive integers and '-' is for 'to' and ',' is for 'and'. example is writeData("main_data['navbar_url']","key(0-1,3)") which return only 0-1 and 3 keys.
 
-		$('.write_data').each(function(i, elA) {
-			eval($(this).html());
-			function writeData(elem) {
-				elem = elem.trim();
-				var objName = elem.split(']')[0].trim();
-				var result = "";
-				var elemSp = elem.split(']');
-				if (elem.match(/\).value$|\).key$|\).pair$/)) {
-					for (var j = 1; j < elemSp.length; j++) {
-						elemSp[j] = elemSp[j].trim();
-						if (elemSp[j] == '(x).value') {
-							var fresult = eval(objName + result)
-							for (x in fresult) {
-								var crClone = $(elA).html('').clone();
-								$(elA).before(crClone.prepend(fresult[x]));
+	function writeData(elem, opt) {
+		var objct = eval(elem)
+		var result = [];
+		if (opt != undefined) {
+			if (opt == "key(x)") {
+				for (x in objct) {
+					result.push(x);
+				}
+			} else if (opt == "value(x)") {
+				for (x in objct) {
+					result.push(objct[x]);
+				}
+			} else if (opt == "pair(x)") {
+				for (x in objct) {
+					result.push(x);
+					result.push(objct[x]);
+				}
+			} else if (opt.match(/(key|value|pair)\([0-9,-]+\)/)) {
+				var splCom = /(key|value|pair)\(([0-9,-]+)\)/.exec(opt)[2].split(',');
+				var whchOpt = /(key|value|pair)\(([0-9,-]+)\)/.exec(opt)[1];
+				var dataArray = Object.entries(eval(elem));
+				for (x in splCom) {
+					if (splCom[x].match(/\d\-\d/)) {
+						var splLine = splCom[x].split('-');
+						for (var i = parseInt(splLine[0]); i < (parseInt(splLine[1]) + 1); i++) {
+							if (whchOpt == "key") {
+								result.push(dataArray[i][0]);
+							} else if (whchOpt == "value") {
+								result.push(dataArray[i][1]);
+							} else if (whchOpt == "pair") {
+								result.push(dataArray[i][0], dataArray[i][1]);
 							}
-						} else if (elemSp[j] == '(x).key') {
-							var fresult = eval(objName + result)
-							for (x in fresult) {
-								var crClone = $(elA).html('').clone();
-								$(elA).before(crClone.prepend(x));
-							}
-						} else if (elemSp[j] == '(x).pair') {
-							var fresult = eval(objName + result)
-							for (x in fresult) {
-								var crClone = $(elA).html('').clone();
-								var crCloneB = $(elA).html('').clone();
-								$(elA).before(crClone.prepend(x));
-								$(elA).before(crCloneB.prepend(fresult[x]));
-							}
-						} else if (elemSp[j].match("^[(]")) {
-							if (elemSp[j].match("[).key]$") || elemSp[j].match("[).value]$") || elemSp[j].match("[).pair]$")) {
-								var dataArray = Object.entries(eval(objName+result));
-								var elemSpC = elemSp[j].split("(")[1].split(")")[0].split(",");
-								for (var k = 0; k < elemSpC.length; k++) {
-									if (elemSpC[k].match("-")) {
-										var elemSpD = elemSpC[k].split('-');
-										for (var l = parseInt(elemSpD[0]) ; l < (parseInt(elemSpD[1]) + 1); l++) {
-											if (elemSp[j].match("[).key]$")) {
-												var fresult = dataArray[l][0];
-												var crClone = $(elA).html('').clone();
-												$(elA).before(crClone.prepend(fresult));
-											} else if (elemSp[j].match("[).value]$")) {
-												var fresult = dataArray[l][1]
-												var crClone = $(elA).html('').clone();
-												$(elA).before(crClone.prepend(fresult));
-											} else if (elemSp[j].match("[).pair]$")) {
-												var fresult = dataArray[l][0]
-												var crClone = $(elA).html('').clone();
-												$(elA).before(crClone.prepend(fresult));
-												var fresultB = dataArray[l][1]
-												var crCloneB = $(elA).html('').clone();
-												$(elA).before(crCloneB.prepend(fresultB));
-											}
-										}
-									} else {
-										if (elemSp[j].match("[).value]$")) {
-											var fresult = dataArray[parseInt(elemSpC[k])][1]
-											var crClone = $(elA).html('').clone();
-											$(elA).before(crClone.prepend(fresult));
-										} else if (elemSp[j].match("[).key]$")) {
-											var fresult = dataArray[parseInt(elemSpC[k])][0];
-											var crClone = $(elA).html('').clone();
-											$(elA).before(crClone.prepend(fresult));
-										} else if (elemSp[j].match("[).pair]$")) {
-											var fresult = dataArray[parseInt(elemSpC[k])][0]
-											var crClone = $(elA).html('').clone();
-											$(elA).before(crClone.prepend(fresult));
-											var fresultB = dataArray[parseInt(elemSpC[k])][1]
-											var crCloneB = $(elA).html('').clone();
-											$(elA).before(crCloneB.prepend(fresultB));
-										}
-									}
-								}
-							}
-						} else {
-							result += '["' + elemSp[j] + '"]';
+						}
+					} else {
+						if (whchOpt == "key") {
+							result.push(dataArray[splCom[x]][0]);
+						} else if (whchOpt == "value") {
+							result.push(dataArray[splCom[x]][1]);
+						} else if (whchOpt == "pair") {
+							result.push(dataArray[splCom[x]][0], dataArray[splCom[x]][1]);
 						}
 					}
-					$(elA).remove();
-				} else {
-					for (var j = 1; j < elemSp.length; j++) {
-						result += '["' + elemSp[j].trim() + '"]';
-					}
-					$(elA).html(eval(objName + result));
 				}
 			}
-		});
-	// }
-
+		} else {
+			result.push(eval(elem));
+		}
+		return result;
+	}
+	$('.write_data').each(function(i, elA) {
+		var allFunc = [];
+		if ($(this).html().trim().match(/^writeData\(.*\)$/)) {
+			allFunc.push($(elA).html().trim());
+		}
+		var elemClone = $(elA).prop('outerHTML').replace(/&quot;/g,'"');
+		var ptrnForFunc = /(writeData\(['"].+['"][,]*['"]*.*['"]*\))/g;
+		var match = '';
+		while ((match = ptrnForFunc.exec(elemClone)) != null) {
+			if (/\"\)(.*)writeData*/.exec(match[0]) != null) {
+				var splitFuncs = match[0].split(/\"\)(.*)writeData*/.exec(match[0])[1]);
+			} else {
+				var splitFuncs = [match[0]];
+			}
+			for (x in splitFuncs) {
+				allFunc.push([splitFuncs[x], eval(splitFuncs[x])]);
+			}
+		}
+		var maxClone = 0;
+		for (x in allFunc) {
+			if (allFunc[x][1].length > maxClone) {
+				maxClone = allFunc[x][1].length;
+			}
+		}
+		for ( x in allFunc) {
+			if (allFunc[x][1].length < maxClone) {
+				for (var i = allFunc[x][1].length; i < maxClone; i++) {
+					allFunc[x][1].push(allFunc[x][1][allFunc[x][1].length - 1])
+				}
+			}
+		}
+		var storeUndValue = '';
+		for (var j = 0; j < maxClone; j++) {
+			var elemCloneB = $(elA).prop('outerHTML').replace(/&quot;/g,'"');
+			for (x in allFunc) {
+				var resultElem = elemCloneB.replace(allFunc[x][0], allFunc[x][1][j]);
+				elemCloneB = resultElem;
+			}
+			$(elA).before(resultElem);
+		}
+		$(elA).remove();
+	});
 	// CREATE CLASS
 	// To create dynamic classes we will JSON file with var "create_class". e.g. {"CSS_Type (Use '_' instead of '-' e.g. border_bottom)":{'SIZE NAME':'VALUE','SIZE-2 NAME':'VALUE-2'...}}. Here is an example {"border_bottom":{"sm":"20px"}}. Then to use our dynamic class we will write class "CSS_Type-SIZE" e.g. "border_bottom-sm" which will add border-bottom = 20px to the element.
 	// To create color like bg-COLOR, text_color-COLOR, we will write CSS_Type is color then in child JSON file we will write color name in key and color in value e.g.
@@ -227,14 +241,14 @@ $(document).ready(function () {
 	// There are three ways to add class by screen size. For this first we tell that different screen sizes and then how to add class for different screen sizes.
 	// There are four type of screen sizes elta introduce, these are "SIZE => (MIN-MAX)"
 	// mbl => (0-767), tb => (768-991), dt => (992-1239), ldt => (1240-Infinity)
-	// to add class for different screen first we add simple class "on_screen" and then we add attribute to that element "data-screen". Next, format of class will be "CLASS-min/max/only_SIZE" e.g. navbar-min_tb => there will be navbar class adds only if minimum screen size is 768px.
-	$('.on_screen').each(function(i, elA) {
+	// to add class for different screen first we add simple class "on_responsive" and then we add attribute to that element "data-responsive". Next, format of class will be "CLASS-min/max/only_SIZE" e.g. navbar-min_tb => there will be navbar class adds only if minimum screen size is 768px.
+	$('.on_responsive').each(function(i, elA) {
 		var min_screen_class = ['-min_mbl','-min_tb','-min_dt','-min_ldt'];
 		var min_screen_size = [0,768,992,1240];
 		var max_screen_class = ['-max_mbl','-max_tb','-max_dt','-max_ldt'];
 		var max_screen_size = [767,991,1239,Infinity];
 		var only_screen_class = ['-only_mbl','-only_tb','-only_dt','-only_ldt'];
-		var screen_cl = $(this).attr('data-screen').split(' ');
+		var screen_cl = $(this).attr('data-responsive').split(' ');
 		$(screen_cl).each(function(j, elB) {
 			for (x in min_screen_class) {
 				if (elB.match(min_screen_class[x])) {

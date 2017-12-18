@@ -12,16 +12,20 @@
 	<script type="text/javascript" src="js/data.js"></script>
 </head>
 <body class="flat_theme">
-	<div class="on_screen" data-screen="navbar-only_mbl bg-main-only_mbl text_color-white-only_mbl">
+	<div class="on_responsive" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
 		<div class="navbar_title bg-main height-nav full-width">
 			<img class="
-			item-center position-relative bg-main radius-circle width-icon border-sm border_color-white animate on_screen
-			" src="files/elta_icon.png" data-screen="top-icon-min_tb">
+			item-center position-relative bg-main radius-circle width-icon border-sm border_color-white animate on_responsive
+			" src="files/elta_icon.png" data-responsive="top-icon-min_dt">
 		</div>
 		<div class="navbar-menu">
-			<ul>
+			<ul class="on_responsive" data-responsive="mynav-min_dt">
 				<li class="write_data">
-					writeData('main_data]navbar_url](x).key')
+					<a href=writeData("main_data['navbar_url']","value(1,2)") class=writeData("main_data['navbar_url']","key(x)")>
+						<span>
+							writeData("main_data['navbar_url']","key(x)")
+						</span>
+					</a>
 				</li>
 			</ul>
 		</div>
