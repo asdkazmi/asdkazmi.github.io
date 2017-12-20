@@ -28,6 +28,7 @@ var main_data = {
 		Canvas: "canvas-icons.html",
 		Examples : "example.html",
 		Themes: 'themes.html',
+		Issue: 'issue.html',
 		About: 'about.html'
 	},
 	home_urls: {

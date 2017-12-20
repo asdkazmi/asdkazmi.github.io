@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-	// ISSUE: Object.entries not supported in IE and Opera
 	
 	// Create Data Tabel and Write Table Data
 	// Data table will be created in JSON file
@@ -343,7 +341,7 @@ $(document).ready(function () {
 		var only_screen_class = ['-only_mbl','-only_tb','-only_dt','-only_ldt'];
 		var screen_cl = $(this).attr('class').split(' ');
 		$(screen_cl).each(function(j, elB) {
-			if (elB.match(/-min_mbl$|-min_tb$|-min_dt$|-min_ldt$|-max_mbl$|-max_tb$|-max_dt$|-max_ldt$|-only_mbl$|-only_tb$|-only_dt$|-only_ldt$|/)) {
+			if (elB.match(/\-{1}(min|max|only){1}\_{1}(mbl|tb|dt|ldt){1}$/)) {
 				for (x in min_screen_class) {
 					if (elB.match(min_screen_class[x])) {
 						var minstoresize = min_screen_size[x];
