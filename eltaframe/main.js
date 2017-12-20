@@ -235,6 +235,36 @@ $(document).ready(function () {
 			});
 		});
 	});
+	// Also to add a class on hover, first we add class onhover and then add class with suffix '-hover'. This method is useful when we are adding classes using "data-child" attribute.
+	$('.on_hover').each(function (i, elA) {
+		var myelem = $(this)
+		$(this).on('mouseenter' , function () {
+			var classes = $(this).attr('class').split(' ');
+			var hoverFormat = ""; 
+			var hoverClass = "";
+			var hoverClasses = "";
+			var overClass = "";
+			$(classes).each(function(j, elB) {
+				if (elB.match('-hover$') != null) {
+					hoverFormat = elB.split('-')[0];
+					hoverClass = elB.split('-hover')[0];
+					hoverClasses = hoverClasses + " " + elB.split('-hover')[0]
+					for (var k = 0; k < classes.length; k++) {
+						if(classes[k].match(hoverFormat) && !classes[k].match(hoverClass)) {
+							overClass = overClass + " " + classes[k]
+						}
+					}
+				}
+			});
+			$(this).addClass(hoverClasses)
+			$(this).removeClass(overClass)
+			$(this).mouseleave(function() {
+				$(this).removeClass(hoverClasses)
+				$(this).addClass(overClass)
+			});
+		});
+	});
+
 
 
 	// add class for different screen sizes
@@ -294,6 +324,65 @@ $(document).ready(function () {
 						OnlyClass();
 					});
 					OnlyClass();
+				}
+			}
+		});
+	});
+	// Also we can add responsive classes by intitiating element by adding class "on_responsive" and adding responsive classes in attribute "class". This method is useful when we have to add classes using "data-child" attribute.
+	$('.on_responsive').each(function(i, elA) {
+		var min_screen_class = ['-min_mbl','-min_tb','-min_dt','-min_ldt'];
+		var min_screen_size = [0,768,992,1240];
+		var max_screen_class = ['-max_mbl','-max_tb','-max_dt','-max_ldt'];
+		var max_screen_size = [767,991,1239,Infinity];
+		var only_screen_class = ['-only_mbl','-only_tb','-only_dt','-only_ldt'];
+		var screen_cl = $(this).attr('class').split(' ');
+		$(screen_cl).each(function(j, elB) {
+			if (elB.match(/-min_mbl$|-min_tb$|-min_dt$|-min_ldt$|-max_mbl$|-max_tb$|-max_dt$|-max_ldt$|-only_mbl$|-only_tb$|-only_dt$|-only_ldt$|/)) {
+				for (x in min_screen_class) {
+					if (elB.match(min_screen_class[x])) {
+						var minstoresize = min_screen_size[x];
+						var minstoreclass = min_screen_class[x];
+						function MinClass() {
+							if ($(window).width() >= minstoresize ) {
+								$(elA).addClass(elB.split(minstoreclass)[0])
+							} else {
+								$(elA).removeClass(elB.split(minstoreclass)[0])
+							}
+						}
+						$(window).resize(function(event) {
+							MinClass();
+						});
+						MinClass();
+					} else if (elB.match(max_screen_class[x])) {
+						var maxstoresize = max_screen_size[x];
+						var maxstoreclass = max_screen_class[x];
+						function MaxClass() {
+							if ($(window).width() <= maxstoresize ) {
+								$(elA).addClass(elB.split(maxstoreclass)[0])
+							} else {
+								$(elA).removeClass(elB.split(maxstoreclass)[0])
+							}
+						}
+						$(window).resize(function() {
+							MaxClass();
+						});
+						MaxClass();
+					} else if (elB.match(only_screen_class[x])) {
+						var onlystoreclass = only_screen_class[x];
+						var minstoresize = min_screen_size[x];
+						var maxstoresize = max_screen_size[x];
+						function OnlyClass() {
+							if ($(window).width() <= maxstoresize && $(window).width() >= minstoresize ) {
+								$(elA).addClass(elB.split(onlystoreclass)[0])
+							} else {
+								$(elA).removeClass(elB.split(onlystoreclass)[0])
+							}
+						}
+						$(window).resize(function() {
+							OnlyClass();
+						});
+						OnlyClass();
+					}
 				}
 			}
 		});
