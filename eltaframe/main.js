@@ -152,26 +152,26 @@ $(document).ready(function () {
 				var colorType = ['background-color','color','border-color']
 				for (y in create_class[x]) {
 					for (z in colorClass) {
-						CSSFile.append('.' + colorClass[z] + '-' + y + '{' + colorType[z] + ':' + create_class[x][y] + ';}' );
+						CSSFile.append('.' + colorClass[z] + '-' + y + '{' + colorType[z] + ':' + create_class[x][y] + '!important;}' );
 					}
-					CSSFile.append('.table-stripped-' + y + ' tr:nth-child(even){' + colorType[0] + ':' + create_class[x][y] + ';}' )
+					CSSFile.append('.table-stripped-' + y + ' tr:nth-child(even){' + colorType[0] + ':' + create_class[x][y] + '!important;}' )
 				}
 			} else {
 				y = x.replace('_','-');
 				for (z in create_class[x]) {
-					CSSFile.append('.' + x + '-' + z + '{' + y + ':' + create_class[x][z] + ';' + '}')
+					CSSFile.append('.' + x + '-' + z + '{' + y + ':' + create_class[x][z] + '!important;}')
 				}
 			}
 		}
 		$('head').append(CSSFile)
 	}
-	// Set style to child elements in attribute "data-child"
+	// Add classes to child elements in attribute "data-child"
 	// To add class to all child element, simply write class in attribute. 
 	// But to add class to only child element by tag name, then use suffix -chd-TAGNAME e.g. bg-black-chd-span
 	// And to add class to only nth child element, use suffix -nth_chd-(N,M,...) where (N,M >= 1) represent any number. e.g. bg-black-nth_chd(4,2) add to 4th-child and 2nd-child
 	// And to add class to only child element except some, use suffix -not_chd-(N,M,...) where (N,M >= 1) represent any number. e.g. bg-black-not_chd(4,2) add to all child element excepts 4th and 2nd-child
 	// And to add class to only last child element, use suffix -last_chd e.g. bg-black-last_chd
-	$('.add-to-child').each(function() {
+	$('*[data-child]').each(function() {
 		var addchild = $(this).attr('data-child')
 		if (addchild != undefined) {
 			addchild = addchild.split(' ');
@@ -206,24 +206,24 @@ $(document).ready(function () {
 	});
 
 	// hover
-	// to add a class on hover, first we add class onhover and then add class with suffix '-hover'
-	$('.onhover').each(function (i, elA) {
-		var myelem = $(this)
+	// to add a class on hover, simply add classes in attribute "data-hover"
+	$('*[data-hover]').each(function (i, elA) {
 		$(this).on('mouseenter' , function () {
-			var classes = $(this).attr('class').split(' ');
+			if ($(this).attr('class') == undefined) {
+				var classes = [''];
+			} else {
+				var classes = $(this).attr('class').split(' ');
+			}
 			var hoverFormat = ""; 
-			var hoverClass = "";
+			var hoverClass = $(this).attr('data-hover').split(' ');
 			var hoverClasses = "";
 			var overClass = "";
-			$(classes).each(function(j, elB) {
-				if (elB.match('-hover$') != null) {
-					hoverFormat = elB.split('-')[0];
-					hoverClass = elB.split('-hover')[0];
-					hoverClasses = hoverClasses + " " + elB.split('-hover')[0]
-					for (var k = 0; k < classes.length; k++) {
-						if(classes[k].match(hoverFormat) && !classes[k].match(hoverClass)) {
-							overClass = overClass + " " + classes[k]
-						}
+			$(hoverClass).each(function(j, elB) {
+				hoverFormat = elB.split('-')[0];
+				hoverClasses = hoverClasses + " " + elB
+				for (k in classes) {
+					if(classes[k].match(hoverFormat) && !classes[k].match(elB)) {
+						overClass = overClass + " " + classes[k]
 					}
 				}
 			});
@@ -242,7 +242,7 @@ $(document).ready(function () {
 	// There are four type of screen sizes elta introduce, these are "SIZE => (MIN-MAX)"
 	// mbl => (0-767), tb => (768-991), dt => (992-1239), ldt => (1240-Infinity)
 	// to add class for different screen first we add simple class "on_responsive" and then we add attribute to that element "data-responsive". Next, format of class will be "CLASS-min/max/only_SIZE" e.g. navbar-min_tb => there will be navbar class adds only if minimum screen size is 768px.
-	$('.on_responsive').each(function(i, elA) {
+	$('*[data-responsive]').each(function(i, elA) {
 		var min_screen_class = ['-min_mbl','-min_tb','-min_dt','-min_ldt'];
 		var min_screen_size = [0,768,992,1240];
 		var max_screen_class = ['-max_mbl','-max_tb','-max_dt','-max_ldt'];
@@ -409,8 +409,8 @@ $(document).ready(function () {
 	// navbar
 	var bodyMarginT = parseInt($("body").css("marginTop"))
 	$(".navbar.navbar-fix").parents("body").css("marginTop", $(".navbar.navbar-fix").outerHeight(true) + bodyMarginT);
-	$(".navbar .navbar_drawer").click(function(){
-		$(this).siblings(":not(.navbar_title)").slideToggle();
+	$(".navbar_drawer").click(function(){
+		$(this).siblings(":not(.navbar_title)").slideToggle(0);
 	})
 
 	// leftbar

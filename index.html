@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ELTA Frame</title>
+	<title class="write_data">writeData("main_data['title']")</title>
 
 	<!-- eltaframe sources -->
 	<script type="text/javascript" src="eltaframe/jquery.min.js"></script>
@@ -10,24 +10,50 @@
 
 	<!-- more files -->
 	<script type="text/javascript" src="js/data.js"></script>
+	<link rel="stylesheet" type="text/css" href="files/site.css">
 </head>
 <body class="flat_theme">
-	<div class="on_responsive" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
-		<div class="navbar_title bg-main height-nav full-width">
+	<div class="navbar-drop_tb" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
+		<div class="navbar_title bg-main height-nav full-width hide-tb">
 			<img class="
-			item-center position-relative bg-main radius-circle width-icon border-sm border_color-white animate on_responsive
+			item-center position-relative bg-main radius-circle width-icon border-sm border_color-white animate
 			" src="files/elta_icon.png" data-responsive="top-icon-min_dt">
 		</div>
-		<div class="navbar-menu">
-			<ul class="on_responsive" data-responsive="mynav-min_dt">
+		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
+			Click Me
+		</div>
+		<div class="navbar_menu">
+			<ul data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt" data-child="padding_horizontal-sm">
 				<li class="write_data">
-					<a href=writeData("main_data['navbar_url']","value(1,2)") class=writeData("main_data['navbar_url']","key(x)")>
+					<a href=writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
 						<span>
 							writeData("main_data['navbar_url']","key(x)")
 						</span>
 					</a>
 				</li>
+				<ul data-responsive="navbar-right-min_dt text_color-main_b-max_tb" class="text_color-white">
+					<li class="write_data">Initial Release of writeData("main_data['title']") writeData("main_data['version']")</li>
+				</ul>
 			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-10-fill">
+			<h1 class="write_data text_align-center text_color-main_b font_family-calibri" data-responsive="text_size-xlg-min_dt text_size-lg-max_tb">writeData("main_data['title']")</h1>
+			<p class="write_data text_align-center" data-responsive="text_size-md-min_dt text_size-sm-max_tb">
+				A responsive mobile first front end framework with huge features. Reduce your work, save your time, reduce code lines. writeData("main_data['title']") is a lattest framework for front-end web development based on JQuery and CSS.
+			</p>
+			<div class="button_group-auto col-6-fill" data-child="button radius-sm padding_vertical-sm bg-main text_color-white animate border_right-sm-nth_chd(1)">
+				<span class="write_data" data-hover="bg-main_b">
+					<a href=writeData("main_data['home_urls']","value(0-1)") class="text_color-white no-text_decoration">
+						writeData("main_data['home_urls']","key(0-1)")
+					</a>
+				</span>
+			</div>
+			<h1 class="write_data text_align-center text_color-main_b font_family-calibri padding_top-xlg" data-responsive="text_size-lg-min_dt text_size-md-max_tb">Aim of writeData("main_data['title']") writeData("main_data['team']")</h1>
+			<p class="write_data text_align-center" data-responsive="text_size-md-min_dt text_size-sm-max_tb">
+				To reduce programmers work. To make files quick editable. Developement which gives advantage to programmers. Decrease lines of coding. Moto of writeData("main_data['title']") is "Do less get more". I hope, one day writeData("main_data['title']") decrease 50% of front-end work.
+			</p>
 		</div>
 	</div>
 </body>
