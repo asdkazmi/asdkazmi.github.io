@@ -4,7 +4,8 @@ var create_class = {
 		main_b: "#313131"
 	},
 	width: {
-		icon: "100px"
+		icon: "100px",
+		icon_small: "60px"
 	},
 	height: {
 		nav: "120px" 
