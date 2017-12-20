@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+	// ISSUE: Object.entries not supported in IE and Opera
 	
 	// Create Data Tabel and Write Table Data
 	// Data table will be created in JSON file
@@ -62,7 +64,11 @@ $(document).ready(function () {
 			} else if (opt.match(/(key|value|pair)\([0-9,-]+\)/)) {
 				var splCom = /(key|value|pair)\(([0-9,-]+)\)/.exec(opt)[2].split(',');
 				var whchOpt = /(key|value|pair)\(([0-9,-]+)\)/.exec(opt)[1];
-				var dataArray = Object.entries(eval(elem));
+				var dataArray = [];
+				var elemObj = eval(elem);
+				for (x in elemObj) {
+					dataArray.push([x, elemObj[x]]);
+				}
 				for (x in splCom) {
 					if (splCom[x].match(/\d\-\d/)) {
 						var splLine = splCom[x].split('-');
