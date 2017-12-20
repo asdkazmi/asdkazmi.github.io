@@ -25,6 +25,7 @@ var main_data = {
 		Home: "index.html",
 		Download: "download.html",
 		Documentation: "documentation.html",
+		Canvas: "canvas-icons.html",
 		Examples : "example.html",
 		Themes: 'themes.html',
 		About: 'about.html'
