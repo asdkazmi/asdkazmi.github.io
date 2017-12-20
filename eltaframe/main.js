@@ -152,14 +152,14 @@ $(document).ready(function () {
 				var colorType = ['background-color','color','border-color']
 				for (y in create_class[x]) {
 					for (z in colorClass) {
-						CSSFile.append('.' + colorClass[z] + '-' + y + '{' + colorType[z] + ':' + create_class[x][y] + '!important;}' );
+						$(CSSFile).append('.' + colorClass[z] + '-' + y + '{' + colorType[z] + ':' + create_class[x][y] + '!important;}' );
 					}
-					CSSFile.append('.table-stripped-' + y + ' tr:nth-child(even){' + colorType[0] + ':' + create_class[x][y] + '!important;}' )
+					$(CSSFile).append('.table-stripped-' + y + ' tr:nth-child(even){' + colorType[0] + ':' + create_class[x][y] + '!important;}' )
 				}
 			} else {
 				y = x.replace('_','-');
 				for (z in create_class[x]) {
-					CSSFile.append('.' + x + '-' + z + '{' + y + ':' + create_class[x][z] + '!important;}')
+					$(CSSFile).append('.' + x + '-' + z + '{' + y + ':' + create_class[x][z] + '!important;}')
 				}
 			}
 		}

@@ -35,6 +35,6 @@ var main_data = {
 		"Download": 'download.html'
 	},
 	title: "ELTA",
-	version: '1.0.0 (Beta)',
+	version: '0.5.0 (Alpha)',
 	team: ""
 }
