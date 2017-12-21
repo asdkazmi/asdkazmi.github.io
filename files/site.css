@@ -7,3 +7,29 @@
 .dt-navdes a {
     color: white;
 }
+
+.resicotext {
+    line-height: 100px;
+    font-size: 57px;
+    letter-spacing: -3px;
+}
+
+.resicotextb {
+	font-size: 35px;
+}
+
+.resicotextb , .resicotext {
+    text-align: center;
+    font-variant: small-caps;
+    font-style: italic;
+    font-family: calibri;
+}
+
+.resicotextb > br {
+	display: none;
+}
+
+.items-in-center {
+	display: flex;
+	align-items: center;
+}

@@ -23,6 +23,11 @@ input:focus {
 .no-text_decoration {
     text-decoration: none;
 }
+.img-responsive {
+    width: 100%;
+    display: block;
+    margin: 0px auto;
+}
 
 /*link decoration:none*/
 a.button , a.label , a.badge {
@@ -1245,7 +1250,7 @@ pre {
 .col-12 , .col-11 , .col-10, .col-9 , .col-8 , .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
     float: left;
 }
-.row .col-12, .full-width {
+.row .col-12, .width-full {
     width: 100%;
 }
 .row .col-11 {

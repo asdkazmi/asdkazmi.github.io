@@ -635,4 +635,9 @@ $(document).ready(function () {
 			eltaformsuccess()
 		}
 	});
+
+	// full_height
+	$('.full_height').each(function(i, elA) {
+		$(this).height($(this).parent().height())
+	});
 })

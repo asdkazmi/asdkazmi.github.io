@@ -1,11 +1,13 @@
 var create_class = {
 	color: {
 		main: "#795548",
-		main_b: "#313131"
+		main_b: "#313131",
+		footerbg: "#dad5d5"
 	},
 	width: {
 		icon: "100px",
-		icon_small: "60px"
+		icon_small: "60px",
+		homeImgs: "70%"
 	},
 	height: {
 		nav: "120px" 
@@ -18,6 +20,12 @@ var create_class = {
 	},
 	font_family: {
 		calibri: 'calibri'
+	},
+	border_radius: {
+		icon: "42%"
+	},
+	padding: {
+		icon: "7px"
 	}
 }
 var main_data = {
@@ -28,7 +36,7 @@ var main_data = {
 		Canvas: "canvas-icons.html",
 		Examples : "example.html",
 		Themes: 'themes.html',
-		Issue: 'issue.html',
+		Issues: 'issues.html',
 		About: 'about.html'
 	},
 	home_urls: {
