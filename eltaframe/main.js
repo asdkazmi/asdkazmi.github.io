@@ -392,6 +392,30 @@ $(document).ready(function () {
 		});
 	});
 
+	
+
+	// to write a html code in div, just add class  "code-html" and then add each line of HTML code in HTML comment e.g.
+// <!-- <!DOCTYPE html> -->
+// <!-- <html> -->
+// <!-- <head> -->
+// <!-- <title>Your webpage Title</title> -->
+// <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> --> <!-- Necessary for responsive webpage -->
+
+// <!-- eltaframe sources -->
+// <!-- <script type="text/javascript" src="eltaframe/jquery.min.js"></script> -->
+// <!-- <script type="text/javascript" src="eltaframe/main.js"></script> -->
+// <!-- <link rel="stylesheet" type="text/css" href="eltaframe/main.css" /> -->
+// <!-- </head> -->
+// <!-- <body> -->
+// <!-- Web Page content goes here -->
+// <!-- </body> -->
+// <!-- </html> -->
+	$('.code.code-html').each(function(i, elA) {
+		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/\</g,'&lt;').replace(/\>/g,'&gt;');
+		console.log(inhtml)
+		$(this).html(inhtml)
+	});
+
 
 	// COMPONENTS
 	// alert box

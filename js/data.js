@@ -7,7 +7,8 @@ var create_class = {
 	width: {
 		icon: "100px",
 		icon_small: "60px",
-		homeImgs: "70%"
+		homeImgs: "70%",
+		doc: "80%"
 	},
 	height: {
 		nav: "120px" 
@@ -26,6 +27,9 @@ var create_class = {
 	},
 	padding: {
 		icon: "7px"
+	},
+	font_size: {
+		doc: '16px'
 	}
 }
 var main_data = {
@@ -43,7 +47,17 @@ var main_data = {
 		"Get Started" : 'documentation.html',
 		"Download": 'download.html'
 	},
-	title: "ELTA",
+	title: "ELTA FRAME",
 	version: '0.5.0 (Alpha)',
-	team: ""
+	team: "",
+	"Download_Url": "#",
+	"GitHub_Repositary": "#",
+	documentation : {
+		Home: 'documentation.html',
+		"CSS_Classes": {
+			General: '#',
+			Padding: '#',
+			Margin: '#',
+		}
+	}
 }
