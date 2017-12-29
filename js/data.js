@@ -55,7 +55,9 @@ var main_data = {
 	documentation : {
 		"Basics about ELTA FRAME": '#',
 		Grids: {
-			"Introduction of Grids" : "#intro-grids"
+			"Introduction of Grids" : "#intro-grids",
+			"Screen Sizes" : "#screen-sizes",
+			"Basic Example" : "#basic-grid-example"
 		},
 		"CSS_Classes": {
 			General: '#',
