@@ -53,7 +53,7 @@ var main_data = {
 	"Download_Url": "#",
 	"GitHub_Repositary": "#",
 	documentation : {
-		Home: 'documentation.html',
+		"Basics about ELTA FRAME": '#',
 		Grids: {
 			"Introduction of Grids" : "#intro-grids"
 		},

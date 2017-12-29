@@ -44,11 +44,11 @@
 	<div class="leftbar_drawer" data-responsive="hide-min_dt">
 		<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
 	</div>
-	<div class="col-3-dt shadow-sm margin-xs leftbar bg-white" data-responsive="margin_top-no-max_tb">
+	<div class="col-3-dt shadow-sm leftbar bg-white" data-responsive="margin_vertical-xs-min_dt">
 		<ul class="list_dots-none">
-			<!-- <li class="write_data">
-				<a href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
-			</li> -->
+			<li class="write_data">
+				<a href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+			</li>
 			<div>
 				<div class="accordian">
 					<a href="#" class="accordian_toggle">Grids</a>
@@ -79,9 +79,104 @@
 			</div>
 		</ul>
 	</div>
-	<div class="col-9-dt">
-		<div class="get_data">
-			getData("docs/grids.html")
+	<div class="col-9-dt padding-sm text_size-sm font_family-calibri">
+		<!-- <div class="get_data" id="intro-grids">
+			getData("docs/intro-grids.html")
+		</div> -->
+		<div>
+			<h3>Basics about <span class="write_data">writeData("main_data['title']")</span></h3>
+			<hr/>
+			<span class="write_data">writeData("main_data['title']")</span> is a full responsive framework with strong grids system and defines many other methods for responsive web and decreasing work. <span class="write_data">writeData("main_data['title']")</span> aslo define many of it's component and canvas icons which are very customizable as required by developers. <span class="write_data">writeData("main_data['title']")</span> use general form of defining html classes which will be used for website work. General form of <span class="write_data">writeData("main_data['title']")</span> html classes is <b><i>Type</i>-<i>Value</i><i>-Effect (optional)</i></b>. <span class="write_data">writeData("main_data['title']")</span> defines a lot <b>Types</b> and there <b>Values</b> but as it's initial release, so only have one effect i.e. <b>hover</b> which will take effect on html element on mouse enter and remove. 
+		</div>
+		<div class="intro-grids">
+			<h3>Introduction to Grids</h3>
+			<hr/>
+			<p><span class="write_data">writeData("main_data['title']")</span> is a responsive framework for web and provide strong responsive grids system which are used for making website responsive which can be use and access on every screen size easily by user. <span class="write_data">writeData("main_data['title']")</span> grid system works using CSS media quiries.
+			</p>
+			<span class="write_data">writeData("main_data['title']")</span> works as a table row and column and provide 12 column grid system for four different types of screen sizes. Column which will be greater than 12 goes into new row. To initiate <span class="write_data">writeData("main_data['title']")</span> grid, first we will initiate an HTML element with class <b>row</b> and then column will be it's child elements.
+			<p>
+			As <span class="write_data">writeData("main_data['title']")</span> classes are defined as using <b><i>Type</i>-<i>Value</i><i>-Effect (optional)</i></b> form. So every of it's grids class will also be defined using above form e.g. (col-3-tb).
+			</p>
+			<p>
+			Grids classes form will be defined as <b>col-<i>(Number of Columns to be span, Max 12)</i>-<i>(MIn screen size when grid class taken, optional)</i></b>
+			</p>
+			<h3>Table of <span class="write_data">writeData("main_data['title']")</span> Screen Sizes</h3>
+			<hr/>
+			<p>
+			There are four different screen sizes for <span class="write_data">writeData("main_data['title']")</span> grid system which are defined below
+			</p>
+			<table class="table table-stripped-lgrey" border="1">
+				<thead>
+					<th>Screen Size name defined by <span class="write_data">writeData("main_data['title']")</span> for grid system</th>
+					<th>Screen Size (px)<br>from-to</th>
+					<th>Example</th>
+				</thead>
+				<tr>
+					<th>default (no need to write any Screen Size)</th>
+					<td>Taken on every screen size</td>
+					<td>col-3 (on every screen size it will span 3 column total of 12 of row element)</td>
+				</tr>
+				<tr>
+					<th>mbl</th>
+					<td>0-767</td>
+					<td>For grids, <span class="write_data">writeData("main_data['title']")</span> not define <b>mbl</b> screen size grid, because grids will be taken when minimum screen size is 0px which is default. So, instead of use col-3-mbl, we will simply use col-3</td>
+				</tr>
+				<tr>
+					<th>tb</th>
+					<td>768-991</td>
+					<td>col-4-tb (which will span 4 columns total of 12 when minimum screen size will be 768px)</td>
+				</tr>
+				<tr>
+					<th>dt</th>
+					<td>992-1239</td>
+					<td>col-6-dt (which will span 6 columns total of 12 when minimum screen size will be 992px)</td>
+				</tr>
+				<tr>
+					<th>ldt</th>
+					<td>1240-Infinity</td>
+					<td>col-8-dt (which will span 8 columns total of 12 when minimum screen size will be 1240px)</td>
+				</tr>
+			</table>
+			<p>
+			Let us take a look at here, an example pf <span class="write_data">writeData("main_data['title']")</span> grids is below
+			</p>
+			<div>
+				<h4 class="code_h">Code</h4>
+				<pre class="code code-html">
+<!-- <div class="row text_align-center">
+	<div class="col-3 bg-lgrey padding-md">
+		I span 3 columns
+	</div>
+	<div class="col-4 bg-lblack text_color-white padding-md">
+		I span 4 columns
+	</div>
+	<div class="col-5 bg-peterriver padding-md">
+		I span 5 columns
+	</div>
+	<div class="col-5 bg-midnightblue text_color-white padding-md">
+		Oh, I am out of above row.
+	</div>
+</div> -->
+				</pre>
+			</div>
+			<h4 class="code_result_h">Result</h4>
+			<div class="row text_align-center">
+				<div class="col-3 bg-lgrey padding-md">
+					I span 3 columns
+				</div>
+				<div class="col-4 bg-lblack text_color-white padding-md">
+					I span 4 columns
+				</div>
+				<div class="col-5 bg-peterriver padding-md">
+					I span 5 columns
+				</div>
+				<div class="col-5 bg-midnightblue text_color-white padding-md">
+					I span 5 column
+					<br/>
+					Oh, I am out of above row.
+				</div>
+			</div>
+
 		</div>
 	</div>
 		<!-- body here -->

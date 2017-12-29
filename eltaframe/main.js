@@ -1,4 +1,18 @@
 $(document).ready(function () {
+
+	// getData
+	// ISSUE: not working script on returning html of data
+	// $('.get_data').each(function(i, elA) {
+	// 	eval($(this).html().trim())
+	// 	// var headSrcs = $('head').html();
+	// 	function getData(dataUrl) {
+	// 		$.get(dataUrl, function(data) {
+	// 			$(elA).html(data)
+	// 			// var ptrnForSrcs = /\<{1}[a-zA-Z]+\s+[^<>]+\>{1}/;
+	// 			// console.log(ptrnForSrcs.exec(data))
+	// 		});
+	// 	}
+	// });
 	
 	// Create Data Tabel and Write Table Data
 	// Data table will be created in JSON file
@@ -41,23 +55,29 @@ $(document).ready(function () {
 	// </li>
 	// EXPLANATION OF writeData()
 	// writeData('JSON Object','Option') has two arguments/paramenters  where first argument is to defind 'JSON Object' i.e. which data is required from JSON object. While 2nd parameter is option i.e. how much and which value from JSON object, we request. There are three type of options i.e. "key('Which'),value('Which'),pair('Which')". key()/value()/pair() return JSON object keys/values/key-value-pair which requested. Now these options have again a parameter i.e. how much and which values/keys/pairs are required. x is for returning all keys/values/pairs while for only different values we can write as n-m,p,q,... where n,m,p,q are positive integers and '-' is for 'to' and ',' is for 'and'. example is writeData("main_data['navbar_url']","key(0-1,3)") which return only 0-1 and 3 keys.
-
+	// writeData() will not return value, if its type is object
 	function writeData(elem, opt) {
 		var objct = eval(elem)
 		var result = [];
 		if (opt != undefined) {
 			if (opt == "key(x)") {
 				for (x in objct) {
-					result.push(x);
+					if ((typeof objct[x]) != 'object') {
+						result.push(x);
+					}
 				}
 			} else if (opt == "value(x)") {
 				for (x in objct) {
-					result.push(objct[x]);
+					if ((typeof objct[x]) != 'object') {
+						result.push(objct[x]);
+					}
 				}
 			} else if (opt == "pair(x)") {
 				for (x in objct) {
-					result.push(x);
-					result.push(objct[x]);
+					if ((typeof objct[x]) != 'object') {
+						result.push(x);
+						result.push(objct[x]);
+					}
 				}
 			} else if (opt.match(/(key|value|pair)\([0-9,-]+\)/)) {
 				var splCom = /(key|value|pair)\(([0-9,-]+)\)/.exec(opt)[2].split(',');
@@ -72,20 +92,32 @@ $(document).ready(function () {
 						var splLine = splCom[x].split('-');
 						for (var i = parseInt(splLine[0]); i < (parseInt(splLine[1]) + 1); i++) {
 							if (whchOpt == "key") {
-								result.push(dataArray[i][0]);
+								if ((typeof dataArray[i][1]) != 'object') {
+									result.push(dataArray[i][0]);
+								}
 							} else if (whchOpt == "value") {
-								result.push(dataArray[i][1]);
+								if ((typeof dataArray[i][1]) != 'object') {
+									result.push(dataArray[i][1]);
+								}
 							} else if (whchOpt == "pair") {
-								result.push(dataArray[i][0], dataArray[i][1]);
+								if ((typeof dataArray[i][1]) != 'object') {
+									result.push(dataArray[i][0], dataArray[i][1]);
+								}
 							}
 						}
 					} else {
 						if (whchOpt == "key") {
-							result.push(dataArray[splCom[x]][0]);
+							if ((typeof dataArray[splCom[x]][1]) != 'object') {
+								result.push(dataArray[splCom[x]][0]);
+							}
 						} else if (whchOpt == "value") {
-							result.push(dataArray[splCom[x]][1]);
+							if ((typeof dataArray[splCom[x]][1]) != 'object') {
+								result.push(dataArray[splCom[x]][1]);
+							}
 						} else if (whchOpt == "pair") {
-							result.push(dataArray[splCom[x]][0], dataArray[splCom[x]][1]);
+							if ((typeof dataArray[splCom[x]][1]) != 'object') {
+								result.push(dataArray[splCom[x]][0], dataArray[splCom[x]][1]);
+							}
 						}
 					}
 				}
@@ -130,6 +162,7 @@ $(document).ready(function () {
 		for (var j = 0; j < maxClone; j++) {
 			var elemCloneB = $(elA).prop('outerHTML').replace(/&quot;/g,'"');
 			for (x in allFunc) {
+				// var resultValue = new RegExp(allFunc[x][0] , 'g') // ISSUE: can't use this regex in below line
 				var resultElem = elemCloneB.replace(allFunc[x][0], allFunc[x][1][j]);
 				elemCloneB = resultElem;
 			}
