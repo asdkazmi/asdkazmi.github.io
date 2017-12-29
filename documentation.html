@@ -147,39 +147,69 @@
 				Let us take a look at here, an example of <span class="write_data">writeData("main_data['title']")</span> grids is below
 				</p>
 				<div>
-					<h4 class="code_h">Code</h4>
+					<h4 class="code_h">Code-1</h4>
 					<pre class="code code-html">
 <!-- <div class="row text_align-center">
-<div class="col-3 bg-lgrey padding-md">
-	I span 3 columns
-</div>
-<div class="col-4 bg-lblack text_color-white padding-md">
-	I span 4 columns
-</div>
-<div class="col-5 bg-peterriver padding-md">
-	I span 5 columns
-</div>
-<div class="col-5 bg-midnightblue text_color-white padding-md">
-	Oh, I am out of above row.
-</div>
+	<div class="col-3 bg-lgrey padding-sm" style="height: 150px">
+		I span 3 columns on every screen size
+	</div>
+	<div class="col-4 bg-lblack text_color-white padding-sm" style="height: 150px">
+		I span 4 columns on every screen size
+	</div>
+	<div class="col-5 bg-peterriver padding-sm" style="height: 150px">
+		I span 5 columns on every screen size
+	</div>
+	<div class="col-5 bg-midnightblue text_color-white padding-sm" style="height: 150px">
+		I span 5 column on every screen size
+		<br/>
+		Oh, I am out of above row.
+	</div>
 </div> -->
 					</pre>
 				</div>
-				<h4 class="code_result_h">Result</h4>
+				<h4 class="code_result_h">Result-1</h4>
 				<div class="row text_align-center">
-					<div class="col-3 bg-lgrey padding-md">
-						I span 3 columns
+					<div class="col-3 bg-lgrey padding-sm" style="height: 150px">
+						I span 3 columns on every screen size
 					</div>
-					<div class="col-4 bg-lblack text_color-white padding-md">
-						I span 4 columns
+					<div class="col-4 bg-lblack text_color-white padding-sm" style="height: 150px">
+						I span 4 columns on every screen size
 					</div>
-					<div class="col-5 bg-peterriver padding-md">
-						I span 5 columns
+					<div class="col-5 bg-peterriver padding-sm" style="height: 150px">
+						I span 5 columns on every screen size
 					</div>
-					<div class="col-5 bg-midnightblue text_color-white padding-md">
-						I span 5 column
+					<div class="col-5 bg-midnightblue text_color-white padding-sm" style="height: 150px">
+						I span 5 column on every screen size
 						<br/>
 						Oh, I am out of above row.
+					</div>
+				</div>
+				<div>
+					<h4 class="code_h">Code-2</h4>
+					<pre class="code code-html">
+<!-- <div class="row text_align-center">
+	<div class="col-3-tb bg-lgrey padding-md" style="height: 150px">
+		I span 3 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+	</div>
+	<div class="col-4-tb bg-lblack text_color-white padding-md" style="height: 150px">
+		I span 4 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+	</div>
+	<div class="col-5-tb bg-peterriver padding-md" style="height: 150px">
+		I span 5 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+	</div>
+</div> -->
+					</pre>
+				</div>
+				<h4 class="code_result_h">Result-2</h4>
+				<div class="row text_align-center">
+					<div class="col-3-tb bg-lgrey padding-md" style="height: 150px">
+						I span 3 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+					</div>
+					<div class="col-4-tb bg-lblack text_color-white padding-md" style="height: 150px">
+						I span 4 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+					</div>
+					<div class="col-5-tb bg-peterriver padding-md" style="height: 150px">
+						I span 5 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
 					</div>
 				</div>
 			</div>
