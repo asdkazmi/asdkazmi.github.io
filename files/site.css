@@ -34,6 +34,43 @@
 	align-items: center;
 }
 
+.leftbar_drawer {
+    position: absolute;
+    top: 106px;
+    z-index: 100;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: white;
+    padding: 10px;
+    margin-left: 0px;
+    box-shadow: 0px 0px 10px;
+}
+
+.accordian_toggle.toggled {
+    border: 1px solid grey;
+    border-bottom: 0px;
+    border-radius: 6px 6px 0px 0px;
+    background: #795548!important;
+    color: white;
+}
+
+.accordian_menu {
+    background: #313131;
+    color: white;
+}
+
+.accordian_menu.toggled {
+    border: 1px solid grey;
+    border-radius: 0px 0px 6px 6px;
+    border-top: 0px;
+}
+
+.leftbar a {
+    padding: 10px 8px;
+}
+
 .documents {
     
 }

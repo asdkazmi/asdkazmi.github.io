@@ -23,7 +23,7 @@
 			" src="files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
 		</div>
 		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
-			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"4"}'></canvas>
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"3"}'></canvas>
 		</div>
 		<div class="navbar_menu">
 			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt" data-child="padding_horizontal-sm">
@@ -41,14 +41,25 @@
 		</div>
 	</div>
 	<div class="row">
-	<div class="col-3-dt shadow-sm margin-xs">
+	<div class="leftbar_drawer" data-responsive="hide-min_dt">
+		<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
+	</div>
+	<div class="col-3-dt shadow-sm margin-xs leftbar bg-white" data-responsive="margin_top-no-max_tb">
 		<ul class="list_dots-none">
-			<li class="write_data">
+			<!-- <li class="write_data">
 				<a href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
-			</li>
+			</li> -->
 			<div>
 				<div class="accordian">
-					<span class="accordian_toggle">Grids</span>
+					<a href="#" class="accordian_toggle">Grids</a>
+					<div class="accordian_menu">
+						<ul>
+							<li class="write_data">
+								<a href=writeData("main_data['documentation']['Grids']","value(x)")>writeData("main_data['documentation']['Grids']","key(x)")</a>
+							</li>
+						</ul>
+					</div>
+					<a href="#" class="accordian_toggle">CSS Classes</a>
 					<div class="accordian_menu">
 						<ul>
 							<li class="write_data">
@@ -56,15 +67,7 @@
 							</li>
 						</ul>
 					</div>
-					<span class="accordian_toggle">CSS Classes</span>
-					<div class="accordian_menu">
-						<ul>
-							<li class="write_data">
-								<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
-							</li>
-						</ul>
-					</div>
-					<span class="accordian_toggle">Dynamic Classes</span>
+					<a href="#" class="accordian_toggle">Dynamic Classes</a>
 					<div class="accordian_menu">
 						<ul>
 							<li class="write_data">
@@ -77,7 +80,9 @@
 		</ul>
 	</div>
 	<div class="col-9-dt">
-		
+		<div class="get_data">
+			getData("docs/grids.html")
+		</div>
 	</div>
 		<!-- body here -->
 	</div>

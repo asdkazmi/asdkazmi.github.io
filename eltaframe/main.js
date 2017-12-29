@@ -514,12 +514,12 @@ $(document).ready(function () {
 	$(".accordian_toggle.toggled").next(".accordian_menu").slideDown(0);
 	$(".accordian_toggle").click(function(){
 		if ($(this).next(".accordian_menu").css("display") == "none") {
-			$(this).parents(".accordian").find(".accordian_menu").slideUp();
-			$(this).next(".accordian_menu").slideDown();
+			$(this).parents(".accordian").find(".accordian_menu").slideUp().removeClass('toggled');
+			$(this).next(".accordian_menu").slideDown().addClass('toggled');
 			$(this).parents(".accordian").find(".accordian_toggle").removeClass("toggled")
 			$(this).addClass("toggled")
 		} else {
-			$(this).next(".accordian_menu").slideUp();
+			$(this).next(".accordian_menu").slideUp().removeClass('toggled');
 			$(this).removeClass("toggled")
 		}
 	})

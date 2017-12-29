@@ -54,6 +54,9 @@ var main_data = {
 	"GitHub_Repositary": "#",
 	documentation : {
 		Home: 'documentation.html',
+		Grids: {
+			"Introduction of Grids" : "#intro-grids"
+		},
 		"CSS_Classes": {
 			General: '#',
 			Padding: '#',

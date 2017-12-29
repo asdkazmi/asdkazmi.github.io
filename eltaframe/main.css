@@ -524,7 +524,7 @@ a.label , a.badge {
 }
 .leftbar li {
     list-style-type: square;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 .leftbar a {
     font-size: inherit;
@@ -724,6 +724,12 @@ pre {
     margin: 200px;
 }
 
+.padding_top-no {
+    padding-top: 0px;
+}
+.margin_top-no {
+    margin-top: 0px;
+}
 .padding_top-xs {
     padding-top: 5px;
 }
@@ -761,6 +767,14 @@ pre {
     margin-top: 200px;
 }
 
+.padding_vertical-no {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.margin_vertical-no {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 .padding_vertical-xs {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -810,6 +824,14 @@ pre {
     margin-bottom: 200px;
 }
 
+.padding_horizontal-no {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.margin_horizontal-no {
+    margin-left: 0px;
+    margin-right: 0px;
+}
 .padding_horizontal-xs {
     padding-left: 5px;
     padding-right: 5px;
