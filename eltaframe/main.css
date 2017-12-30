@@ -1272,7 +1272,7 @@ pre {
     width: 100%;
     float: left;
 }
-.row.equat-height {
+.row.equate-height {
     display: flex;
 }
 .col-12 , .col-11 , .col-10, .col-9 , .col-8 , .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
@@ -1355,7 +1355,7 @@ pre {
     margin-right: 25%;
 }
 .col-4-fill {
-    width: 33.34%;
+    width: 33.33%;
     margin-left: 33.33%;
     margin-right: 33.33%;
 }
@@ -1485,7 +1485,7 @@ pre {
     width: 41.66%;
 }
 .row .col-4-tb {
-    width: 33.34%;
+    width: 33.33%;
 }
 .row .col-3-tb {
     width: 25%;
@@ -1549,7 +1549,7 @@ pre {
     width: 41.66%;
 }
 .row .col-4-dt {
-    width: 33.34%;
+    width: 33.33%;
 }
 .row .col-3-dt {
     width: 25%;
@@ -1642,7 +1642,7 @@ pre {
     width: 41.66%;
 }
 .row .col-4-ldt {
-    width: 33.34%;
+    width: 33.33%;
 }
 .row .col-3-ldt {
     width: 25%;

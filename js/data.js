@@ -57,7 +57,9 @@ var main_data = {
 		Grids: {
 			"Introduction of Grids" : "#intro-grids",
 			"Screen Sizes" : "#screen-sizes",
-			"Basic Example" : "#basic-grid-example"
+			"Basic Example" : "#basic-grid-example",
+			"Overriding Grid Classes" : "#overriding-grid-classes",
+			"Equate Height of Columns" : "#equate-height"
 		},
 		"CSS_Classes": {
 			General: '#',
