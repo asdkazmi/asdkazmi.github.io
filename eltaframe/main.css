@@ -43,9 +43,9 @@ a.button , a.label , a.badge {
 }
 .table {
 	width: 100%;
-	/*font-family: sans-serif;*/
-	/*text-align: justify;*/
     border-spacing: 0px;
+    overflow: auto;
+    display: block;
 }
 .table th {
     text-align: center;
@@ -426,9 +426,9 @@ a.label , a.badge {
     /*padding: 5px 10px;*/
     display: block;
 }
-.accordian .accordian_toggle.toggled {
+/*.accordian .accordian_toggle.toggled {
     background: #bbb9b9;
-}
+}*/
 .accordian_container {
     border-width: 2px;
     border-style: inset outset outset inset;

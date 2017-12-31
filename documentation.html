@@ -83,7 +83,7 @@
 			<div id="basics">
 				<h3>Basics about <span class="write_data">writeData("main_data['title']")</span></h3>
 				<hr/>
-				<span class="write_data">writeData("main_data['title']")</span> is a full responsive framework with strong grids system and defines many other methods for responsive web and decreasing work. <span class="write_data">writeData("main_data['title']")</span> aslo define many of it's component and canvas icons which are very customizable as required by developers. <span class="write_data">writeData("main_data['title']")</span> use general form of defining html classes which will be used for website work. General form of <span class="write_data">writeData("main_data['title']")</span> html classes is <b><i>Type</i>-<i>Value</i><i>-Effect (optional)</i></b>. <span class="write_data">writeData("main_data['title']")</span> defines a lot <b>Types</b> and there <b>Values</b> but as it's initial release, so only have one effect i.e. <b>hover</b> which will take effect on html element on mouse enter and remove. 
+				<span class="write_data">writeData("main_data['title']")</span> is a full responsive framework with strong grids system and defines many other methods for responsive web and decreasing work. <span class="write_data">writeData("main_data['title']")</span> aslo define many of it's component and canvas icons which are very customizable as required by developers. <span class="write_data">writeData("main_data['title']")</span> use it's own form of defining html classes which will be used for website work. General form of <span class="write_data">writeData("main_data['title']")</span> html classes is <b><i>Type</i>-<i>Value</i><i>-Effect (optional)</i></b>, where - is used as separator. So do not use - while defining own class, instead of - you can use _. Because there are a lot of features of <span class="write_data">writeData("main_data['title']")</span> which depends on -. <span class="write_data">writeData("main_data['title']")</span> defines a lot <b>Types</b> and there <b>Values</b> but as it's initial release, so only have one effect i.e. <b>hover</b> which will take effect on html element on mouse enter and remove. 
 			</div> <!-- basic -->
 			<div id="intro-grids">
 				<h3>Introduction to Grids</h3>
@@ -387,6 +387,8 @@
 		Hi, I should have less height.
 	</div>
 </div>
+
+
 <h4 class="text_align-center">With <b>equate-height</b></h4>
 <div class="row equate-height text_align-center">
 	<div class="col-2 bg-lgrey">
@@ -421,6 +423,8 @@
 							Hi, I should have less height.
 						</div>
 					</div>
+
+
 					<h4 class="text_align-center">With <b>equate-height</b></h4>
 					<div class="row equate-height text_align-center">
 						<div class="col-2 bg-lgrey">
@@ -432,6 +436,95 @@
 					</div>
 				</div>
 			</div> <!-- equate-height -->
+			<div id="fill-column">
+				<h3>Fill Space of Remaining Column</h3>
+				<hr/>
+				<p><span class="write_data">writeData("main_data['title']")</span> provide an option to fill the space of remaining column and align the column in center. It will only be used if there is only one column in a row. It will used for every screen size.</p>
+				<p>There are 6 types of classes for aligning column in center and filling remaining sapce outside of column. Following table explain these classes</p>
+				<table class="table table-stripped-lgrey" border="1">
+					<thead>
+						<th>Classes</th>
+						<th>Number column to span</th>
+						<th>Number of remaining column to fill</th>
+						<th>Description</th>
+					</thead>
+					<tr>
+						<th>col-12-fill</th>
+						<td>12</td>
+						<td>No remaining column</td>
+						<td>This class span 12 column of a row while remain margin on both sides of itself to show that the column is in center.</td>
+					</tr>
+					<tr>
+						<th>col-10-fill</th>
+						<td>10</td>
+						<td>1 column on each side</td>
+						<td>This class span 10 column of a row and remain 1 column on each side to be empty and align the column in the center.</td>
+					</tr>
+					<tr>
+						<th>col-8-fill</th>
+						<td>8</td>
+						<td>2 column on each side</td>
+						<td>This class span 8 column of a row and remain 2 column on each side to be empty and align the column in the center.</td>
+					</tr>
+					<tr>
+						<th>col-6-fill</th>
+						<td>6</td>
+						<td>3 column on each side</td>
+						<td>This class span 6 column of a row and remain 3 column on each side to be empty and align the column in the center.</td>
+					</tr>
+					<tr>
+						<th>col-4-fill</th>
+						<td>4</td>
+						<td>4 column on each side</td>
+						<td>This class span 4 column of a row and remain 4 column on each side to be empty and align the column in the center.</td>
+					</tr>
+					<tr>
+						<th>col-2-fill</th>
+						<td>2</td>
+						<td>5 column on each side</td>
+						<td>This class span 2 column of a row and remain 5 column on each side to be empty and align the column in the center.</td>
+					</tr>
+				</table>
+				<h4>Example</h4>
+				<hr/>
+				<p>Here is an example of filling space of remaining column on each side of a column.</p>
+				<div>
+					<h4 class="code_h">Code-6</h4>
+					<pre class="code code-html">
+<!-- <div class="row">
+	<div class="col-6-fill bg-lgrey">
+		<p>I am col-6-fill column which spanned 6 column of a row and remain 3 column on each side to be empty and align myself in center.</p>
+	</div>
+	<div class="col-2 bg-peterriver">
+		I am col-2
+	</div>
+</div> -->
+					</pre>
+					<h4 class="code_result_h">Result-6</h4>
+					<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
+						<div class="col-1">Col 1</div>
+						<div class="col-1">Col 2</div>
+						<div class="col-1">Col 3</div>
+						<div class="col-1">Col 4</div>
+						<div class="col-1">Col 5</div>
+						<div class="col-1">Col 6</div>
+						<div class="col-1">Col 7</div>
+						<div class="col-1">Col 8</div>
+						<div class="col-1">Col 9</div>
+						<div class="col-1">Col 10</div>
+						<div class="col-1">Col 11</div>
+						<div class="col-1">Col 12</div>
+					</div>
+					<div class="row">
+						<div class="col-6-fill bg-lgrey">
+							<p>I am col-6-fill column which spanned 6 column of a row and remain 3 column on each side to be empty and align myself in center.</p>
+						</div>
+						<div class="col-2 bg-peterriver">
+							I am col-2
+						</div>
+					</div>
+				</div>
+			</div> <!-- fill-column -->
 		</div>
 		<!-- body here -->
 	</div>

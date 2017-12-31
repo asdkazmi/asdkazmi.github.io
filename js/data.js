@@ -59,7 +59,8 @@ var main_data = {
 			"Screen Sizes" : "#screen-sizes",
 			"Basic Example" : "#basic-grid-example",
 			"Overriding Grid Classes" : "#overriding-grid-classes",
-			"Equate Height of Columns" : "#equate-height"
+			"Equate Height of Columns" : "#equate-height",
+			"Fill Space of Remaining Column": "#fill-column"
 		},
 		"CSS_Classes": {
 			General: '#',
