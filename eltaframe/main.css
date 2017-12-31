@@ -20,7 +20,7 @@ input:focus {
 .hide {
     display: none;
 }
-.no-text_decoration {
+.text_decoration-no {
     text-decoration: none;
 }
 .img-responsive {
@@ -1793,10 +1793,5 @@ pre {
 
 /*validation*/
 .validate-email > * , .validate-password > * {
-    display: none;
-}
-
-/*create Data table*/
-.create_data , .create_class {
     display: none;
 }

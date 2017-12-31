@@ -38,8 +38,8 @@ var main_data = {
 		Download: "download.html",
 		Documentation: "documentation.html",
 		Canvas: "canvas-icons.html",
-		Examples : "example.html",
-		Themes: 'themes.html',
+		// Examples : "example.html",
+		// Themes: 'themes.html',
 		Issues: 'issues.html',
 		About: 'about.html'
 	},
