@@ -2,25 +2,25 @@
 <html>
 <head>
 	<title class="write_data">writeData("main_data['title']")</title>
-	<link rel="icon" type="image/gif" href="files/favicon-32x32.png">
+	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- eltaframe sources -->
-	<script type="text/javascript" src="eltaframe/jquery.min.js"></script>
-	<script type="text/javascript" src="eltaframe/main.js"></script>
-	<script type="text/javascript" src="eltaframe/canvas-icons.js"></script>
-	<link rel="stylesheet" type="text/css" href="eltaframe/main.css" />
+	<script type="text/javascript" src="../eltaframe/jquery.min.js"></script>
+	<script type="text/javascript" src="../eltaframe/main.js"></script>
+	<script type="text/javascript" src="../eltaframe/canvas-icons.js"></script>
+	<link rel="stylesheet" type="text/css" href="../eltaframe/main.css" />
 
 	<!-- more files -->
-	<script type="text/javascript" src="js/data.js"></script>
-	<link rel="stylesheet" type="text/css" href="files/site.css">
+	<script type="text/javascript" src="../js/data.js"></script>
+	<link rel="stylesheet" type="text/css" href="../files/site.css">
 </head>
-<body class="flat_theme">
+<body class="flat_theme container-auto-fix">
 	<div class="navbar-drop_tb" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
 		<div class="navbar_title bg-main full-width hide-tb" data-responsive="height-nav-min_dt">
 			<img class="
 			item-center position-relative bg-main border_color-white animate
-			" src="files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
+			" src="../files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
 		</div>
 		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
 			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"3"}'></canvas>
@@ -28,7 +28,7 @@
 		<div class="navbar_menu">
 			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt" data-child="padding_horizontal-sm">
 				<li class="write_data">
-					<a href=writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
+					<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
 						<span>
 							writeData("main_data['navbar_url']","key(x)")
 						</span>
@@ -40,18 +40,19 @@
 			</ul>
 		</div>
 	</div>
-	<div class="row">
-		<div class="leftbar_drawer" data-responsive="hide-min_dt">
+	<div class="row container-auto-fix">
+		<div class="auto-fix leftbar_drawer" data-responsive="hide-min_dt">
 			<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
 		</div>
-		<div class="col-3-dt shadow-sm leftbar bg-white" data-responsive="margin_vertical-xs-min_dt">
+		<!-- <span class="container-auto-fix"></span> -->
+		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
 			<ul class="list_dots-none">
 				<li class="write_data">
-					<a href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+					<a class="padding-xs ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
 				</li>
 				<div>
 					<div class="accordian">
-						<a href="#" class="accordian_toggle toggled">Grids</a>
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl">Grids</a>
 						<div class="accordian_menu toggled">
 							<ul>
 								<li class="write_data">
@@ -59,32 +60,11 @@
 								</li>
 							</ul>
 						</div>
-						<a href="#" class="accordian_toggle">CSS Classes</a>
-						<div class="accordian_menu">
-							<ul>
-								<li class="write_data">
-									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
-								</li>
-							</ul>
-						</div>
-						<a href="#" class="accordian_toggle">Dynamic Classes</a>
-						<div class="accordian_menu">
-							<ul>
-								<li class="write_data">
-									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
-								</li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</ul>
 		</div>
-		<div class="col-9-dt padding-sm text_size-sm font_family-calibri" data-child="left width-full">
-			<div id="basics">
-				<h3>Basics about <span class="write_data">writeData("main_data['title']")</span></h3>
-				<hr/>
-				<span class="write_data">writeData("main_data['title']")</span> is a full responsive framework with strong grids system and defines many other methods for responsive web and decreasing work. <span class="write_data">writeData("main_data['title']")</span> aslo define many of it's component and canvas icons which are very customizable as required by developers. <span class="write_data">writeData("main_data['title']")</span> use it's own form of defining html classes which will be used for website work. General form of <span class="write_data">writeData("main_data['title']")</span> html classes is <b><i>Type</i>-<i>Value</i><i>-Effect (optional)</i></b>, where - is used as separator. So do not use - while defining own class, instead of - you can use _. Because there are a lot of features of <span class="write_data">writeData("main_data['title']")</span> which depends on -. <span class="write_data">writeData("main_data['title']")</span> defines a lot <b>Types</b> and there <b>Values</b> but as it's initial release, so only have one effect i.e. <b>hover</b> which will take effect on html element on mouse enter and remove. 
-			</div> <!-- basic -->
+		<div class="col-9-dt right padding-sm text_size-sm font_family-calibri" data-child="left width-full">
 			<div id="intro-grids">
 				<h3>Introduction to Grids</h3>
 				<hr/>

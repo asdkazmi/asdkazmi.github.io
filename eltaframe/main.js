@@ -170,6 +170,16 @@ $(document).ready(function () {
 		}
 		$(elA).remove();
 	});
+
+
+	// Hide Url of element if url is openend by adding class to HTML tag "a" is "ifme-hideUrl"
+	$('.ifme-hideUrl').each(function(i, elA) {
+		var elemUrl = new RegExp($(this).attr('href') + '#*.*$');
+		var windUrl = window.location.href;
+		if (windUrl.match(elemUrl)) {
+			$(this).attr('href', "##");
+		}
+	});
 	// CREATE CLASS
 	// To create dynamic classes we will JSON file with var "create_class". e.g. {"CSS_Type (Use '_' instead of '-' e.g. border_bottom)":{'SIZE NAME':'VALUE','SIZE-2 NAME':'VALUE-2'...}}. Here is an example {"border_bottom":{"sm":"20px"}}. Then to use our dynamic class we will write class "CSS_Type-SIZE" e.g. "border_bottom-sm" which will add border-bottom = 20px to the element.
 	// To create color like bg-COLOR, text_color-COLOR, we will write CSS_Type is color then in child JSON file we will write color name in key and color in value e.g.
@@ -445,7 +455,7 @@ $(document).ready(function () {
 // <!-- </html> -->
 	$('.code.code-html').each(function(i, elA) {
 		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/\</g,'&lt;').replace(/\>/g,'&gt;');
-		console.log(inhtml)
+		// console.log(inhtml)
 		$(this).html(inhtml)
 	});
 
@@ -603,6 +613,55 @@ $(document).ready(function () {
 				$(".leftbar").css("marginLeft" , "0px")
 			}
 		});
+	});
+	// leftbar auto-fix
+	$('.auto-fix').each(function(i, elA) {
+		var mainElem = $(this);
+		var elemHgt = $(mainElem).outerHeight(true);
+		var elemInitPos = $(this).css("position");
+		var elemPos = '';
+		var elemTop = $(mainElem).offset().top;
+		var checkHgt = 0;
+		$(window).resize(function(e) {
+			elemTop = mainElem.offset().top;
+		});
+		$(".leftbar_drawer").click(function(e) {
+			elemPos = mainElem.css('position')
+			elemTop = mainElem.offset().top;
+			if ($(window).width() >= 992) {
+				elemPos = elemInitPos;
+			} else {
+				elemPos = "absolute";
+			}
+		});
+		$(".navbar_drawer").click(function(e) {
+			elemTop = mainElem.offset().top;
+		});
+		$(window).on("scroll resize" ,function(e) {
+			elemHgt = $(mainElem).outerHeight(true);
+			if (elemHgt > $(window).height()) {
+				checkHgt = parseInt(elemHgt - $(window).height());
+				fixPosition(mainElem, elemTop, checkHgt, elemPos, "initial", "0px");
+			} else {
+				checkHgt = 0;
+				fixPosition(mainElem, elemTop, checkHgt, elemPos, "0px", "initial");
+			}
+		});
+		function fixPosition(elemName, elemTop, checkHgt, elemPos, setTop, setBottom) {
+			if ($(window).scrollTop() >= (elemTop + checkHgt)) {
+				elemName.css({
+					"position":"fixed",
+					"top" : setTop,
+					"bottom":setBottom
+				}).addClass('fixed')
+			} else {
+				elemName.css({
+					"position":elemPos,
+					"top" : "initial",
+					"bottom" : "initial"
+				}).removeClass('fixed');
+			}
+		}
 	});
 
 	// rotate-vertical

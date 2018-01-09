@@ -30,7 +30,7 @@ input:focus {
 }
 
 /*link decoration:none*/
-a.button , a.label , a.badge {
+a.button, .button a , a.label, .lable a , a.badge, .badge a {
 	text-decoration: none;
 }
 
@@ -677,10 +677,10 @@ pre {
 
 /*float positions*/
 .right {
-    float: right;
+    float: right!important;
 }
 .left {
-    float: left;
+    float: left!important;
 }
 
 /*paddings and margin*/

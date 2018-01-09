@@ -34,33 +34,36 @@ var create_class = {
 }
 var main_data = {
 	navbar_url : {
-		Home: "index.html",
-		Download: "download.html",
-		Documentation: "documentation.html",
-		Canvas: "canvas-icons.html",
+		Home: "./index.html",
+		Download: "./download.html",
+		Documentation: "./docs/intro-to-docs.html",
+		Canvas: "./canvas-icons.html",
 		// Examples : "example.html",
 		// Themes: 'themes.html',
-		Issues: 'issues.html',
-		About: 'about.html'
+		Issues: './issues.html',
+		About: './about.html'
 	},
 	home_urls: {
-		"Get Started" : 'documentation.html',
-		"Download": 'download.html'
+		"Get Started" : '../documentation.html',
+		"Download": '../download.html'
 	},
-	title: "ELTA FRAME",
+	title: "ELTA Frame",
 	version: '0.5.0 (Alpha)',
 	team: "",
 	"Download_Url": "#",
 	"GitHub_Repositary": "#",
 	documentation : {
-		"Basics about ELTA FRAME": '#',
+		"Introduction to ELTA Frame": '../docs/intro-to-docs.html',
+		allDocsUrl : {
+			Grids : "grids.html"
+		},
 		Grids: {
-			"Introduction of Grids" : "#intro-grids",
-			"Screen Sizes" : "#screen-sizes",
-			"Basic Example" : "#basic-grid-example",
-			"Overriding Grid Classes" : "#overriding-grid-classes",
-			"Equate Height of Columns" : "#equate-height",
-			"Fill Space of Remaining Column": "#fill-column"
+			"Introduction of Grids" : "grids.html#intro-grids",
+			"Screen Sizes" : "grids.html#screen-sizes",
+			"Basic Example" : "grids.html#basic-grid-example",
+			"Overriding Grid Classes" : "grids.html#overriding-grid-classes",
+			"Equate Height of Columns" : "grids.html#equate-height",
+			"Fill Space of Remaining Column": "grids.html#fill-column"
 		},
 		"CSS_Classes": {
 			General: '#',
