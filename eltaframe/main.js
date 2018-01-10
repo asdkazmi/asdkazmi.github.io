@@ -622,12 +622,12 @@ $(document).ready(function () {
 		var elemPos = '';
 		var elemTop = $(mainElem).offset().top;
 		var checkHgt = 0;
+		var myParent = $(this).parents('.container-auto-fix')[0];
 		$(window).resize(function(e) {
 			elemTop = mainElem.offset().top;
 		});
 		$(".leftbar_drawer").click(function(e) {
 			elemPos = mainElem.css('position')
-			elemTop = mainElem.offset().top;
 			if ($(window).width() >= 992) {
 				elemPos = elemInitPos;
 			} else {
@@ -639,29 +639,41 @@ $(document).ready(function () {
 		});
 		$(window).on("scroll resize" ,function(e) {
 			elemHgt = $(mainElem).outerHeight(true);
+			// if ($(window).scrollTop() >= parseInt($(myParent).outerHeight(true) + $(myParent).offset().top - $(window).height() +elemHgt)) {
+			// 	console.log(elemHgt)
+			// }
 			if (elemHgt > $(window).height()) {
 				checkHgt = parseInt(elemHgt - $(window).height());
-				fixPosition(mainElem, elemTop, checkHgt, elemPos, "initial", "0px");
+				if ($(window).scrollTop() >= (elemTop + checkHgt)) {
+					mainElem.css({
+						"position":"fixed",
+						"top" : "initial",
+						"bottom":"0px"
+					}).addClass('fixed')
+				} else {
+					mainElem.css({
+						"position":elemPos,
+						"top" : "initial",
+						"bottom" : "initial"
+					}).removeClass('fixed');
+				}
 			} else {
 				checkHgt = 0;
-				fixPosition(mainElem, elemTop, checkHgt, elemPos, "0px", "initial");
+				if ($(window).scrollTop() >= (elemTop + checkHgt)) {
+					mainElem.css({
+						"position":"fixed",
+						"top" : "0px",
+						"bottom":"initial"
+					}).addClass('fixed')
+				} else {
+					mainElem.css({
+						"position":elemPos,
+						"top" : "initial",
+						"bottom" : "initial"
+					}).removeClass('fixed');
+				}
 			}
 		});
-		function fixPosition(elemName, elemTop, checkHgt, elemPos, setTop, setBottom) {
-			if ($(window).scrollTop() >= (elemTop + checkHgt)) {
-				elemName.css({
-					"position":"fixed",
-					"top" : setTop,
-					"bottom":setBottom
-				}).addClass('fixed')
-			} else {
-				elemName.css({
-					"position":elemPos,
-					"top" : "initial",
-					"bottom" : "initial"
-				}).removeClass('fixed');
-			}
-		}
 	});
 
 	// rotate-vertical

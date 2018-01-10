@@ -55,7 +55,8 @@ var main_data = {
 	documentation : {
 		"Introduction to ELTA Frame": '../docs/intro-to-docs.html',
 		allDocsUrl : {
-			Grids : "grids.html"
+			Grids : "grids.html",
+			"CSS Classes" : "css_classes.html"
 		},
 		Grids: {
 			"Introduction of Grids" : "grids.html#intro-grids",
@@ -66,9 +67,9 @@ var main_data = {
 			"Fill Space of Remaining Column": "grids.html#fill-column"
 		},
 		"CSS_Classes": {
-			General: '#',
-			Padding: '#',
-			Margin: '#',
+			General: 'css_classes.html#General',
+			Padding: 'css_classes.html#Padding',
+			Margin: 'css_classes.html#Margin',
 		}
 	}
 }

@@ -50,13 +50,24 @@
 				<li class="write_data">
 					<a class="padding-xs ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
 				</li>
+				
 				<div>
 					<div class="accordian">
-						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl">Grids</a>
+						<!-- grids container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle toggled write_data ifme-hideUrl">Grids</a>
 						<div class="accordian_menu toggled">
 							<ul>
 								<li class="write_data">
 									<a href=writeData("main_data['documentation']['Grids']","value(x)")>writeData("main_data['documentation']['Grids']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- css classes container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle write_data ifme-hideUrl">CSS Classes</a>
+						<div class="accordian_menu toggled">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
 								</li>
 							</ul>
 						</div>
