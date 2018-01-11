@@ -48,7 +48,7 @@ var main_data = {
 		"Download": '../download.html'
 	},
 	title: "ELTA Frame",
-	version: '0.5.0 (Alpha)',
+	version: '1.0.0 (Alpha)',
 	team: "",
 	"Download_Url": "#",
 	"GitHub_Repositary": "#",
@@ -69,7 +69,8 @@ var main_data = {
 		"CSS_Classes": {
 			"Intro to CSS Classes": "css_classes.html#intro-to-css",
 			"General": 'css_classes.html#general',
-			"Position": 'css_classes.html#position'
+			"Position": 'css_classes.html#position',
+			"Padding and Margin": 'css_classes.html#padding-margin'
 		}
 	}
 }

@@ -19,9 +19,7 @@ a.button, .button a , a.label, .lable a , a.badge, .badge a {
 	box-sizing: border-box;
 }
 .table {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     border-spacing: 0px;
     overflow: auto;
     display: block;

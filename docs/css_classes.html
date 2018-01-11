@@ -90,6 +90,50 @@
 					<div>
 						<b><span class="text_color-red">Note</span>:</b> <span class="write_data">writeData("main_data['title']")</span> use "<b>-</b>" as a separtor between <b><i>type-value-Effect</i></b>. So no type or value of <span class="write_data">writeData("main_data['title']")</span> classes will be defined using "<b>-</b>" as a separator between definition, but <span class="write_data">writeData("main_data['title']")</span> type, value or effect will be defined using "<b>_</b>" as a separator for any single between type, value and effect. e.g. <b>my_type</b>-<b>my_value</b>-<b>my_effect</b>
 					</div>
+					<h4>Some Abbreviations Used in <span class="write_data">writeData("main_data['title']")</span> CSS Class</h4>
+					<hr/>
+					<table class="table table-stripped-lgrey" border="1">
+						<thead>
+							<th>Abbreviation</th>
+							<th>Type/Value/effect</th>
+							<th>Definition</th>
+						</thead>
+						<tr>
+							<th>no</th>
+							<td>Value</td>
+							<td>Stand for nothing, often it will be use in value while having value 0px or none.</td>
+						</tr>
+						<tr>
+							<th>xs</th>
+							<td>Value</td>
+							<td>Stand for extra small</td>
+						</tr>
+						<tr>
+							<th>sm</th>
+							<td>Value</td>
+							<td>Stand for small</td>
+						</tr>
+						<tr>
+							<th>md</th>
+							<td>Value</td>
+							<td>Stand for medium</td>
+						</tr>
+						<tr>
+							<th>lg</th>
+							<td>Value</td>
+							<td>Stand for large</td>
+						</tr>
+						<tr>
+							<th>xlg</th>
+							<td>Value</td>
+							<td>Stand for extra large</td>
+						</tr>
+						<tr>
+							<th>xxlg</th>
+							<td>Value</td>
+							<td>Stand for extra of extra large, it is the maximum value defined by <span class="write_data">writeData("main_data['title']")</span></td>
+						</tr>
+					</table>
 				</div> <!-- intro-to-css -->
 				<div id="general">
 					<h3>Some General Classes</h3>
@@ -208,8 +252,153 @@
 							<td>Not important</td>
 							<td>This class will add position to inherit to element.</td>
 						</tr>
+						<tr>
+							<th colspan="5">float Positions</th>
+						</tr>
+						<tr>
+							<th>right</th>
+							<td>right</td>
+							<td><i class="text_color-red">Not Available</i></td>
+							<td>Not Important</td>
+							<td>This will set element to right side inside it's parent element. i.e. <b>float</b> position <b>right</b>.</td>
+						</tr>
+						<tr>
+							<th>left</th>
+							<td>left</td>
+							<td><i class="text_color-red">Not Available</i></td>
+							<td>Not Important</td>
+							<td>This will set element to left side inside it's parent element. i.e. <b>float</b> position <b>left</b>.</td>
+						</tr>
 					</table>
 				</div> <!-- position -->
+				<div id="padding-margin">
+					<h3><span class="write_data">writeData("main_data['title']")</span> CSS Padding and Margin Classes</h3>
+					<hr/>
+					<span class="write_data">writeData("main_data['title']")</span> provide some usefull css classes for elements padding and margin. The value for padding and margin will be same. There are different types of padding and margin.
+					<h4>All sides Padding and Margins</h4>
+					<hr/>
+					<p>Following classes will add margin and padding to all sides of element by same ratio.</p>
+					<table class="table table-stripped-lgrey" border="1">
+						<thead>
+							<th><span class="write_data">writeData("main_data['title']")</span> Class</th>
+							<th>Type</th>
+							<th>Value</th>
+							<th>Important/Not Important</th>
+							<th>Description</th>
+						</thead>
+						<tr>
+							<th colspan="5">Padding</th>
+						</tr>
+						<tr>
+							<th>padding-no</th>
+							<td>padding</td>
+							<td>no</td>
+							<td>Not Important</td>
+							<td>Remove all paddings.</td>
+						</tr>
+						<tr>
+							<th>padding-xs</th>
+							<td>padding</td>
+							<td>xs</td>
+							<td>Not Important</td>
+							<td>This class adds 5px padding to all sides of element</td>
+						</tr>
+						<tr>
+							<th>padding-sm</th>
+							<td>padding</td>
+							<td>sm</td>
+							<td>Not Important</td>
+							<td>This class adds 15px padding to all sides of element</td>
+						</tr>
+						<tr>
+							<th>padding-md</th>
+							<td>padding</td>
+							<td>md</td>
+							<td>Not Important</td>
+							<td>This class adds 35px padding to all sides of element</td>
+						</tr>
+						<tr>
+							<th>padding-lg</th>
+							<td>padding</td>
+							<td>lg</td>
+							<td>Not Important</td>
+							<td>This class adds 70px padding to all sides of element</td>
+						</tr>
+						<tr>
+							<th>padding-xlg</th>
+							<td>padding</td>
+							<td>xlg</td>
+							<td>Not Important</td>
+							<td>This class adds 130px padding to all sides of element</td>
+						</tr>
+						<tr>
+							<th>padding-xxlg</th>
+							<td>padding</td>
+							<td>xxlg</td>
+							<td>Not Important</td>
+							<td>This class adds 200px padding to all sides of element</td>
+						</tr>
+						<tr>
+							<th colspan="5">Margin</th>
+						</tr>
+						<tr>
+							<th>margin-auto</th>
+							<td>margin</td>
+							<td>auto</td>
+							<td>Not Important</td>
+							<td>This class adds top/bottom margin 0px while left/right margin to auto to align item in center.</td>
+						</tr>
+						<tr>
+							<th>margin-no</th>
+							<td>margin</td>
+							<td>no</td>
+							<td>Not Important</td>
+							<td>Remove all margins.</td>
+						</tr>
+						<tr>
+							<th>margin-xs</th>
+							<td>margin</td>
+							<td>xs</td>
+							<td>Not Important</td>
+							<td>This class adds 5px margin to all sides of element</td>
+						</tr>
+						<tr>
+							<th>margin-sm</th>
+							<td>margin</td>
+							<td>sm</td>
+							<td>Not Important</td>
+							<td>This class adds 15px margin to all sides of element</td>
+						</tr>
+						<tr>
+							<th>margin-md</th>
+							<td>margin</td>
+							<td>md</td>
+							<td>Not Important</td>
+							<td>This class adds 35px margin to all sides of element</td>
+						</tr>
+						<tr>
+							<th>margin-lg</th>
+							<td>margin</td>
+							<td>lg</td>
+							<td>Not Important</td>
+							<td>This class adds 70px margin to all sides of element</td>
+						</tr>
+						<tr>
+							<th>margin-xlg</th>
+							<td>margin</td>
+							<td>xlg</td>
+							<td>Not Important</td>
+							<td>This class adds 130px margin to all sides of element</td>
+						</tr>
+						<tr>
+							<th>margin-xxlg</th>
+							<td>margin</td>
+							<td>xxlg</td>
+							<td>Not Important</td>
+							<td>This class adds 200px margin to all sides of element</td>
+						</tr>
+					</table>
+				</div> <!-- padding and margin -->
 			</div>
 		</div>
 	</div>
