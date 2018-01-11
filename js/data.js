@@ -59,7 +59,7 @@ var main_data = {
 			"CSS Classes" : "css_classes.html"
 		},
 		Grids: {
-			"Introduction of Grids" : "grids.html#intro-grids",
+			"Intro to Grids" : "grids.html#intro-grids",
 			"Screen Sizes" : "grids.html#screen-sizes",
 			"Basic Example" : "grids.html#basic-grid-example",
 			"Overriding Grid Classes" : "grids.html#overriding-grid-classes",
@@ -67,9 +67,9 @@ var main_data = {
 			"Fill Space of Remaining Column": "grids.html#fill-column"
 		},
 		"CSS_Classes": {
-			General: 'css_classes.html#General',
-			Padding: 'css_classes.html#Padding',
-			Margin: 'css_classes.html#Margin',
+			"Intro to CSS Classes": "css_classes.html#intro-to-css",
+			"General": 'css_classes.html#general',
+			"Position": 'css_classes.html#position'
 		}
 	}
 }

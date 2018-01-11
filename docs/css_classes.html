@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title class="write_data">writeData("main_data['title']")</title>
+	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- eltaframe sources -->
+	<script type="text/javascript" src="../eltaframe/jquery.min.js"></script>
+	<script type="text/javascript" src="../eltaframe/main.js"></script>
+	<script type="text/javascript" src="../eltaframe/canvas-icons.js"></script>
+	<link rel="stylesheet" type="text/css" href="../eltaframe/main.css" />
+
+	<!-- more files -->
+	<script type="text/javascript" src="../js/data.js"></script>
+	<link rel="stylesheet" type="text/css" href="../files/site.css">
+</head>
+<body class="flat_theme">
+	<div class="navbar-drop_tb" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
+		<div class="navbar_title bg-main full-width hide-tb" data-responsive="height-nav-min_dt">
+			<img class="
+			item-center position-relative bg-main border_color-white animate
+			" src="../files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
+		</div>
+		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"4"}'></canvas>
+		</div>
+		<div class="navbar_menu">
+			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt" data-child="padding_horizontal-sm">
+				<li class="write_data">
+					<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
+						<span>
+							writeData("main_data['navbar_url']","key(x)")
+						</span>
+					</a>
+				</li>
+				<ul data-responsive="navbar-right-min_dt text_color-main_b-max_tb" class="text_color-white">
+					<li class="write_data">Initial Release of writeData("main_data['title']") writeData("main_data['version']")</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="leftbar_drawer auto-fix" data-responsive="hide-min_dt">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
+		</div>
+		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
+			<ul class="list_dots-none">
+				<li class="write_data">
+					<a class="padding-xs ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				</li>
+				
+				<div>
+					<div class="accordian">
+						<!-- grids container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl">Grids</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Grids']","value(x)")>writeData("main_data['documentation']['Grids']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- css classes container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle toggled write_data ifme-hideUrl">CSS Classes</a>
+						<div class="accordian_menu toggled">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+		<!-- body here -->
+		<div class="col-9-dt right padding-sm text_size-sm font_family-calibri" data-child="left width-full">
+			<div>
+				<div id="intro-to-css">
+					<h3>
+						Introduction to <span class="write_data">writeData("main_data['title']")</span> CSS Classes
+					</h3>
+					<hr/>
+					<p>
+						<span class="write_data">writeData("main_data['title']")</span> provide a huge CSS classes which can be use for designing including default padding, margin, flatuicolor, radius, positioning, font styling, shadows, border etc. These classes are very useful for designing website.
+						<br/>
+						These classes provided by <span class="write_data">writeData("main_data['title']")</span> are below.
+					</p>
+					<div>
+						<b><span class="text_color-red">Note</span>:</b> <span class="write_data">writeData("main_data['title']")</span> use "<b>-</b>" as a separtor between <b><i>type-value-Effect</i></b>. So no type or value of <span class="write_data">writeData("main_data['title']")</span> classes will be defined using "<b>-</b>" as a separator between definition, but <span class="write_data">writeData("main_data['title']")</span> type, value or effect will be defined using "<b>_</b>" as a separator for any single between type, value and effect. e.g. <b>my_type</b>-<b>my_value</b>-<b>my_effect</b>
+					</div>
+				</div> <!-- intro-to-css -->
+				<div id="general">
+					<h3>Some General Classes</h3>
+					<hr/>
+					There are some general purpose CSS Classes provided <span class="write_data">writeData("main_data['title']")</span>.
+					<table class="table table-stripped-lgrey" border="1">
+						<thead>
+							<th><span class="write_data">writeData("main_data['title']")</span> Class</th>
+							<th>Type</th>
+							<th>Value</th>
+							<th>Important/Not Important</th>
+							<th>Description</th>
+						</thead>
+						<tr>
+							<th>flat_theme</th>
+							<td>flat_theme</td>
+							<td><i class="text_color-red">Not Available</i></td>
+							<td>Not Important</td>
+							<td>It will remove padding and margin of Element itself and box-shadow and border of it's all child elements to make template flaty</td>
+						</tr>
+						<tr>
+							<th>list_dots-none</th>
+							<td>list_dots</td>
+							<td>none</td>
+							<td>Important</td>
+							<td>To remove list style of <b>ul</b> tag and it's child <b>li</b> tag/tags.</td>
+						</tr>
+						<tr>
+							<th>hide</th>
+							<td>hide</td>
+							<td><i class="text_color-red">Not Available</i></td>
+							<td>Not Important</td>
+							<td>It will hide element, i.e. display none.</td>
+						</tr>
+						<tr>
+							<th>block</th>
+							<td>block</td>
+							<td><i class="text_color-red">Not Available</i></td>
+							<td>Not Important</td>
+							<td>It will block element, i.e. display block.</td>
+						</tr>
+						<tr>
+							<th>img-responsive</th>
+							<td>img</td>
+							<td>responsive</td>
+							<td>Not Important</td>
+							<td>It will made <b>img</b> tag responsive i.e. <b>img</b> always remain in center having full width and auto height</td>
+						</tr>
+						<tr>
+							<th>item-center</th>
+							<td>item</td>
+							<td>center</td>
+							<td>Important</td>
+							<td>This class will align item in center of it's parent element. While it have float position of item none i.e. important css for <b>item-center</b> class</td>
+						</tr>
+						<tr>
+							<th>animate</th>
+							<td>animate</td>
+							<td><i class="text_color-red">Not Available</i></td>
+							<td>Not Important</td>
+							<td>This class add transition 500ms to element which will be used for hovering effect (useful for <b>hover</b> effect by <span class="write_data">writeData("main_data['title']")</span>) and make element like animation.</td>
+						</tr>
+					</table>
+				</div> <!-- general -->
+				<div id="position">
+					<h3><span class="write_data">writeData("main_data['title']")</span> CSS Position Classes</h3>
+					<hr/>
+					<span class="write_data">writeData("main_data['title']")</span> provide some usefull css design classes for element position. Following table will describe it
+					<table class="table table-stripped-lgrey" border="1">
+						<thead>
+							<th><span class="write_data">writeData("main_data['title']")</span> Class</th>
+							<th>Type</th>
+							<th>Value</th>
+							<th>Important/Not Important</th>
+							<th>Description</th>
+						</thead>
+						<tr>
+							<th>position-relative</th>
+							<td>position</td>
+							<td>relative</td>
+							<td>Not important</td>
+							<td>This class will add position to relative to element.</td>
+						</tr>
+						<tr>
+							<th>position-fixed</th>
+							<td>position</td>
+							<td>fixed</td>
+							<td>Not important</td>
+							<td>This class will add position to fixed to element.</td>
+						</tr>
+						<tr>
+							<th>position-absolute</th>
+							<td>position</td>
+							<td>absolute</td>
+							<td>Not important</td>
+							<td>This class will add position to absolute to element.</td>
+						</tr>
+						<tr>
+							<th>position-static</th>
+							<td>position</td>
+							<td>static</td>
+							<td>Not important</td>
+							<td>This class will add position to static to element.</td>
+						</tr>
+						<tr>
+							<th>position-initial</th>
+							<td>position</td>
+							<td>initial</td>
+							<td>Not important</td>
+							<td>This class will add position to initial to element.</td>
+						</tr>
+						<tr>
+							<th>position-inherit</th>
+							<td>position</td>
+							<td>inherit</td>
+							<td>Not important</td>
+							<td>This class will add position to inherit to element.</td>
+						</tr>
+					</table>
+				</div> <!-- position -->
+			</div>
+		</div>
+	</div>
+	<footer class="row bg-main_b">
+		<div class="text_align-center write_data padding_horizontal-sm padding_vertical-lg text_color-white">
+			writeData("main_data['title']") Responsive Front-end Framework with a lot other features
+			<br/>
+			<span>Do Less Get More</span>
+		</div>
+	</footer>
+</body>
+</html>

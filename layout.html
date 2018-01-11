@@ -44,30 +44,25 @@
 		<div class="leftbar_drawer" data-responsive="hide-min_dt">
 			<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
 		</div>
-		<div class="col-3-dt shadow-sm leftbar bg-white" data-responsive="margin_vertical-xs-min_dt">
+		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
 			<ul class="list_dots-none">
 				<li class="write_data">
-					<a href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+					<a class="padding-xs ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
 				</li>
+				
 				<div>
 					<div class="accordian">
-						<a href="#" class="accordian_toggle toggled">Grids</a>
-						<div class="accordian_menu toggled">
+						<!-- grids container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl">Grids</a>
+						<div class="accordian_menu">
 							<ul>
 								<li class="write_data">
 									<a href=writeData("main_data['documentation']['Grids']","value(x)")>writeData("main_data['documentation']['Grids']","key(x)")</a>
 								</li>
 							</ul>
 						</div>
-						<a href="#" class="accordian_toggle">CSS Classes</a>
-						<div class="accordian_menu">
-							<ul>
-								<li class="write_data">
-									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
-								</li>
-							</ul>
-						</div>
-						<a href="#" class="accordian_toggle">Dynamic Classes</a>
+						<!-- css classes container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle write_data ifme-hideUrl">CSS Classes</a>
 						<div class="accordian_menu">
 							<ul>
 								<li class="write_data">
@@ -80,6 +75,9 @@
 			</ul>
 		</div>
 		<!-- body here -->
+		<div class="col-9-dt">
+			
+		</div>
 	</div>
 	<footer class="row bg-main_b">
 		<div class="text_align-center write_data padding_horizontal-sm padding_vertical-lg text_color-white">

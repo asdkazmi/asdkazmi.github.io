@@ -162,7 +162,6 @@ $(document).ready(function () {
 		for (var j = 0; j < maxClone; j++) {
 			var elemCloneB = $(elA).prop('outerHTML').replace(/&quot;/g,'"');
 			for (x in allFunc) {
-				// var resultValue = new RegExp(allFunc[x][0] , 'g') // ISSUE: can't use this regex in below line
 				var resultElem = elemCloneB.replace(allFunc[x][0], allFunc[x][1][j]);
 				elemCloneB = resultElem;
 			}
