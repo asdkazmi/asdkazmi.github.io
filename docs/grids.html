@@ -76,67 +76,68 @@
 			</ul>
 		</div>
 		<div class="col-9-dt right padding-sm text_size-sm font_family-calibri" data-child="left width-full">
-			<div id="intro-grids">
-				<h3>Introduction to Grids</h3>
-				<hr/>
-				<p><span class="write_data">writeData("main_data['title']")</span> is a responsive framework for web and provide strong responsive grids system which are used for making website responsive which can be use and access on every screen size easily by user. <span class="write_data">writeData("main_data['title']")</span> grid system works using CSS media quiries.
-				</p>
-				<span class="write_data">writeData("main_data['title']")</span> works as a table row and column and provide 12 column grid system for four different types of screen sizes. Column which will be greater than 12 goes into new row. To initiate <span class="write_data">writeData("main_data['title']")</span> grid, first we will initiate an HTML element with class <b>row</b> and then column will be it's child elements.
-				<p>
-				As <span class="write_data">writeData("main_data['title']")</span> classes are defined as using <b><i>Type</i>-<i>Value</i><i>-Effect (optional)</i></b> form. So every of it's grids class will also be defined using above form e.g. (col-3-tb).
-				</p>
-				<p>
-				Grids classes form will be defined as <b>col-<i>(Number of Columns to be span, Max 12)</i>-<i>(MIn screen size when grid class taken, optional)</i></b>
-				</p>
-			</div> <!-- intro-grids -->
-			<div id="screen-sizes">
-				<h3>Table of <span class="write_data">writeData("main_data['title']")</span> Screen Sizes</h3>
-				<hr/>
-				<p>
-				There are four different screen sizes for <span class="write_data">writeData("main_data['title']")</span> grid system which are defined below
-				</p>
-				<table class="table table-stripped-lgrey" border="1">
-					<thead>
-						<th>Screen Size name defined by <span class="write_data">writeData("main_data['title']")</span> for grid system</th>
-						<th>Screen Size (px)<br>from-to</th>
-						<th>Description</th>
-					</thead>
-					<tr>
-						<th>default (no need to write any Screen Size)</th>
-						<td>Taken on every screen size</td>
-						<td>col-3 (on every screen size it will span 3 column total of 12 of row element)</td>
-					</tr>
-					<tr>
-						<th>mbl</th>
-						<td>0-767</td>
-						<td>For grids, <span class="write_data">writeData("main_data['title']")</span> not define <b>mbl</b> screen size grid, because grids will be taken when minimum screen size is 0px which is default. So, instead of use col-3-mbl, we will simply use col-3</td>
-					</tr>
-					<tr>
-						<th>tb</th>
-						<td>768-991</td>
-						<td>col-4-tb (which will span 4 columns total of 12 when minimum screen size will be 768px)</td>
-					</tr>
-					<tr>
-						<th>dt</th>
-						<td>992-1239</td>
-						<td>col-6-dt (which will span 6 columns total of 12 when minimum screen size will be 992px)</td>
-					</tr>
-					<tr>
-						<th>ldt</th>
-						<td>1240-Infinity</td>
-						<td>col-8-ldt (which will span 8 columns total of 12 when minimum screen size will be 1240px)</td>
-					</tr>
-				</table>
-			</div> <!-- screen size -->
-			<div id="basic-grid-example">
-				<h3>Basic Grid Example</h3>
-				<hr/>
-				<p>
-				Let us take a look at here, an example of <span class="write_data">writeData("main_data['title']")</span> grids is below
-				</p>
-				<div>
-					<h4 class="code_h">Code-1</h4>
-					<pre class="code code-html">
+			<div class="write_data">
+				<div id="intro-grids">
+					<h3>Introduction to Grids</h3>
+					<hr/>
+					<p>writeData("main_data['title']") is a responsive framework for web and provide strong responsive grids system which are used for making website responsive which can be use and access on every screen size easily by user. writeData("main_data['title']") grid system works using CSS media quiries.
+					</p>
+					writeData("main_data['title']") works as a table row and column and provide 12 column grid system for four different types of screen sizes. Column which will be greater than 12 goes into new row. To initiate writeData("main_data['title']") grid, first we will initiate an HTML element with class <b>row</b> and then column will be it's child elements.
+					<p>
+					As writeData("main_data['title']") classes are defined as using <b><i>Type</i>-<i>Value</i><i>-Effect (optional)</i></b> form. So every of it's grids class will also be defined using above form e.g. (col-3-tb).
+					</p>
+					<p>
+					Grids classes form will be defined as <b>col-<i>(Number of Columns to be span, Max 12)</i>-<i>(MIn screen size when grid class taken, optional)</i></b>
+					</p>
+				</div> <!-- intro-grids -->
+				<div id="screen-sizes">
+					<h3>Table of writeData("main_data['title']") Screen Sizes</h3>
+					<hr/>
+					<p>
+					There are four different screen sizes for writeData("main_data['title']") grid system which are defined below
+					</p>
+					<table class="table table-stripped-lgrey" border="1">
+						<thead>
+							<th>Screen Size name defined by writeData("main_data['title']") for grid system</th>
+							<th>Screen Size (px)<br>from-to</th>
+							<th>Description</th>
+						</thead>
+						<tr>
+							<th>default (no need to write any Screen Size)</th>
+							<td>Taken on every screen size</td>
+							<td>col-3 (on every screen size it will span 3 column total of 12 of row element)</td>
+						</tr>
+						<tr>
+							<th>mbl</th>
+							<td>0-767</td>
+							<td>For grids, writeData("main_data['title']") not define <b>mbl</b> screen size grid, because grids will be taken when minimum screen size is 0px which is default. So, instead of use col-3-mbl, we will simply use col-3</td>
+						</tr>
+						<tr>
+							<th>tb</th>
+							<td>768-991</td>
+							<td>col-4-tb (which will span 4 columns total of 12 when minimum screen size will be 768px)</td>
+						</tr>
+						<tr>
+							<th>dt</th>
+							<td>992-1239</td>
+							<td>col-6-dt (which will span 6 columns total of 12 when minimum screen size will be 992px)</td>
+						</tr>
+						<tr>
+							<th>ldt</th>
+							<td>1240-Infinity</td>
+							<td>col-8-ldt (which will span 8 columns total of 12 when minimum screen size will be 1240px)</td>
+						</tr>
+					</table>
+				</div> <!-- screen size -->
+				<div id="basic-grid-example">
+					<h3>Basic Grid Example</h3>
+					<hr/>
+					<p>
+					Let us take a look at here, an example of writeData("main_data['title']") grids is below
+					</p>
+					<div>
+						<h4 class="code_h">Code-1</h4>
+						<pre class="code code-html">
 <!-- <div class="row text_align-center">
 	<div class="col-3 bg-lgrey padding-sm" style="height: 150px">
 		I span 3 columns on every screen size
@@ -153,42 +154,42 @@
 		Oh, I am out of above row.
 	</div>
 </div> -->
-					</pre>
-					<h4 class="code_result_h">Result-1</h4>
-					<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
-						<div class="col-1">Col 1</div>
-						<div class="col-1">Col 2</div>
-						<div class="col-1">Col 3</div>
-						<div class="col-1">Col 4</div>
-						<div class="col-1">Col 5</div>
-						<div class="col-1">Col 6</div>
-						<div class="col-1">Col 7</div>
-						<div class="col-1">Col 8</div>
-						<div class="col-1">Col 9</div>
-						<div class="col-1">Col 10</div>
-						<div class="col-1">Col 11</div>
-						<div class="col-1">Col 12</div>
+						</pre>
+						<h4 class="code_result_h">Result-1</h4>
+						<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
+							<div class="col-1">Col 1</div>
+							<div class="col-1">Col 2</div>
+							<div class="col-1">Col 3</div>
+							<div class="col-1">Col 4</div>
+							<div class="col-1">Col 5</div>
+							<div class="col-1">Col 6</div>
+							<div class="col-1">Col 7</div>
+							<div class="col-1">Col 8</div>
+							<div class="col-1">Col 9</div>
+							<div class="col-1">Col 10</div>
+							<div class="col-1">Col 11</div>
+							<div class="col-1">Col 12</div>
+						</div>
+						<div class="row text_align-center">
+							<div class="col-3 bg-lgrey padding-sm" style="height: 150px">
+								I span 3 columns on every screen size
+							</div>
+							<div class="col-4 bg-lblack text_color-white padding-sm" style="height: 150px">
+								I span 4 columns on every screen size
+							</div>
+							<div class="col-5 bg-peterriver padding-sm" style="height: 150px">
+								I span 5 columns on every screen size
+							</div>
+							<div class="col-5 bg-midnightblue text_color-white padding-sm" style="height: 150px">
+								I span 5 column on every screen size
+								<br/>
+								Oh, I am out of above row.
+							</div>
+						</div>
 					</div>
-					<div class="row text_align-center">
-						<div class="col-3 bg-lgrey padding-sm" style="height: 150px">
-							I span 3 columns on every screen size
-						</div>
-						<div class="col-4 bg-lblack text_color-white padding-sm" style="height: 150px">
-							I span 4 columns on every screen size
-						</div>
-						<div class="col-5 bg-peterriver padding-sm" style="height: 150px">
-							I span 5 columns on every screen size
-						</div>
-						<div class="col-5 bg-midnightblue text_color-white padding-sm" style="height: 150px">
-							I span 5 column on every screen size
-							<br/>
-							Oh, I am out of above row.
-						</div>
-					</div>
-				</div>
-				<div>
-					<h4 class="code_h">Code-2</h4>
-					<pre class="code code-html">
+					<div>
+						<h4 class="code_h">Code-2</h4>
+						<pre class="code code-html">
 <!-- <div class="row text_align-center">
 	<div class="col-3-tb bg-lgrey padding-md" style="height: 150px">
 		I span 3 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
@@ -200,37 +201,37 @@
 		I span 5 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
 	</div>
 </div> -->
-					</pre>
-					<h4 class="code_result_h">Result-2</h4>
-					<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
-						<div class="col-1">Col 1</div>
-						<div class="col-1">Col 2</div>
-						<div class="col-1">Col 3</div>
-						<div class="col-1">Col 4</div>
-						<div class="col-1">Col 5</div>
-						<div class="col-1">Col 6</div>
-						<div class="col-1">Col 7</div>
-						<div class="col-1">Col 8</div>
-						<div class="col-1">Col 9</div>
-						<div class="col-1">Col 10</div>
-						<div class="col-1">Col 11</div>
-						<div class="col-1">Col 12</div>
+						</pre>
+						<h4 class="code_result_h">Result-2</h4>
+						<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
+							<div class="col-1">Col 1</div>
+							<div class="col-1">Col 2</div>
+							<div class="col-1">Col 3</div>
+							<div class="col-1">Col 4</div>
+							<div class="col-1">Col 5</div>
+							<div class="col-1">Col 6</div>
+							<div class="col-1">Col 7</div>
+							<div class="col-1">Col 8</div>
+							<div class="col-1">Col 9</div>
+							<div class="col-1">Col 10</div>
+							<div class="col-1">Col 11</div>
+							<div class="col-1">Col 12</div>
+						</div>
+						<div class="row text_align-center">
+							<div class="col-3-tb bg-lgrey padding-md" style="height: 150px">
+								I span 3 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+							</div>
+							<div class="col-4-tb bg-lblack text_color-white padding-md" style="height: 150px">
+								I span 4 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+							</div>
+							<div class="col-5-tb bg-peterriver padding-md" style="height: 150px">
+								I span 5 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
+							</div>
+						</div>
 					</div>
-					<div class="row text_align-center">
-						<div class="col-3-tb bg-lgrey padding-md" style="height: 150px">
-							I span 3 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
-						</div>
-						<div class="col-4-tb bg-lblack text_color-white padding-md" style="height: 150px">
-							I span 4 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
-						</div>
-						<div class="col-5-tb bg-peterriver padding-md" style="height: 150px">
-							I span 5 columns on tb screen size i.e. min screen size 768, otherwise I will span 12 columns
-						</div>
-					</div>
-				</div>
-				<div>
-					<h4 class="code_h">Code-3</h4>
-					<pre class="code code-html">
+					<div>
+						<h4 class="code_h">Code-3</h4>
+						<pre class="code code-html">
 <!-- <div class="row text_align-center">
 	<div class="col-3-dt bg-lgrey padding-md" style="height: 150px">
 		I span 3 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
@@ -242,84 +243,84 @@
 		I span 5 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
 	</div>
 </div> -->
-					</pre>
-					<h4 class="code_result_h">Result-3</h4>
-					<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
-						<div class="col-1">Col 1</div>
-						<div class="col-1">Col 2</div>
-						<div class="col-1">Col 3</div>
-						<div class="col-1">Col 4</div>
-						<div class="col-1">Col 5</div>
-						<div class="col-1">Col 6</div>
-						<div class="col-1">Col 7</div>
-						<div class="col-1">Col 8</div>
-						<div class="col-1">Col 9</div>
-						<div class="col-1">Col 10</div>
-						<div class="col-1">Col 11</div>
-						<div class="col-1">Col 12</div>
+						</pre>
+						<h4 class="code_result_h">Result-3</h4>
+						<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
+							<div class="col-1">Col 1</div>
+							<div class="col-1">Col 2</div>
+							<div class="col-1">Col 3</div>
+							<div class="col-1">Col 4</div>
+							<div class="col-1">Col 5</div>
+							<div class="col-1">Col 6</div>
+							<div class="col-1">Col 7</div>
+							<div class="col-1">Col 8</div>
+							<div class="col-1">Col 9</div>
+							<div class="col-1">Col 10</div>
+							<div class="col-1">Col 11</div>
+							<div class="col-1">Col 12</div>
+						</div>
+						<div class="row text_align-center">
+							<div class="col-3-dt bg-lgrey padding-md" style="height: 150px">
+								I span 3 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
+							</div>
+							<div class="col-4-dt bg-lblack text_color-white padding-md" style="height: 150px">
+								I span 4 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
+							</div>
+							<div class="col-5-dt bg-peterriver padding-md" style="height: 150px">
+								I span 5 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
+							</div>
+						</div>
 					</div>
-					<div class="row text_align-center">
-						<div class="col-3-dt bg-lgrey padding-md" style="height: 150px">
-							I span 3 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
-						</div>
-						<div class="col-4-dt bg-lblack text_color-white padding-md" style="height: 150px">
-							I span 4 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
-						</div>
-						<div class="col-5-dt bg-peterriver padding-md" style="height: 150px">
-							I span 5 columns on dt screen size i.e. min screen size 992, otherwise I will span 12 columns
-						</div>
-					</div>
-				</div>
-			</div> <!-- basic-grid-example -->
-			<div id="overriding-grid-classes">
-				<h3>Overriding Grid Classes</h3>
-				<hr/>
-				<p>
-				Overriding of grid classes provide option to manage grid system for different screen sizes i.e. to span different columns for different screen sizes e.g. we can span 3 column of an element for dt screen and 6 column of same element on tb screen size, when screen size is less than dt and greater than mbl.
-				</p>
-				<h4>Priority of Overriding Grid Classes</h4>
-				<hr/>
-				<ul>
-					<p>Classes will override descendant classes by following priority. </p>
-					<li>ldt</li>
-					<li>dt</li>
-					<li>tb</li>
-					<li><i>default</i> without using any screen size</li>
-				</ul>
-				<h4>Table to Understand Overriding Grid Classes</h4>
-				<table class="table table-stripped-lgrey" border="1">
-					<thead>
-						<th>ELTA Screen Size</th>
-						<th>Minmum Screen Size (px)<br/>When Override Descendant Classes</th>
-						<th>Description</th>
-					</thead>
-					<tr>
-						<th>ldt</th>
-						<td>1240</td>
-						<td>ldt override descendant classes (dt,tb, mbl or <i>default</i>) when device screen size will be greater than or equal to 1240px</td>
-					</tr>
-					<tr>
-						<th>dt</th>
-						<td>992</td>
-						<td>dt override descendant classes (tb, mbl or <i>default</i>) when device screen size will be greater than or equal to 992px</td>
-					</tr>
-					<tr>
-						<th>tb</th>
-						<td>768</td>
-						<td>tb override descendant classes (mbl or <i>default</i>) when device screen size will be greater than or equal to 768px</td>
-					</tr>
-					<tr>
-						<th><i>default</i> without using any class</th>
-						<td>768</td>
-						<td>It can't override any class</td>
-					</tr>
-				</table>
-				<h4>Example of Overriding Grid Classes</h4>
-				<hr/>
-				<p>Here is an example of overriding grid classes</p>
-				<div>
-					<h4 class="code_h">Code-4</h4>
-					<pre class="code code-html">
+				</div> <!-- basic-grid-example -->
+				<div id="overriding-grid-classes">
+					<h3>Overriding Grid Classes</h3>
+					<hr/>
+					<p>
+					Overriding of grid classes provide option to manage grid system for different screen sizes i.e. to span different columns for different screen sizes e.g. we can span 3 column of an element for dt screen and 6 column of same element on tb screen size, when screen size is less than dt and greater than mbl.
+					</p>
+					<h4>Priority of Overriding Grid Classes</h4>
+					<hr/>
+					<ul>
+						<p>Classes will override descendant classes by following priority. </p>
+						<li>ldt</li>
+						<li>dt</li>
+						<li>tb</li>
+						<li><i>default</i> without using any screen size</li>
+					</ul>
+					<h4>Table to Understand Overriding Grid Classes</h4>
+					<table class="table table-stripped-lgrey" border="1">
+						<thead>
+							<th>ELTA Screen Size</th>
+							<th>Minmum Screen Size (px)<br/>When Override Descendant Classes</th>
+							<th>Description</th>
+						</thead>
+						<tr>
+							<th>ldt</th>
+							<td>1240</td>
+							<td>ldt override descendant classes (dt,tb, mbl or <i>default</i>) when device screen size will be greater than or equal to 1240px</td>
+						</tr>
+						<tr>
+							<th>dt</th>
+							<td>992</td>
+							<td>dt override descendant classes (tb, mbl or <i>default</i>) when device screen size will be greater than or equal to 992px</td>
+						</tr>
+						<tr>
+							<th>tb</th>
+							<td>768</td>
+							<td>tb override descendant classes (mbl or <i>default</i>) when device screen size will be greater than or equal to 768px</td>
+						</tr>
+						<tr>
+							<th><i>default</i> without using any class</th>
+							<td>768</td>
+							<td>It can't override any class</td>
+						</tr>
+					</table>
+					<h4>Example of Overriding Grid Classes</h4>
+					<hr/>
+					<p>Here is an example of overriding grid classes</p>
+					<div>
+						<h4 class="code_h">Code-4</h4>
+						<pre class="code code-html">
 <!-- <div class="row text_align-center">
 	<div class="col-2-ldt col-3-dt col-4-tb col-6 bg-lgrey padding-md">
 		I span 2 columns on ldt (min 1240px), 3 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
@@ -331,44 +332,44 @@
 		I span 2 columns on ldt (min 1240px), 6 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
 	</div>
 </div> -->
-					</pre>
-					<h4 class="code_result_h">Result-4</h4>
-					<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
-						<div class="col-1">Col 1</div>
-						<div class="col-1">Col 2</div>
-						<div class="col-1">Col 3</div>
-						<div class="col-1">Col 4</div>
-						<div class="col-1">Col 5</div>
-						<div class="col-1">Col 6</div>
-						<div class="col-1">Col 7</div>
-						<div class="col-1">Col 8</div>
-						<div class="col-1">Col 9</div>
-						<div class="col-1">Col 10</div>
-						<div class="col-1">Col 11</div>
-						<div class="col-1">Col 12</div>
+						</pre>
+						<h4 class="code_result_h">Result-4</h4>
+						<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
+							<div class="col-1">Col 1</div>
+							<div class="col-1">Col 2</div>
+							<div class="col-1">Col 3</div>
+							<div class="col-1">Col 4</div>
+							<div class="col-1">Col 5</div>
+							<div class="col-1">Col 6</div>
+							<div class="col-1">Col 7</div>
+							<div class="col-1">Col 8</div>
+							<div class="col-1">Col 9</div>
+							<div class="col-1">Col 10</div>
+							<div class="col-1">Col 11</div>
+							<div class="col-1">Col 12</div>
+						</div>
+						<div class="row text_align-center">
+							<div class="col-2-ldt col-3-dt col-4-tb col-6 bg-lgrey padding-md">
+								I span 2 columns on ldt (min 1240px), 3 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
+							</div>
+							<div class="col-8-ldt col-3-dt col-4-tb col-6 bg-lblack text_color-white padding-md">
+								I span 8 columns on ldt (min 1240px), 3 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
+							</div>
+							<div class="col-2-ldt col-6-dt col-4-tb col-6 bg-peterriver padding-md">
+								I span 2 columns on ldt (min 1240px), 6 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
+							</div>
+						</div>
 					</div>
-					<div class="row text_align-center">
-						<div class="col-2-ldt col-3-dt col-4-tb col-6 bg-lgrey padding-md">
-							I span 2 columns on ldt (min 1240px), 3 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
-						</div>
-						<div class="col-8-ldt col-3-dt col-4-tb col-6 bg-lblack text_color-white padding-md">
-							I span 8 columns on ldt (min 1240px), 3 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
-						</div>
-						<div class="col-2-ldt col-6-dt col-4-tb col-6 bg-peterriver padding-md">
-							I span 2 columns on ldt (min 1240px), 6 column on dt (min 992px), 4 column on tb (min 768) and 6 column on mobile (when there is no remaining class for this screen size i.e. less than or equal to 767px) screen size.
-						</div>
-					</div>
-				</div>
-			</div> <!-- overriding-grid-classes -->
-			<div id="equate-height">
-				<h3>Equate Height of Columns</h3>
-				<hr/>
-				<p><span class="write_data">writeData("main_data['title']")</span> also provide an option to equate heights of all columns. To equate heights of all columns of a row we need to add class <b>equate-height</b> to parent element i.e. element having <b>row</b> class.</p>
-				<p><b>NOTE:</b> <b>equate-height</b> class convert row element into <i>flex-box</i>, and in flex box, column more than 12 will not goes into new row but remain in parent row and number of columns will not be exactly 12. </p>
-				<p>Here is an example</p>
-				<div>
-					<h4 class="code_h">Code-5</h4>
-					<pre class="code code-html">
+				</div> <!-- overriding-grid-classes -->
+				<div id="equate-height">
+					<h3>Equate Height of Columns</h3>
+					<hr/>
+					<p>writeData("main_data['title']") also provide an option to equate heights of all columns. To equate heights of all columns of a row we need to add class <b>equate-height</b> to parent element i.e. element having <b>row</b> class.</p>
+					<p><b>NOTE:</b> <b>equate-height</b> class convert row element into <i>flex-box</i>, and in flex box, column more than 12 will not goes into new row but remain in parent row and number of columns will not be exactly 12. </p>
+					<p>Here is an example</p>
+					<div>
+						<h4 class="code_h">Code-5</h4>
+						<pre class="code code-html">
 <!-- <h4 class="text_align-center">Without <b>equate-height</b></h4>
 <div class="row text_align-center">
 	<div class="col-2 bg-lgrey">
@@ -389,99 +390,99 @@
 		Hi, I should have less height.
 	</div>
 </div> -->
-					</pre>
-					<h4 class="code_result_h">Result-5</h4>
-					<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
-						<div class="col-1">Col 1</div>
-						<div class="col-1">Col 2</div>
-						<div class="col-1">Col 3</div>
-						<div class="col-1">Col 4</div>
-						<div class="col-1">Col 5</div>
-						<div class="col-1">Col 6</div>
-						<div class="col-1">Col 7</div>
-						<div class="col-1">Col 8</div>
-						<div class="col-1">Col 9</div>
-						<div class="col-1">Col 10</div>
-						<div class="col-1">Col 11</div>
-						<div class="col-1">Col 12</div>
-					</div>
-					<h4 class="text_align-center">Without <b>equate-height</b></h4>
-					<div class="row text_align-center">
-						<div class="col-2 bg-lgrey">
-							I have more text and less width then other column, so my height should be more than remaining columns.
+						</pre>
+						<h4 class="code_result_h">Result-5</h4>
+						<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
+							<div class="col-1">Col 1</div>
+							<div class="col-1">Col 2</div>
+							<div class="col-1">Col 3</div>
+							<div class="col-1">Col 4</div>
+							<div class="col-1">Col 5</div>
+							<div class="col-1">Col 6</div>
+							<div class="col-1">Col 7</div>
+							<div class="col-1">Col 8</div>
+							<div class="col-1">Col 9</div>
+							<div class="col-1">Col 10</div>
+							<div class="col-1">Col 11</div>
+							<div class="col-1">Col 12</div>
 						</div>
-						<div class="col-10 bg-peterriver">
-							Hi, I should have less height.
+						<h4 class="text_align-center">Without <b>equate-height</b></h4>
+						<div class="row text_align-center">
+							<div class="col-2 bg-lgrey">
+								I have more text and less width then other column, so my height should be more than remaining columns.
+							</div>
+							<div class="col-10 bg-peterriver">
+								Hi, I should have less height.
+							</div>
 						</div>
-					</div>
 
 
-					<h4 class="text_align-center">With <b>equate-height</b></h4>
-					<div class="row equate-height text_align-center">
-						<div class="col-2 bg-lgrey">
-							I have more text and less width then other column, so my height should be more than remaining columns.
-						</div>
-						<div class="col-10 bg-peterriver">
-							Hi, I should have less height.
+						<h4 class="text_align-center">With <b>equate-height</b></h4>
+						<div class="row equate-height text_align-center">
+							<div class="col-2 bg-lgrey">
+								I have more text and less width then other column, so my height should be more than remaining columns.
+							</div>
+							<div class="col-10 bg-peterriver">
+								Hi, I should have less height.
+							</div>
 						</div>
 					</div>
-				</div>
-			</div> <!-- equate-height -->
-			<div id="fill-column">
-				<h3>Fill Space of Remaining Column</h3>
-				<hr/>
-				<p><span class="write_data">writeData("main_data['title']")</span> provide an option to fill the space of remaining column and align the column in center. It will only be used if there is only one column in a row. It will used for every screen size.</p>
-				<p>There are 6 types of classes for aligning column in center and filling remaining sapce outside of column. Following table explain these classes</p>
-				<table class="table table-stripped-lgrey" border="1">
-					<thead>
-						<th><span class="write_data">writeData("main_data['title']")</span> Classes</th>
-						<th>Number column to span</th>
-						<th>Number of remaining column to fill</th>
-						<th>Description</th>
-					</thead>
-					<tr>
-						<th>col-12-fill</th>
-						<td>12</td>
-						<td>No remaining column</td>
-						<td>This class span 12 column of a row while remain margin on both sides of itself to show that the column is in center.</td>
-					</tr>
-					<tr>
-						<th>col-10-fill</th>
-						<td>10</td>
-						<td>1 column on each side</td>
-						<td>This class span 10 column of a row and remain 1 column on each side to be empty and align the column in the center.</td>
-					</tr>
-					<tr>
-						<th>col-8-fill</th>
-						<td>8</td>
-						<td>2 column on each side</td>
-						<td>This class span 8 column of a row and remain 2 column on each side to be empty and align the column in the center.</td>
-					</tr>
-					<tr>
-						<th>col-6-fill</th>
-						<td>6</td>
-						<td>3 column on each side</td>
-						<td>This class span 6 column of a row and remain 3 column on each side to be empty and align the column in the center.</td>
-					</tr>
-					<tr>
-						<th>col-4-fill</th>
-						<td>4</td>
-						<td>4 column on each side</td>
-						<td>This class span 4 column of a row and remain 4 column on each side to be empty and align the column in the center.</td>
-					</tr>
-					<tr>
-						<th>col-2-fill</th>
-						<td>2</td>
-						<td>5 column on each side</td>
-						<td>This class span 2 column of a row and remain 5 column on each side to be empty and align the column in the center.</td>
-					</tr>
-				</table>
-				<h4>Example</h4>
-				<hr/>
-				<p>Here is an example of filling space of remaining column on each side of a column.</p>
-				<div>
-					<h4 class="code_h">Code-6</h4>
-					<pre class="code code-html">
+				</div> <!-- equate-height -->
+				<div id="fill-column">
+					<h3>Fill Space of Remaining Column</h3>
+					<hr/>
+					<p>writeData("main_data['title']") provide an option to fill the space of remaining column and align the column in center. It will only be used if there is only one column in a row. It will used for every screen size.</p>
+					<p>There are 6 types of classes for aligning column in center and filling remaining sapce outside of column. Following table explain these classes</p>
+					<table class="table table-stripped-lgrey" border="1">
+						<thead>
+							<th>writeData("main_data['title']") Classes</th>
+							<th>Number column to span</th>
+							<th>Number of remaining column to fill</th>
+							<th>Description</th>
+						</thead>
+						<tr>
+							<th>col-12-fill</th>
+							<td>12</td>
+							<td>No remaining column</td>
+							<td>This class span 12 column of a row while remain margin on both sides of itself to show that the column is in center.</td>
+						</tr>
+						<tr>
+							<th>col-10-fill</th>
+							<td>10</td>
+							<td>1 column on each side</td>
+							<td>This class span 10 column of a row and remain 1 column on each side to be empty and align the column in the center.</td>
+						</tr>
+						<tr>
+							<th>col-8-fill</th>
+							<td>8</td>
+							<td>2 column on each side</td>
+							<td>This class span 8 column of a row and remain 2 column on each side to be empty and align the column in the center.</td>
+						</tr>
+						<tr>
+							<th>col-6-fill</th>
+							<td>6</td>
+							<td>3 column on each side</td>
+							<td>This class span 6 column of a row and remain 3 column on each side to be empty and align the column in the center.</td>
+						</tr>
+						<tr>
+							<th>col-4-fill</th>
+							<td>4</td>
+							<td>4 column on each side</td>
+							<td>This class span 4 column of a row and remain 4 column on each side to be empty and align the column in the center.</td>
+						</tr>
+						<tr>
+							<th>col-2-fill</th>
+							<td>2</td>
+							<td>5 column on each side</td>
+							<td>This class span 2 column of a row and remain 5 column on each side to be empty and align the column in the center.</td>
+						</tr>
+					</table>
+					<h4>Example</h4>
+					<hr/>
+					<p>Here is an example of filling space of remaining column on each side of a column.</p>
+					<div>
+						<h4 class="code_h">Code-6</h4>
+						<pre class="code code-html">
 <!-- <div class="row">
 	<div class="col-6-fill bg-lgrey">
 		<p>I am col-6-fill column which spanned 6 column of a row and remain 3 column on each side to be empty and align myself in center.</p>
@@ -490,32 +491,33 @@
 		I am col-2
 	</div>
 </div> -->
-					</pre>
-					<h4 class="code_result_h">Result-6</h4>
-					<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
-						<div class="col-1">Col 1</div>
-						<div class="col-1">Col 2</div>
-						<div class="col-1">Col 3</div>
-						<div class="col-1">Col 4</div>
-						<div class="col-1">Col 5</div>
-						<div class="col-1">Col 6</div>
-						<div class="col-1">Col 7</div>
-						<div class="col-1">Col 8</div>
-						<div class="col-1">Col 9</div>
-						<div class="col-1">Col 10</div>
-						<div class="col-1">Col 11</div>
-						<div class="col-1">Col 12</div>
-					</div>
-					<div class="row">
-						<div class="col-6-fill bg-lgrey">
-							<p>I am col-6-fill column which spanned 6 column of a row and remain 3 column on each side to be empty and align myself in center.</p>
+						</pre>
+						<h4 class="code_result_h">Result-6</h4>
+						<div class="text_align-center" data-child="border-xs border_right-no-not_chd(12)">
+							<div class="col-1">Col 1</div>
+							<div class="col-1">Col 2</div>
+							<div class="col-1">Col 3</div>
+							<div class="col-1">Col 4</div>
+							<div class="col-1">Col 5</div>
+							<div class="col-1">Col 6</div>
+							<div class="col-1">Col 7</div>
+							<div class="col-1">Col 8</div>
+							<div class="col-1">Col 9</div>
+							<div class="col-1">Col 10</div>
+							<div class="col-1">Col 11</div>
+							<div class="col-1">Col 12</div>
 						</div>
-						<div class="col-2 bg-peterriver">
-							I am col-2
+						<div class="row">
+							<div class="col-6-fill bg-lgrey">
+								<p>I am col-6-fill column which spanned 6 column of a row and remain 3 column on each side to be empty and align myself in center.</p>
+							</div>
+							<div class="col-2 bg-peterriver">
+								I am col-2
+							</div>
 						</div>
 					</div>
-				</div>
-			</div> <!-- fill-column -->
+				</div> <!-- fill-column -->
+			</div>
 		</div>
 		<!-- body here -->
 	</div>

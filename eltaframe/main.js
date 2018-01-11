@@ -133,7 +133,8 @@ $(document).ready(function () {
 			allFunc.push($(elA).html().trim());
 		}
 		var elemClone = $(elA).prop('outerHTML').replace(/&quot;/g,'"');
-		var ptrnForFunc = /(writeData\(['"].+['"][,]*['"]*.*['"]*\))/g;
+		// var ptrnForFunc = /(writeData\(['"].+['"][,]*['"]*.*['"]*\))/g;
+		var ptrnForFunc = /(writeData\(['"][^()]+['"][,]*['"]*((key|value|pair)\([x0-9]\))*['"]*[^()]*\))/g;
 		var match = '';
 		while ((match = ptrnForFunc.exec(elemClone)) != null) {
 			if (/\"\)(.*)writeData*/.exec(match[0]) != null) {
