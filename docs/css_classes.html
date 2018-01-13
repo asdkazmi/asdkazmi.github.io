@@ -176,6 +176,13 @@
 							<td>It will block element, i.e. display block.</td>
 						</tr>
 						<tr>
+							<th>width-full</th>
+							<td>width</td>
+							<td>full</td>
+							<td>Not Important</td>
+							<td>This class will add 100% width to element</td>
+						</tr>
+						<tr>
 							<th>img-responsive</th>
 							<td>img</td>
 							<td>responsive</td>
@@ -272,130 +279,134 @@
 					</table>
 				</div> <!-- position -->
 				<div id="padding-margin">
-					<h3><span class="write_data">writeData("main_data['title']") where</span> CSS Padding and Margin Classes</h3>
+					<h3>writeData("main_data['title']") CSS Padding and Margin Classes</h3>
 					<hr/>
-					writeData("main_data['title']") provide some usefull css classes for elements padding and margin. The value for padding and margin will be same. There are different types of padding and margin.
-					<h4>All sides Padding and Margins</h4>
+					writeData("main_data['title']") provide some usefull css classes for elements padding and margin. Every writeData("main_data['title']") padding and margin class will be defined as <b><i>Type</i>-<i>Value</i></b>. These types and values of writeData("main_data['title']") CSS Padding and Margin Classes defined below.
+					<br/>
+					<p>NOTE: Padding and margin classes are not important css.</p>
+					<h4>Types of Padding and Margin</h4>
 					<hr/>
-					<p>Following classes will add margin and padding to all sides of element by same ratio.</p>
 					<table class="table table-stripped-lgrey" border="1">
-						<thead>
-							<th>writeData("main_data['title']") Class</th>
+						<tr>
+							<th colspan="2">Padding</th>
+							<th colspan="2">Margin</th>
+						</tr>
+						<tr>
 							<th>Type</th>
-							<th>Value</th>
-							<th>Important/Not Important</th>
 							<th>Description</th>
-						</thead>
-						<tr>
-							<th colspan="5">Padding</th>
+							<th>Type</th>
+							<th>Description</th>
 						</tr>
 						<tr>
-							<th>padding-no</th>
-							<td>padding</td>
-							<td>no</td>
-							<td>Not Important</td>
-							<td>Remove all paddings.</td>
+							<th>padding</th>
+							<td>Add padding to all sides of element equally.</td>
+							<th>margin</th>
+							<td>Add margin to all sides of element equally.</td>
 						</tr>
 						<tr>
-							<th>padding-xs</th>
-							<td>padding</td>
-							<td>xs</td>
-							<td>Not Important</td>
-							<td>This class adds 5px padding to all sides of element</td>
+							<th>padding_top</th>
+							<td>Add padding to only top of element and not left, right and bottom of element.</td>
+							<th>margin_top</th>
+							<td>Add margin to only top of element and not left, right and bottom of element.</td>
 						</tr>
 						<tr>
-							<th>padding-sm</th>
-							<td>padding</td>
-							<td>sm</td>
-							<td>Not Important</td>
-							<td>This class adds 15px padding to all sides of element</td>
+							<th>padding_vertical</th>
+							<td>Add padding to top and bottom of element equally but not left and right of element.</td>
+							<th>margin_vertical</th>
+							<td>Add margin to top and bottom of element equally but not left and right of element.</td>
 						</tr>
 						<tr>
-							<th>padding-md</th>
-							<td>padding</td>
-							<td>md</td>
-							<td>Not Important</td>
-							<td>This class adds 35px padding to all sides of element</td>
+							<th>padding_horizontal</th>
+							<td>Add padding to left and right of element equally but not top and bottom of element.</td>
+							<th>margin_horizontal</th>
+							<td>Add margin to left and right of element equally but not top and bottom of element.</td>
+						</tr>
+					</table>
+					<h4>Value of Padding and Margin</h4>
+					<hr/>
+					<p>When we have to use these padding and margin classes, we must have to use the value for these types of padding and margin. Values of these padding and margin are defined in below table</p>
+					<table class="table table-stripped-lgrey" border="1">
+						<tr>
+							<th>Value</th>
+							<th>Size<br/>px</th>
+							<th>Description</th>
+							<th>Example<br/>As a <b><i>Type</i>-<i>Value</i></b> Pair</th>
 						</tr>
 						<tr>
-							<th>padding-lg</th>
-							<td>padding</td>
-							<td>lg</td>
-							<td>Not Important</td>
-							<td>This class adds 70px padding to all sides of element</td>
+							<th>auto<br/>only for <i>margin</i> type</th>
+							<td>0px auto</td>
+							<td>Add 0px margin to top and bottom of element while auto to left and right</td>
+							<td>margin-auto</td>
 						</tr>
 						<tr>
-							<th>padding-xlg</th>
-							<td>padding</td>
-							<td>xlg</td>
-							<td>Not Important</td>
-							<td>This class adds 130px padding to all sides of element</td>
+							<th>no</th>
+							<td>0px</td>
+							<td>Remove margin or padding of element.</td>
+							<td>
+								<b>margin-no</b>: Remove margin to all sides of element 
+								<br/>
+								<b>padding_vertical-no</b>: Remove top and bottom padding of element
+							</td>
 						</tr>
 						<tr>
-							<th>padding-xxlg</th>
-							<td>padding</td>
-							<td>xxlg</td>
-							<td>Not Important</td>
-							<td>This class adds 200px padding to all sides of element</td>
+							<th>xs</th>
+							<td>5px</td>
+							<td>Add 5px padding or margin.</td>
+							<td>
+								<b>margin-xs</b>: Add 5px margin to all sides of element 
+								<br/>
+								<b>padding_top-xs</b>: Add 5px padding to top of element
+							</td>
 						</tr>
 						<tr>
-							<th colspan="5">Margin</th>
+							<th>sm</th>
+							<td>15px</td>
+							<td>Add 15px padding or margin.</td>
+							<td>
+								<b>padding-sm</b>: Add 15px padding to all sides of element 
+								<br/>
+								<b>margin_top-sm</b>: Add 15px margin to top of element
+							</td>
 						</tr>
 						<tr>
-							<th>margin-auto</th>
-							<td>margin</td>
-							<td>auto</td>
-							<td>Not Important</td>
-							<td>This class adds top/bottom margin 0px while left/right margin to auto to align item in center.</td>
+							<th>md</th>
+							<td>35px</td>
+							<td>Add 35px padding or margin.</td>
+							<td>
+								<b>padding_horizontal-md</b>: Add 35px padding to left and right sides of element 
+								<br/>
+								<b>margin_vertical-md</b>: Add 35px margin to top and bottom of element
+							</td>
 						</tr>
 						<tr>
-							<th>margin-no</th>
-							<td>margin</td>
-							<td>no</td>
-							<td>Not Important</td>
-							<td>Remove all margins.</td>
+							<th>lg</th>
+							<td>70px</td>
+							<td>Add 70px padding or margin.</td>
+							<td>
+								<b>padding_horizontal-lg</b>: Add 70px padding to left and right sides of element 
+								<br/>
+								<b>margin_vertical-lg</b>: Add 70px margin to top and bottom of element
+							</td>
 						</tr>
 						<tr>
-							<th>margin-xs</th>
-							<td>margin</td>
-							<td>xs</td>
-							<td>Not Important</td>
-							<td>This class adds 5px margin to all sides of element</td>
+							<th>xlg</th>
+							<td>130px</td>
+							<td>Add 130px padding or margin.</td>
+							<td>
+								<b>padding-xlg</b>: Add 130px padding to all sides of element 
+								<br/>
+								<b>margin_top-xlg</b>: Add 130px margin to top of element
+							</td>
 						</tr>
 						<tr>
-							<th>margin-sm</th>
-							<td>margin</td>
-							<td>sm</td>
-							<td>Not Important</td>
-							<td>This class adds 15px margin to all sides of element</td>
-						</tr>
-						<tr>
-							<th>margin-md</th>
-							<td>margin</td>
-							<td>md</td>
-							<td>Not Important</td>
-							<td>This class adds 35px margin to all sides of element</td>
-						</tr>
-						<tr>
-							<th>margin-lg</th>
-							<td>margin</td>
-							<td>lg</td>
-							<td>Not Important</td>
-							<td>This class adds 70px margin to all sides of element</td>
-						</tr>
-						<tr>
-							<th>margin-xlg</th>
-							<td>margin</td>
-							<td>xlg</td>
-							<td>Not Important</td>
-							<td>This class adds 130px margin to all sides of element</td>
-						</tr>
-						<tr>
-							<th>margin-xxlg</th>
-							<td>margin</td>
-							<td>xxlg</td>
-							<td>Not Important</td>
-							<td>This class adds 200px margin to all sides of element</td>
+							<th>xxlg</th>
+							<td>200px</td>
+							<td>Add 200px padding or margin.</td>
+							<td>
+								<b>margin-xxlg</b>: Add 200px margin to all sides of element 
+								<br/>
+								<b>padding_top-xxlg</b>: Add 200px padding to top of element
+							</td>
 						</tr>
 					</table>
 				</div> <!-- padding and margin -->
