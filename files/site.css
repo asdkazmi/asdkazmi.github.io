@@ -1,11 +1,22 @@
 .dt-navdes {
     height: 190px;
     margin-top: 0px;
-    z-index: -1;
 }
 
 .dt-navdes a {
     color: white;
+}
+
+.navbar_title img {
+    z-index: 101;
+}
+
+.auto-fix-navbar.fixed {
+    background: #313131;
+    width: 100%;
+    left: 0px;
+    z-index: 999;
+    padding-left: 40px;
 }
 
 .resicotext {

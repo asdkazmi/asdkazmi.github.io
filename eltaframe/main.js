@@ -615,64 +615,81 @@ $(document).ready(function () {
 		});
 	});
 	// leftbar auto-fix
-	$('.auto-fix').each(function(i, elA) {
-		var mainElem = $(this);
-		var elemHgt = $(mainElem).outerHeight(true);
-		var elemInitPos = $(this).css("position");
-		var elemPos = '';
-		var elemTop = $(mainElem).offset().top;
-		var checkHgt = 0;
-		var myParent = $(this).parents('.container-auto-fix')[0];
-		$(window).resize(function(e) {
-			elemTop = mainElem.offset().top;
-		});
-		$(".leftbar_drawer").click(function(e) {
-			elemPos = mainElem.css('position')
-			if ($(window).width() >= 992) {
-				elemPos = elemInitPos;
-			} else {
-				elemPos = "absolute";
-			}
-		});
-		$(".navbar_drawer").click(function(e) {
-			elemTop = mainElem.offset().top;
-		});
-		$(window).on("scroll resize" ,function(e) {
-			elemHgt = $(mainElem).outerHeight(true);
-			// if ($(window).scrollTop() >= parseInt($(myParent).outerHeight(true) + $(myParent).offset().top - $(window).height() +elemHgt)) {
-			// 	console.log(elemHgt)
-			// }
-			if (elemHgt > $(window).height()) {
-				checkHgt = parseInt(elemHgt - $(window).height());
-				if ($(window).scrollTop() >= (elemTop + checkHgt)) {
-					mainElem.css({
-						"position":"fixed",
-						"top" : "initial",
-						"bottom":"0px"
-					}).addClass('fixed')
-				} else {
-					mainElem.css({
-						"position":elemPos,
-						"top" : "initial",
-						"bottom" : "initial"
-					}).removeClass('fixed');
-				}
-			} else {
-				checkHgt = 0;
-				if ($(window).scrollTop() >= (elemTop + checkHgt)) {
-					mainElem.css({
-						"position":"fixed",
-						"top" : "0px",
-						"bottom":"initial"
-					}).addClass('fixed')
-				} else {
-					mainElem.css({
-						"position":elemPos,
-						"top" : "initial",
-						"bottom" : "initial"
-					}).removeClass('fixed');
+	$(window).on('resize load' ,function() {
+		$('.auto-fix').each(function(i, elA) {
+			var mainElem = $(this);
+			var elemHgt = $(mainElem).outerHeight(true);
+			var elemInitPos = $(this).css("position");
+			var elemPos = '';
+			var elemTop = $(mainElem).offset().top;
+			var checkHgt = 0;
+			var myParent = $(this).parents('.container-auto-fix')[0];
+			var topMarginForFix = 0;
+			if ((typeof $('.auto-fix-navbar')[0]) != 'undefined') {
+				if ($(mainElem).hasClass('auto-fix-navbar')) {
+					topMarginForFix = 0
+				} else { 
+					topMarginForFix = $('.auto-fix-navbar').outerHeight(true)
 				}
 			}
+			$(window).resize(function(e) {
+				elemTop = mainElem.offset().top;
+				if ($(mainElem).hasClass('auto-fix-navbar')) {
+					topMarginForFix = 0
+				} else { 
+					topMarginForFix = $('.auto-fix-navbar').outerHeight(true)
+				}
+			});
+			$(".leftbar_drawer").click(function(e) {
+				elemPos = mainElem.css('position')
+				if ($(window).width() >= 992) {
+					elemPos = elemInitPos;
+				} else {
+					elemPos = "absolute";
+				}
+			});
+			$(".navbar_drawer").click(function(e) {
+				elemTop = mainElem.offset().top;
+			});
+			$(window).on("scroll resize" ,function(e) {
+				elemHgt = $(mainElem).outerHeight(true);
+				// if ($(window).scrollTop() >= parseInt($(myParent).outerHeight(true) + $(myParent).offset().top - $(window).height() +elemHgt)) {
+				// 	console.log(elemHgt)
+				// }
+				if ($(mainElem).hasClass('auto-fix')) {
+					if (elemHgt > $(window).height()) {
+						checkHgt = parseInt(elemHgt - $(window).height());
+						if ($(window).scrollTop() >= (elemTop + checkHgt)) {
+							mainElem.css({
+								"position":"fixed",
+								"top" : "initial",
+								"bottom":"0px"
+							}).addClass('fixed')
+						} else {
+							mainElem.css({
+								"position":elemPos,
+								"top" : "initial",
+								"bottom" : "initial"
+							}).removeClass('fixed');
+						}
+					} else {
+						checkHgt = 0;
+						if ($(window).scrollTop() >= (elemTop + checkHgt - topMarginForFix)) {
+							mainElem.css({
+								"position":"fixed",
+								"top":topMarginForFix,
+								"bottom":"initial"
+							}).addClass('fixed')
+						} else {
+							mainElem.css({
+								"position":elemPos,
+								"top" : "initial",
+								"bottom" : "initial"
+							}).removeClass('fixed');
+						}
+					}
+				}
+			});
 		});
 	});
 

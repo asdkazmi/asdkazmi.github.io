@@ -26,14 +26,16 @@
 			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"4"}'></canvas>
 		</div>
 		<div class="navbar_menu">
-			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt" data-child="padding_horizontal-sm">
-				<li class="write_data">
-					<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
-						<span>
-							writeData("main_data['navbar_url']","key(x)")
-						</span>
-					</a>
-				</li>
+			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt">
+				<div class="padding_vertical-xs" data-responsive="auto-fix-min_dt auto-fix-navbar-min_dt" data-child="padding_horizontal-sm">
+					<li class="write_data">
+						<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
+							<span>
+								writeData("main_data['navbar_url']","key(x)")
+							</span>
+						</a>
+					</li>
+				</div>
 				<ul data-responsive="navbar-right-min_dt text_color-main_b-max_tb" class="text_color-white">
 					<li class="write_data">Initial Release of writeData("main_data['title']") writeData("main_data['version']")</li>
 				</ul>
