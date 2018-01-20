@@ -80,7 +80,9 @@ var main_data = {
 		},
 		"Components" : {
 			"Intro to Components" : "components.html#intro-to-components",
-			"Hide Url on Existance" : "components.html#hide-url"
+			"Hide Url on Existance" : "components.html#hide-url",
+			"Alert Box" : "components.html#alert-box",
+			"Progress Bar" : "components.html#progress-bar"
 		},
 		"Dynamic CSS Classes" : "dynamic-css-classes.html",
 		"writeData() Method" : "writedata.html",

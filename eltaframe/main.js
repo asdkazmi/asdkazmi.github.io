@@ -227,7 +227,6 @@ $(document).ready(function () {
 					$(this).children(addchild[i].split('-chd-')[1]).addClass(addchild[i].split('-chd-')[0])
 				} else if (addchild[i].match('-nth_chd')) {
 					var crntChd = addchild[i].split('-nth_chd(')[1].split(')')[0].split(',');
-					debugger
 					var prnt = $(this)
 					$(crntChd).each(function(j, elA) {
 						$(prnt).children().eq(elA).addClass(addchild[i].split('-nth_chd')[0])
@@ -783,7 +782,7 @@ $(document).ready(function () {
 	});
 
 	// full_height
-	$('.full_height').each(function(i, elA) {
+	$('.height-full').each(function(i, elA) {
 		$(this).height($(this).parent().height())
 	});
 })

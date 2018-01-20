@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>ELTA Frame</title>
-	<link rel="icon" type="image/gif" href="files/favicon-32x32.png">
+	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- eltaframe sources -->
@@ -92,8 +92,65 @@
 			</ul>
 		</div>
 		<!-- body here -->
-		<div class="col-9-dt">
-			
+		<div class="col-9-dt right padding-sm text_size-sm font_family-calibri" data-child="left width-full"">
+			<div class="write_data">
+				<div id="intro-to-components">
+					<h3>Introduction to Components</h3>
+					<hr/>
+					<p>writeData("main_data['title']") provide some usefull components like navbar, leftbar, pagination etc which are very customizable. These components are built in JQuery.</p>
+				</div> <!-- intro-to-components -->
+				<div id="hide-url">
+					<h3>Hide Url on Existance</h3>
+					<hr/>
+					<p>writeData("main_data['title']") provide an option to remove url of tag <b>a</b> if url is opened/active. Then url will be replaced by <b>##</b>. This is provided in type <b>ifme</b> whose value is <b>hideUrl</b>. When <b>hideUrl</b> value will be added to <b>ifme</b> type then Url will be replaced if it is opened or active i.e. if url will be match to window current location.</p>
+					<h4>Example</h4>
+					<hr/>
+					<pre class="code code-html">
+<!-- <a href="writedata.html" class="ifme-hideUrl">Another Page Url</a>
+<a href="components.html" class="ifme-hideUrl">Current Page Url</a> -->
+					</pre>
+					<div class="code_result">
+						<a href="writedata.html" class="ifme-hideUrl">Another Page Url</a>
+						<a href="components.html" class="ifme-hideUrl">Current Page Url</a>
+					</div>
+					<p>In this example first tag <b></b> has another page url so link is not replaced but 2nd has current page url so url replaced by <b>##</b>.</p>
+				</div> <!-- hide-url -->
+				<div id="alert-box">
+					<h3>Alert Box</h3>
+					<hr/>
+					<p>Alert Box component is very useful for alert message and to hide alert box. To hide alert box we only need to add element having class <b>hide_alert</b> inside alert box which we want to hide. Onclick of <b>hide_alert</b> It's parent element will be hide.</p>
+					<h4>Example</h4>
+					<hr/>
+					<pre class="code code-html">
+<!-- <div class="bg-midnightblue width-full left">
+	<p class="left">Click to hide me</p>
+	<button class="hide_alert right">&times;</button>
+</div> -->
+					</pre>
+					<div class="code_result">
+						<div class="bg-midnightblue width-full left">
+							<p class="left">Click to hide me</p>
+							<button class="hide_alert right">&times;</button>
+						</div>
+					</div>
+					<pre class="code code-html margin_top-sm left">
+<!-- <div class="bg-midnightblue width-full left text_color-white radius-sm padding_horizontal-xs">
+	<p class="left">Click to hide me</p>
+	<button class="hide_alert right height-full bg-transparent border-no text_color-white">&times;</button>
+</div> -->
+					</pre>
+					<div class="code_result">
+						<div class="bg-midnightblue width-full left text_color-white radius-sm padding_horizontal-xs">
+							<p class="left">Click to hide me</p>
+							<button class="hide_alert right height-full bg-transparent border-no text_color-white">&times;</button>
+						</div>
+					</div>
+				</div> <!-- alert-box -->
+				<div id="progress-bar">
+					<h3>Progress Bar</h3>
+					<hr/>
+				</div> <!-- progress-bar -->
+			</div>
 		</div>
 	</div>
 	<footer class="row bg-main_b">

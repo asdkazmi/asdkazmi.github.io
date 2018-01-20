@@ -525,12 +525,18 @@ a.label , a.badge {
     user-select: none;
 }
 /*programming codes and results*/
+.code {
+    background: #313131;
+}
+.code_result {
+    background: #999999;
+}
 .code , .code_result {
+    font-size: 15px;
     padding: 5px 15px;
     margin: 5px 15px;
     border-radius: 3px;
     display: block;
-    background: #313131;
     color: white;
     overflow: auto;
 }
