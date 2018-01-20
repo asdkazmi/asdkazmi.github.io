@@ -26,7 +26,8 @@ var create_class = {
 		icon: "42%"
 	},
 	padding: {
-		icon: "7px"
+		icon: "7px",
+		nav: "10px 8px"
 	},
 	font_size: {
 		doc: '16px'
@@ -52,14 +53,15 @@ var main_data = {
 	team: "",
 	"Download_Url": "#",
 	"GitHub_Repositary": "#",
-	documentation : {
+	"documentation" : {
 		"Introduction to ELTA Frame": '../docs/intro-to-docs.html',
-		allDocsUrl : {
-			Grids : "grids.html",
-			"CSS Classes" : "css_classes.html"
+		"allDocsUrl" : {
+			"Grids" : "grids.html",
+			"CSS Classes" : "css_classes.html",
+			"Components" : "components.html"
 		},
-		Grids: {
-			"Intro to Grids" : "grids.html#intro-grids",
+		"Grids" : {
+			"Intro to Grids" : "grids.html#",
 			"Screen Sizes" : "grids.html#screen-sizes",
 			"Basic Example" : "grids.html#basic-grid-example",
 			"Overriding Grid Classes" : "grids.html#overriding-grid-classes",
@@ -70,7 +72,21 @@ var main_data = {
 			"Intro to CSS Classes": "css_classes.html#intro-to-css",
 			"General": 'css_classes.html#general',
 			"Position": 'css_classes.html#position',
-			"Padding and Margin": 'css_classes.html#padding-margin'
-		}
+			"Padding and Margin": 'css_classes.html#padding-margin',
+			"Shadow/Text-Shadow": 'css_classes.html#shadow',
+			"Border" : 'css_classes.html#border',
+			"Radius": 'css_classes.html#radius',
+			"Font Styling": 'css_classes.html#font-styling'
+		},
+		"Components" : {
+			"Intro to Components" : "components.html#intro-to-components",
+			"Hide Url on Existance" : "components.html#hide-url"
+		},
+		"Dynamic CSS Classes" : "dynamic-css-classes.html",
+		"writeData() Method" : "writedata.html",
+		"Responsive Attribute" : "responsive-attr.html",
+		"Child classes Attribute" : "child-classes.html",
+		"Hover Effect" : "hover-effect.html",
+		"Email/Password Format Validation" : "form-validation.html"
 	}
 }

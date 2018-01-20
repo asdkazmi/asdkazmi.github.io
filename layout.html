@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title class="write_data">writeData("main_data['title']")</title>
+	<title>ELTA Frame</title>
 	<link rel="icon" type="image/gif" href="files/favicon-32x32.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,20 +20,22 @@
 		<div class="navbar_title bg-main full-width hide-tb" data-responsive="height-nav-min_dt">
 			<img class="
 			item-center position-relative bg-main border_color-white animate
-			" src="files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
+			" src="../files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
 		</div>
 		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
 			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"4"}'></canvas>
 		</div>
 		<div class="navbar_menu">
-			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt" data-child="padding_horizontal-sm">
-				<li class="write_data">
-					<a href=writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
-						<span>
-							writeData("main_data['navbar_url']","key(x)")
-						</span>
-					</a>
-				</li>
+			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt">
+				<div class="padding_vertical-xs" data-responsive="auto-fix-min_dt auto-fix-navbar-min_dt" data-child="padding_horizontal-sm">
+					<li class="write_data">
+						<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
+							<span>
+								writeData("main_data['navbar_url']","key(x)")
+							</span>
+						</a>
+					</li>
+				</div>
 				<ul data-responsive="navbar-right-min_dt text_color-main_b-max_tb" class="text_color-white">
 					<li class="write_data">Initial Release of writeData("main_data['title']") writeData("main_data['version']")</li>
 				</ul>
@@ -46,14 +48,13 @@
 		</div>
 		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
 			<ul class="list_dots-none">
-				<li class="write_data">
-					<a class="padding-xs ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
 				</li>
-				
 				<div>
 					<div class="accordian">
 						<!-- grids container -->
-						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl">Grids</a>
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(0)")</a>
 						<div class="accordian_menu">
 							<ul>
 								<li class="write_data">
@@ -62,7 +63,7 @@
 							</ul>
 						</div>
 						<!-- css classes container -->
-						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle write_data ifme-hideUrl">CSS Classes</a>
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(1)")</a>
 						<div class="accordian_menu">
 							<ul>
 								<li class="write_data">
@@ -70,8 +71,22 @@
 								</li>
 							</ul>
 						</div>
+						<!-- components container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(2)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(2)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Components']","value(x)")>writeData("main_data['documentation']['Components']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
+				<span data-child="hide-nth_chd(0)">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				</li>
+				</span>
 			</ul>
 		</div>
 		<!-- body here -->

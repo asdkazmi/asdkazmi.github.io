@@ -166,7 +166,7 @@ $(document).ready(function () {
 				var resultElem = elemCloneB.replace(allFunc[x][0], allFunc[x][1][j]);
 				elemCloneB = resultElem;
 			}
-			$(elA).before(resultElem);
+			$(elA).before(resultElem.replace('write_data',''));
 		}
 		$(elA).remove();
 	});
@@ -215,8 +215,8 @@ $(document).ready(function () {
 	// Add classes to child elements in attribute "data-child"
 	// To add class to all child element, simply write class in attribute. 
 	// But to add class to only child element by tag name, then use suffix -chd-TAGNAME e.g. bg-black-chd-span
-	// And to add class to only nth child element, use suffix -nth_chd-(N,M,...) where (N,M >= 1) represent any number. e.g. bg-black-nth_chd(4,2) add to 4th-child and 2nd-child
-	// And to add class to only child element except some, use suffix -not_chd-(N,M,...) where (N,M >= 1) represent any number. e.g. bg-black-not_chd(4,2) add to all child element excepts 4th and 2nd-child
+	// And to add class to only nth child element, use suffix -nth_chd-(N,M,...) where (N,M >= 0) represent any number. e.g. bg-black-nth_chd(4,2) add to 4th-child and 2nd-child
+	// And to add class to only child element except some, use suffix -not_chd-(N,M,...) where (N,M >= 0) represent any number. e.g. bg-black-not_chd(4,2) add to all child element excepts 4th and 2nd-child
 	// And to add class to only last child element, use suffix -last_chd e.g. bg-black-last_chd
 	$('*[data-child]').each(function() {
 		var addchild = $(this).attr('data-child')
@@ -225,26 +225,27 @@ $(document).ready(function () {
 			for (var i = 0; i < addchild.length; i++) {
 				if (addchild[i].match('-chd-')) {
 					$(this).children(addchild[i].split('-chd-')[1]).addClass(addchild[i].split('-chd-')[0])
-				} if (addchild[i].match('-nth_chd')) {
+				} else if (addchild[i].match('-nth_chd')) {
 					var crntChd = addchild[i].split('-nth_chd(')[1].split(')')[0].split(',');
+					debugger
 					var prnt = $(this)
 					$(crntChd).each(function(j, elA) {
-						$(prnt).children().eq(elA - 1).addClass(addchild[i].split('-nth_chd')[0])
+						$(prnt).children().eq(elA).addClass(addchild[i].split('-nth_chd')[0])
 					});
-				} if (addchild[i].match('-last_chd')) {
+				} else if (addchild[i].match('-last_chd')) {
 					$(this).children().last().addClass(addchild[i].split('-last_chd')[0])
-				} if (addchild[i].match('-odd_chd')) {
+				} else if (addchild[i].match('-odd_chd')) {
 					$(this).children().filter(':even').addClass(addchild[i].split('-odd_chd')[0])
-				} if (addchild[i].match('-even_chd')) {
+				} else if (addchild[i].match('-even_chd')) {
 					$(this).children().filter(':odd').addClass(addchild[i].split('-even_chd')[0])
-				} if (addchild[i].match('-not_chd')) {
+				} else if (addchild[i].match('-not_chd')) {
 					var crntChd = addchild[i].split('-not_chd(')[1].split(')')[0].split(',');
 					var prnt = $(this);
 					$(prnt).children().addClass(addchild[i].split('-not_chd')[0]);
 					$(crntChd).each(function(j, elA) {
-						$(prnt).children().eq(elA - 1).removeClass(addchild[i].split('-not_chd')[0]);
+						$(prnt).children().eq(elA).removeClass(addchild[i].split('-not_chd')[0]);
 					});
-				} if (!addchild[i].match('-chd-') && !addchild[i].match('-nth_chd-') && !addchild[i].match('-last_chd') && !addchild[i].match('-odd_chd') && !addchild[i].match('-even_chd') && !addchild[i].match('-not_chd')) {
+				} else {
 					$(this).children().addClass(addchild[i])
 				}
 			}
@@ -615,7 +616,7 @@ $(document).ready(function () {
 		});
 	});
 	// leftbar auto-fix
-	$(window).on('resize load' ,function() {
+	$(window).on('resize load' ,function(event) {
 		$('.auto-fix').each(function(i, elA) {
 			var mainElem = $(this);
 			var elemHgt = $(mainElem).outerHeight(true);

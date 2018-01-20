@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>ELTA Frame</title>
-	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
+	<link rel="icon" type="image/gif" href="files/favicon-32x32.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- eltaframe sources -->
@@ -48,6 +48,7 @@
 		</div>
 		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
 			<ul class="list_dots-none">
+				<!--intro url -->
 				<li class="padding-xs write_data">
 					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
 				</li>
@@ -72,8 +73,8 @@
 							</ul>
 						</div>
 						<!-- components container -->
-						<a href=writeData("main_data['documentation']['allDocsUrl']","value(2)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(2)")</a>
-						<div class="accordian_menu">
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(2)") class="padding-xs accordian_toggle toggled write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(2)")</a>
+						<div class="accordian_menu toggled">
 							<ul>
 								<li class="write_data">
 									<a href=writeData("main_data['documentation']['Components']","value(x)")>writeData("main_data['documentation']['Components']","key(x)")</a>
@@ -82,6 +83,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- other urls -->
 				<span data-child="hide-nth_chd(0)">
 				<li class="padding-xs write_data">
 					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
@@ -90,19 +92,8 @@
 			</ul>
 		</div>
 		<!-- body here -->
-		<div class="col-9-dt padding-sm text_size-sm font_family-calibri right" data-child="left width-full">
-			<div id="basics" class="write_data">
-				<h3>Introducation to writeData("main_data['title']") Documentation</h3>
-				<hr/>
-				<p>
-				writeData("main_data['title']") is not only responsive but having a lot features framework for front-end web development especially a method created by writeData("main_data['title']") to display data from json in HTML while using this method in simply HTML with a lot options to get data from json which is very useful to handle application very easily by just using a single json file or JavaScript objects. Also define it's attributes for responsive to reduce work. The purpose of writeData("main_data['title']") is to reduce front-end web work with using it's features. writeData("main_data['title']") introduce strong responsive grid system with many CSS design classes and very customizable components. The whole work of writeData("main_data['title']") will be done in HTML file while using class attributes and other attributes defined by writeData("main_data['title']") for making website responsive, reducing HTML work with using it's features. Following are some features of writeData("main_data['title']").
-				</p>
-				<h4>Grids</h4>
-				<hr/>
-				<p>
-				writeData("main_data['title']") provides strong responsive grid system with many features included in grid system. Grid system is provided for 4 different screen sizes for mobile, tablet, small desktop and large desktop preview. writeData("main_data['title']") Grids works as a table row and column and also provide option to equate height of all it's rows column and there is another option provided by writeData("main_data['title']") is to fill the space of remaining column which are not neccessary to use. For further detail, see <a href='../docs/grids.html'>Grids</a>
-				</p>
-			</div> <!-- basic -->
+		<div class="col-9-dt">
+			
 		</div>
 	</div>
 	<footer class="row bg-main_b">

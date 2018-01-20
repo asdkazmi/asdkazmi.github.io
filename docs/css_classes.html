@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title class="write_data">writeData("main_data['title']")</title>
+	<title>ELTA Frame</title>
 	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -43,19 +43,18 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="leftbar_drawer auto-fix" data-responsive="hide-min_dt">
+		<div class="leftbar_drawer" data-responsive="hide-min_dt">
 			<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
 		</div>
 		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
 			<ul class="list_dots-none">
-				<li class="write_data">
-					<a class="padding-xs ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
 				</li>
-				
 				<div>
 					<div class="accordian">
 						<!-- grids container -->
-						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl">Grids</a>
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(0)")</a>
 						<div class="accordian_menu">
 							<ul>
 								<li class="write_data">
@@ -64,7 +63,7 @@
 							</ul>
 						</div>
 						<!-- css classes container -->
-						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle toggled write_data ifme-hideUrl">CSS Classes</a>
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle toggled write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(1)")</a>
 						<div class="accordian_menu toggled">
 							<ul>
 								<li class="write_data">
@@ -72,8 +71,22 @@
 								</li>
 							</ul>
 						</div>
+						<!-- components container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(2)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(2)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Components']","value(x)")>writeData("main_data['documentation']['Components']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
+				<span data-child="hide-nth_chd(0)">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				</li>
+				</span>
 			</ul>
 		</div>
 		<!-- body here -->
@@ -412,6 +425,179 @@
 						</tr>
 					</table>
 				</div> <!-- padding and margin -->
+				<div id="shadow">
+					<h3>writeData("main_data['title']") CSS Shadow/Text-Shadow</h3>
+					<hr/>
+					writeData("main_data['title']") also define text shadow and box shadow of elements on top, left, right and bottom sides with some sizes. writeData("main_data['title']") types of shadows and values are defined in below table.
+					<h4>Types</h4>
+					<hr/>
+					<table class="table table-stripped-lgrey" border="1">
+						<tr>
+							<th colspan="2">Padding</th>
+							<th colspan="2">Margin</th>
+						</tr>
+						<tr>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Type</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<th>shadow</th>
+							<td>Add shadow equally on every side of element</td>
+							<th>text_shadow</th>
+							<td>Add text shadow equally on every side of text</td>
+						</tr>
+						<tr>
+							<th>shadow_bottom</th>
+							<td>Add shadow to bottom side of element</td>
+							<th>text_shadow_bottom</th>
+							<td>Add text shadow to bottom side of text</td>
+						</tr>
+						<tr>
+							<th>shadow_right</th>
+							<td>Add shadow to right side of element</td>
+							<th>text_shadow_right</th>
+							<td>Add text shadow to right side of text</td>
+						</tr>
+						<tr>
+							<th>shadow_top</th>
+							<td>Add shadow to top side of element</td>
+							<th>text_shadow_top</th>
+							<td>Add shadow to top side of text</td>
+						</tr>
+						<tr>
+							<th>shadow_left</th>
+							<td>Add shadow to left side of element</td>
+							<th>text_shadow_left</th>
+							<td>Add shadow to left side of text</td>
+						</tr>
+					</table>
+					<h4>Values</h4>
+					<hr/>
+					<table class="table table-stripped-lgrey" border="1">
+						<tr>
+							<th colspan="2">Padding</th>
+							<th colspan="2">Margin</th>
+						</tr>
+						<tr>
+							<th>Value</th>
+							<th>Size (px)</th>
+							<th>Example</th>
+						</tr>
+						<tr>
+							<th>no (only for shadow and text_shadow types)</th>
+							<td>0px</td>
+							<td><b>shadow-no</b> <br> It will remove box shadow of element.</td>
+						</tr>
+						<tr>
+							<th>sm</th>
+							<td>2px</td>
+							<td><b>shadow_bottom-sm</b> <br> It will add 2px shadow to bottom of element</td>
+						</tr>
+						<tr>
+							<th>md</th>
+							<td>4px</td>
+							<td><b>text_shadow_right-md</b> <br> It will add 4px shadow to right of text</td>
+						</tr>
+						<tr>
+							<th>lg</th>
+							<td>8px</td>
+							<td><b>shadow_right-lg</b> <br> It will add 8px shadow to right of element</td>
+						</tr>
+						<tr>
+							<th>xlg</th>
+							<td>16px</td>
+							<td><b>text_shadow_bottom-lg</b> <br> It will add 16px shadow to bottom of text</td>
+						</tr>
+						<tr>
+							<th>xxlg</th>
+							<td>20px</td>
+							<td><b>shadow-xxlg</b> <br> It will add 20px shadow to all side of element
+							<br>
+							<b>text_shadow-xxlg</b> <br> It will add 20px shadow to all side of text</td>
+							<td></td>
+						</tr>
+					</table>
+				</div> <!-- shodows -->
+				<div id="border">
+					<h3>writeData("main_data['title']") CSS Border Classes</h3>
+					<hr/>
+					<p>writeData("main_data['title']") provide classes for adding border to elements by just using HTML classes and without using any external CSS. These CSS border Classes <b><i>Types</i></b> and <b><i>Values</i></b> are defined below.</p>
+					<p>NOTE: writeData("main_data['title']") Border classes are not important. writeData("main_data['title']") Border classes will add solid border style to element.</p>
+					<h4>Types</h4>
+					<hr/>
+					<table class="table table-stripped-lgrey" border="1">
+						<tr>
+							<th>Types</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<th>border</th>
+							<td>Add equally border to all sides of element</td>
+						</tr>
+						<tr>
+							<th>border_top</th>
+							<td>Add border to only top side of element</td>
+						</tr>
+						<tr>
+							<th>border_right</th>
+							<td>Add border to only right side of element</td>
+						</tr>
+						<tr>
+							<th>border_bottom</th>
+							<td>Add border to only bottom side of element</td>
+						</tr>
+						<tr>
+							<th>border_left</th>
+							<td>Add border to only left side of element</td>
+						</tr>
+					</table>
+					<h4>Values</h4>
+					<hr/>
+					<table class="table table-stripped-lgrey" border="1">
+						<tr>
+							<th>Values</th>
+							<th>Size (px)</th>
+							<th>Example</th>
+						</tr>
+						<tr>
+							<th>no</th>
+							<td>0px</td>
+							<td><b>border_bottom-no</b> <br/>It will remove bottom side of border of element i.e. 0px border to bottom of element</td>
+						</tr>
+						<tr>
+							<th>xs</th>
+							<td>1px</td>
+							<td><b>border_bottom-xs</b> <br/>It will add 1px border to only bottom side of element</td>
+						</tr>
+						<tr>
+							<th>sm</th>
+							<td>2px</td>
+							<td><b>border_left-sm</b> <br/>It will add 2px border to only left side of element</td>
+						</tr>
+						<tr>
+							<th>md</th>
+							<td>4px</td>
+							<td><b>border-md</b> <br/>It will add 4px border to every side of element</td>
+						</tr>
+						<tr>
+							<th>lg</th>
+							<td>8px</td>
+							<td><b>border_top-lg</b> <br/>It will add 8px border to only top side of element</td>
+						</tr>
+						<tr>
+							<th>xlg</th>
+							<td>16px</td>
+							<td><b>border_right-lg</b> <br/>It will add 16px border to only right side of element</td>
+						</tr>
+						<tr>
+							<th>xxlg</th>
+							<td>32px</td>
+							<td><b>border-xxlg</b> <br/>It will add 32px border to every side of element</td>
+						</tr>
+					</table>
+				</div> <!-- border -->
 			</div>
 		</div>
 	</div>
