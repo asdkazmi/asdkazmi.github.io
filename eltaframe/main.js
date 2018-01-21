@@ -453,10 +453,16 @@ $(document).ready(function () {
 // <!-- Web Page content goes here -->
 // <!-- </body> -->
 // <!-- </html> -->
+	$('.code-result').each(function(i, elA) {
+		$(this).prepend('<h4 class="code-result_h">Result<h4>')
+	});
 	$('.code.code-html').each(function(i, elA) {
 		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/\</g,'&lt;').replace(/\>/g,'&gt;');
 		// console.log(inhtml)
 		$(this).html(inhtml)
+	});
+	$('.code').each(function(i, elA) {
+		$(this).prepend('<h4 class="code_h">Code<h4>')
 	});
 
 
@@ -467,19 +473,19 @@ $(document).ready(function () {
 	});
 
 	// progress bar
-	var progValue = document.getElementsByClassName('progress_value');
+	var progValue = document.getElementsByClassName('progress-value');
 	for (var i = 0; i < progValue.length; i++) {
-		var progValueIs = $(progValue[i]).attr("prog-value");
+		var progValueIs = $(progValue[i]).attr("data-value");
 		$(progValue[i]).css("width",progValueIs + "%");
 	}
 	// progress animated
-	var progAnimated = document.getElementsByClassName("progress_animated");
+	var progAnimated = document.getElementsByClassName("progress-animated");
 	for (var i = 0; i < progAnimated.length; i++) {
-		var progColor = $(progAnimated[i]).attr("prog-color").split(";");
+		var progColor = $(progAnimated[i]).attr("data-color").split(";");
 		$(progAnimated[i]).css("background-image" , "repeating-linear-gradient(45deg, "+progColor[0]+" 0px, "+progColor[0]+" 15px, "+progColor[1]+" 0px, "+progColor[1]+" 30px)");
 	}
 	//progress animated b
-	var progAnimB = document.getElementsByClassName("progress_animated-b");
+	var progAnimB = document.getElementsByClassName("progress-animated_b");
 	for (var i = 0; i < progAnimB.length; i++) {
 		$(progAnimB[i]).css("marginBottom",-$(progAnimB[i]).outerHeight(true))
 	}

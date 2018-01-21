@@ -109,7 +109,7 @@
 <!-- <a href="writedata.html" class="ifme-hideUrl">Another Page Url</a>
 <a href="components.html" class="ifme-hideUrl">Current Page Url</a> -->
 					</pre>
-					<div class="code_result">
+					<div class="code-result">
 						<a href="writedata.html" class="ifme-hideUrl">Another Page Url</a>
 						<a href="components.html" class="ifme-hideUrl">Current Page Url</a>
 					</div>
@@ -123,25 +123,25 @@
 					<hr/>
 					<pre class="code code-html">
 <!-- <div class="bg-midnightblue width-full left">
-	<p class="left">Click to hide me</p>
+	<p class="left">Click x to hide me</p>
 	<button class="hide_alert right">&times;</button>
 </div> -->
 					</pre>
-					<div class="code_result">
+					<div class="code-result">
 						<div class="bg-midnightblue width-full left">
-							<p class="left">Click to hide me</p>
+							<p class="left">Click x to hide me</p>
 							<button class="hide_alert right">&times;</button>
 						</div>
 					</div>
 					<pre class="code code-html margin_top-sm left">
 <!-- <div class="bg-midnightblue width-full left text_color-white radius-sm padding_horizontal-xs">
-	<p class="left">Click to hide me</p>
+	<p class="left">Click x to hide me</p>
 	<button class="hide_alert right height-full bg-transparent border-no text_color-white">&times;</button>
 </div> -->
 					</pre>
-					<div class="code_result">
+					<div class="code-result">
 						<div class="bg-midnightblue width-full left text_color-white radius-sm padding_horizontal-xs">
-							<p class="left">Click to hide me</p>
+							<p class="left">Click x to hide me</p>
 							<button class="hide_alert right height-full bg-transparent border-no text_color-white">&times;</button>
 						</div>
 					</div>
@@ -149,6 +149,118 @@
 				<div id="progress-bar">
 					<h3>Progress Bar</h3>
 					<hr/>
+					<p>writeData("main_data['title']") provide <b>progress bar</b> which is very customizable, easy to use, with many options. Progress bar will be initiated with a class and some attributes and more classes for further options.</p>
+					<p>To initiate progress bar inside any element, <b>progress-bar</b> class will be added to <i>class</i> attribute. <b>progress-bar</b> default background color is transparent. Then to show progress value, another element inside <b>progress-bar</b> element will be added with class <b>progress-value</b> which will show progress value. Then to add progress value to progress bar, <b>data-value</b> attribute will be added to <b>progress-value</b> element whose value is between 0 and 100. <b>progress-value</b> default color is white.</p>
+					<h4>Example</h4>
+					<hr/>
+					<pre class="code code-html">
+<!-- <div class="progress-bar">
+	<div class="progress-value" data-value="70"></div>
+</div> -->
+					</pre>
+					<div class="code-result">
+						<div class="progress-bar">
+							<div class="progress-value" data-value="70"></div>
+						</div>
+					</div>
+					<h4>Options</h4>
+					<hr/>
+					<p>Progress bar has certain options to show progress value, animated progress etc.</p>
+					<div id="show-progress-value">
+						<h4>Show Progress value</h4>
+						<hr/>
+						<p>To show progress value, <b>progress-show</b> class will be added to <b>progress-value</b> element.</p>
+						<h4>Example</h4>
+						<hr/>
+						<pre class="code code-html">
+<!-- <div class="progress-bar">
+	<div class="progress-value progress-show" data-value="70"></div>
+</div> -->
+						</pre>
+						<div class="code-result">
+							<div class="progress-bar">
+								<div class="progress-value progress-show" data-value="70"></div>
+							</div>
+						</div>
+					</div> <!-- show-progress-value -->
+					<div id="progress-animated">
+						<h4>Animated Progress Bar</h4>
+						<hr/>
+						<p>writeData("main_data['title']") provide animated progress bar. There are 2 different types of animated progress bars.</p>
+						<p>To add animated progress bar, add class <b>progress-animated</b> to <b>progress-value</b> element which will initiate progress animation, then add <b>data-color</b> with two different color which will splitted by (<span class="text_color-red">;</span>). e.g. [<b>data-color="red;white"</b>]. There are no default color for animated progress bar, <b>data-color</b> attribute must be initiate to add colors to animated progress bar.</p>
+						<h4>Example</h4>
+						<hr/>
+						<pre class="code code-html">
+<!-- <div class="progress-bar">
+	<div class="progress-value progress-show progress-animated" data-color="red;white" data-value="70"></div>
+</div> 
+<div class="progress-bar">
+	<div class="progress-value progress-show progress-animated" data-color="green;#454545" data-value="47"></div>
+</div>-->
+						</pre>
+						<div class="code-result">
+							<div class="progress-bar">
+								<div class="progress-value progress-show progress-animated" data-color="red;white" data-value="70"></div>
+							</div>
+							<div class="padding-xs"></div>
+							<div class="progress-bar">
+								<div class="progress-value progress-show progress-animated" data-color="green;#454545" data-value="47"></div>
+							</div>
+						</div>
+						<p>To add 2nd animated progress bar, add class <b>progress-animated_b</b> instead of <b>progress-animated</b> This animation don't have any <b>data-color</b> attribute.</p>
+						<pre class="code code-html">
+<!-- <div class="progress-bar">
+	<div class="progress-value progress-show progress-animated_b" data-value="50"></div>
+</div> -->
+						</pre>
+						<div class="code-result">
+							<div class="progress-bar">
+								<div class="progress-value progress-show progress-animated_b" data-value="50"></div>
+							</div>
+						</div>
+						<h4>Animation Speed</h4>
+						<hr/>
+						<p>There are 4 different types of animation speed for animated progress bar. These speed will be defined by adding class <b>animation_speed-<i>Speed-Value</i></b>
+						<br/>
+						There are 4 following Speed Values
+						<ul>
+							<li>slow</li>
+							<li>medium</li>
+							<li>fast</li>
+							<li>vfast</li>
+						</ul>
+						To defined any speed we will use these above Speed Values.</p>
+						<h4>Example</h4>
+						<pre class="code code-html">
+<!-- <div class="progress-bar">
+	<div class="progress-value progress-show progress-animated animation_speed-fast" data-color="red;white" data-value="70"></div>
+</div>
+<div class="progress-bar">
+	<div class="progress-value progress-show progress-animated_b animation_speed-vfast" data-value="50"></div>
+</div>
+<div class="progress-bar">
+	<div class="progress-value progress-show progress-animated_b animation_speed-slow" data-value="50"></div>
+</div> -->
+						</pre>
+						<div class="code-result">
+							<p>Default Speed</p>
+							<div class="progress-bar">
+								<div class="progress-value progress-show progress-animated" data-color="red;white" data-value="70"></div>
+							</div>
+							<p>fast Speed</p>
+							<div class="progress-bar">
+								<div class="progress-value progress-show progress-animated animation_speed-fast" data-color="red;white" data-value="70"></div>
+							</div>
+							<p>vfast Speed</p>
+							<div class="progress-bar">
+								<div class="progress-value progress-show progress-animated_b animation_speed-vfast" data-value="50"></div>
+							</div>
+							<p>slow Speed</p>
+							<div class="progress-bar">
+								<div class="progress-value progress-show progress-animated_b animation_speed-slow" data-value="50"></div>
+							</div>
+						</div>
+					</div> <!-- progress-animated -->
 				</div> <!-- progress-bar -->
 			</div>
 		</div>

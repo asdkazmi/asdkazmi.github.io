@@ -104,14 +104,14 @@ a.label , a.badge {
 	background: #d8d8d8;
 }
 /*progress bar*/
-.progress_bar {
+.progress-bar {
 	width: 100%;
 	border-radius: 5px;
 	margin: 2px 0px;
 	height: 15px;
     box-shadow: inset 0px 0px 5px #c7c7c7;
 }
-.progress_value{
+.progress-value{
     height: inherit;
     border-radius: inherit;
     background: #e8e8e8;
@@ -119,7 +119,7 @@ a.label , a.badge {
     font-weight: bold;
     display: flex;
 }
-.progress_animated {
+.progress-animated {
     background-size: 43px 43px;
     animation-name: progressBar;
     animation-iteration-count: infinite;
@@ -127,23 +127,23 @@ a.label , a.badge {
     animation-timing-function: linear;
     animation-direction: reverse;
 }
-.progress_animation-fast {
+.animation_speed-fast {
     animation-duration: 500ms;
 }
-.progress_animation-vfast {
+.animation_speed-vfast {
     animation-duration: 200ms;
 }
-.progress_animation-medium {
+.animation_speed-medium {
     animation-duration: 0.9s;
 }
-.progress_animation-slow {
+.animation_speed-slow {
     animation-duration: 2.5s;
 }
 @keyframes progressBar {
 	100% {background-position-x: -43px;}
 }
-.progress_show:after {
-	content: attr(prog-value);
+.progress-show:after {
+	content: attr(data-value) '%';
     display: inline-block;
     width: 100%;
     text-align: inherit; 
@@ -153,10 +153,10 @@ a.label , a.badge {
     align-self: center;
 }
 /*progress animated b*/
-.progress_animated-b {
+.progress-animated_b {
     flex-direction: column;
 }
-.progress_animated-b:before {
+.progress-animated_b:before {
     content: " ";
     width: 0%;
     height: inherit;
@@ -188,16 +188,16 @@ a.label , a.badge {
         margin-left: 0%;
     }
 }
-.progress_animated-b.progress_animation-fast:before {
+.progress-animated_b.animation_speed-fast:before {
     animation-duration: 8s;
 }
-.progress_animated-b.progress_animation-vfast:before {
+.progress-animated_b.animation_speed-vfast:before {
     animation-duration: 5s;
 }
-.progress_animated-b.progress_animation-medium:before {
+.progress-animated_b.animation_speed-medium:before {
     animation-duration: 11s;
 }
-.progress_animated-b.progress_animation-slow:before {
+.progress-animated_b.animation_speed-slow:before {
     animation-duration: 15s;
 }
 /*pagination*/
@@ -527,20 +527,21 @@ a.label , a.badge {
 /*programming codes and results*/
 .code {
     background: #313131;
+    color: white;
 }
-.code_result {
+.code-result {
     background: #999999;
+    color: black;
 }
-.code , .code_result {
+.code , .code-result {
     font-size: 15px;
     padding: 5px 15px;
     margin: 5px 15px;
     border-radius: 3px;
     display: block;
-    color: white;
     overflow: auto;
 }
-.code_h , .code_result_h {
+.code_h , .code-result_h {
     border-bottom: 1px solid;
 }
 
