@@ -89,7 +89,7 @@ var main_data = {
 		"writeData() Method" : "writedata.html",
 		"Responsive Attribute" : "responsive-attr.html",
 		"Child classes Attribute" : "child-classes.html",
-		"Hover Effect" : "hover-effect.html",
+		"Hover Effect Attribute" : "hover-effect.html",
 		"Email/Password Format Validation" : "form-validation.html"
 	}
 }
