@@ -49,7 +49,7 @@ var main_data = {
 		"Download": '../download.html'
 	},
 	title: "ELTA Frame",
-	version: '1.0.0 (Alpha)',
+	version: 'Yet, documentation not completed',
 	team: "",
 	"Download_Url": "#",
 	"GitHub_Repositary": "#",
@@ -82,7 +82,8 @@ var main_data = {
 			"Intro to Components" : "components.html#intro-to-components",
 			"Hide Url on Existance" : "components.html#hide-url",
 			"Alert Box" : "components.html#alert-box",
-			"Progress Bar" : "components.html#progress-bar"
+			"Progress Bar" : "components.html#progress-bar",
+			"Pagination" : "components.html#pagination"
 		},
 		"Dynamic CSS Classes" : "dynamic-css-classes.html",
 		"writeData() Method" : "writedata.html",
