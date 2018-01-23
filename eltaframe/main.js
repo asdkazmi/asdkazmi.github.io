@@ -456,9 +456,41 @@ $(document).ready(function () {
 	$('.code-result').each(function(i, elA) {
 		$(this).prepend('<h4 class="code-result_h">Result<h4>')
 	});
+	String.prototype.allReplace = function(obj) {
+	    var retStr = this;
+	    for (var x in obj) {
+	        retStr = retStr.replace(new RegExp(x, 'g'), obj[x]);
+	    }
+	    return retStr;
+	};
 	$('.code.code-html').each(function(i, elA) {
-		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/\</g,'&lt;').replace(/\>/g,'&gt;');
-		// console.log(inhtml)
+		var finalResult = [];
+		var matchResult = [];
+		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>')
+		var ptrnForHTML = /\<{1}([^<>]+)\>{1}/g;
+		var match = '';
+		while ((match = ptrnForHTML.exec(inhtml)) != null) {
+			var ptrnForAttr = /([^\s]+)={1}['"]{1}([^'"]+)['"]{1}/g
+			var matchb = '';
+			var matchForReplace = match[1]
+			while ((matchb = ptrnForAttr.exec(match[1])) != null) {
+				matchForReplace = matchForReplace.replace(matchb[1], '<span style="color:#da5252;">'+matchb[1]+'</span>')
+					.replace(matchb[2], '<span style="color:#32b932;">'+matchb[2]+'</span>');
+			}
+			var resultAttr = match[0].replace(match[1],matchForReplace).trim().allReplace({
+				'^<':'&lt;',
+				'>$':'&gt;',
+				'&lt;/':'<span style="color:red;">&lt;/</span>',
+				'&lt;':'<span style="color:red;">&lt;</span>',
+				'&gt;':'<span style="color:red;">&gt;</span>'
+				
+			})
+			finalResult.push('<span style="color:#f1c10c;">'+resultAttr+'</span>')
+			matchResult.push(match)
+		}
+		for (x in finalResult) {
+			inhtml = inhtml.replace(matchResult[x][0], finalResult[x])
+		}
 		$(this).html(inhtml)
 	});
 	$('.code').each(function(i, elA) {
