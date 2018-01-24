@@ -466,7 +466,7 @@ $(document).ready(function () {
 	$('.code.code-html').each(function(i, elA) {
 		var finalResult = [];
 		var matchResult = [];
-		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>')
+		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/style/g,'&__yl_$')
 		var ptrnForHTML = /\<{1}([^<>]+)\>{1}/g;
 		var match = '';
 		while ((match = ptrnForHTML.exec(inhtml)) != null) {
@@ -491,7 +491,7 @@ $(document).ready(function () {
 		for (x in finalResult) {
 			inhtml = inhtml.replace(matchResult[x][0], finalResult[x])
 		}
-		$(this).html(inhtml)
+		$(this).html(inhtml.replace(/&__yl_\$/g,'style'))
 	});
 	$('.code').each(function(i, elA) {
 		$(this).prepend('<h4 class="code_h">Code<h4>')
