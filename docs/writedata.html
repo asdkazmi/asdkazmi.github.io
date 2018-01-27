@@ -105,7 +105,7 @@
 				<p>One of the major developement of writeData("main_data['title']") is writeData() method which is very usefull for web development. It will return data from JSON or JS Object data whose value is not a JS object and it will work as a loop.</p>
 				<h3>How it works?</h3>
 				<hr/>
-				<p>writeData will be initiated by a HTML class <b>write_data</b> which will initiate a loop. The HTML element initiated by <b>write_data</b> class created a clone of itself and then find the writeData() inside it and check how much clone will be created and return. It depends on writeData() called inside this HTML element, that how much JSON key, values or pair will be return. If there are two writeData() are passed inside this HTML element where one returning 5 values while other returning 3 then 5 loops will be created and 5 HTMl element will be return. Inside this HTML element, writeData<span></span>("Arg A","Arg B") will be passed which return data from JSON or JS Object.</p>
+				<p>writeData will be initiated by an HTML class <b>write_data</b> which will initiate a loop. The HTML element initiated by <b>write_data</b> class created a clone of itself and then find the writeData() inside it and check how much clone will be created and return. It depends on writeData() called inside this HTML element, that how much JSON key, values or pair will be return. If there are two writeData() are passed inside this HTML element where one returning 5 values while other returning 3 then 5 loops will be created and 5 HTMl element will be return. Inside this HTML element, writeData<span></span>("Arg A","Arg B") will be passed which return data from JSON or JS Object.</p>
 				<p>Return Element length depends on writeData() passed in this element and maximum length between these writeData().</p>
 				<p>In <b>writeData<span></span>("Arg A","Arg B")</b> method <b>Arg A</b> is necessary and it will be a JSON object location i.e. which JSON object will return or JSON object key. While <b>Arg B</b> is optional and option for to use which keys or values will be return from considered JSON Object location.</p>
 				<h4>Arg A, JSON Object Location</h4>
@@ -257,19 +257,19 @@
 				<span>Written Code</span>
 				<pre class="code code-html">
 <!-- <div class="write_data">
-	writeData\("exampleData"\,"value(0-2,3)")
+	writeData\("exampleData"\,"value(0-1,3)")
 </div> -->
 				</pre>
 				<span>Return Code</span>
 				<pre class="return-code code-html write_data">
 <!-- <div class>
-	writeData("exampleData","value(0-2,3)")
+	writeData("exampleData","value(0-1,3)")
 </div> -->
 				</pre>
 				<span>Executed Result</span>
 				<div class="code-result">
 					<div class="write_data">
-						writeData("exampleData","value(0-2,3)")
+						writeData("exampleData","value(0-1,3)")
 					</div>
 				</div>
 			</div>
