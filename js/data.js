@@ -45,8 +45,8 @@ var main_data = {
 		// About: './about.html'
 	},
 	home_urls: {
-		"Get Started" : '../documentation.html',
-		"Download": '../download.html'
+		"Get Started" : './docs/intro-to-docs.html',
+		"Download": './download.html'
 	},
 	title: "ELTA Frame",
 	version: 'Yet, documentation not completed',
