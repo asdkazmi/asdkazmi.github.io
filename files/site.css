@@ -82,3 +82,14 @@
     border-color: white;
     border-style: outset;
 }
+
+.return-code {
+    background: #313131;
+    color: white;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin: 0px 15px;
+    /*border-radius: 3px;*/
+    display: block;
+    overflow: auto;
+}

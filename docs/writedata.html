@@ -105,7 +105,8 @@
 				<p>One of the major developement of writeData("main_data['title']") is writeData() method which is very usefull for web development. It will return data from JSON or JS Object data whose value is not a JS object and it will work as a loop.</p>
 				<h3>How it works?</h3>
 				<hr/>
-				<p>writeData will be initiated by a HTML class <b>write_data</b> which will initiate a loop and then inside this HTML element, writeData<span></span>("Arg A","Arg B") will be passed which return data from JSON or JS Object</p>
+				<p>writeData will be initiated by a HTML class <b>write_data</b> which will initiate a loop. The HTML element initiated by <b>write_data</b> class created a clone of itself and then find the writeData() inside it and check how much clone will be created and return. It depends on writeData() called inside this HTML element, that how much JSON key, values or pair will be return. If there are two writeData() are passed inside this HTML element where one returning 5 values while other returning 3 then 5 loops will be created and 5 HTMl element will be return. Inside this HTML element, writeData<span></span>("Arg A","Arg B") will be passed which return data from JSON or JS Object.</p>
+				<p>Return Element length depends on writeData() passed in this element and maximum length between these writeData().</p>
 				<p>In <b>writeData<span></span>("Arg A","Arg B")</b> method <b>Arg A</b> is necessary and it will be a JSON object location i.e. which JSON object will return or JSON object key. While <b>Arg B</b> is optional and option for to use which keys or values will be return from considered JSON Object location.</p>
 				<h4>Arg A, JSON Object Location</h4>
 				<hr/>
@@ -116,17 +117,206 @@
 				When we will choose JSON object location while not choose any key, then <b>Arg B</b> will be an option to choose what is in specific JSON object, either keys or values or key-value pair and which keys, values or pair.</p>
 				<p>Here is an example, where JSON object key will be passed in <b>Arg A</b> and will return JSON object value which is not a JS Obect</p>
 				<a href="exampledata/exampledata.js" target="_blank">JSON Object location</a>
+				<br/>
+				<span>Written Code</span>
 				<pre class="code code-html">
 <!-- <div class="write_data">
 	writeData\("exampleData['name']"\)
 </div> -->
 				</pre>
+				<span>Return Code</span>
+				<pre class="return-code code-html">
+<!-- <div class>
+	writeData("exampleData['name']")
+</div> -->
+				</pre>
+				<span>Executed Result</span>
 				<div class="code-result">
-					<div class="nested write_data">
+					<div>
 						writeData("exampleData['name']")
 					</div>
 				</div>
 				<p>Which is returning Value of JSON Object key <b>name</b>.</p>
+				<h4>Arg B, called wd-option is A very Powerful option. It will be only passed when specified JSON location in Arg A is an Array or Object type.</h4>
+				<hr/>
+				<p>Arg B is called wd-option</p>
+				<p><b>Arg A</b> will be used for JSON object location, which can be a string, int, array or JS object. <b>wd-option</b> is best option when we want to return all values/keys/pairs from json object or only our choice value/keys/pairs. In <b>Arg A</b> JSON object location will be passes while in <b>Arg B</b> option will be passed what we want to return from the specific object.</p>
+				<p>There are three methods which can pass in <b>Arg B</b>. Here is a table which will explain <b>Arg B</b> methods</p>
+				<table class="table table-stripped-lgrey" border="1">
+					<thead>
+						<th style="min-width: 120px;">Arg B method</th>
+						<th>Return</th>
+						<th>Example Code</th>
+					</thead>
+					<tr>
+						<th>key(Arg C)</th>
+						<td>It will return keys of specified JSON Object, while <b>Arg C</b> passed in <b>key(Arg C)</b> will be passed by a value which we want to return. <b>Arg C</b> is explained below.</td>
+						<td>writeData<span></span>("exampleData['qualification']","key(x)")
+						<br/>
+						It will return all keys from specified JSON location whose values are not an object</td>
+					</tr>
+					<tr>
+						<th>value(Arg C)</th>
+						<td>It will return values of specified JSON Object, while <b>Arg C</b> passed in <b>value(Arg C)</b> will be passed by a value which we want to return. <b>Arg C</b> is explained below.</td>
+						<td>writeData<span></span>("exampleData['qualification']","value(x)")
+						<br/>
+						It will return all values from specified JSON location which are not an object</td>
+					</tr>
+					<tr>
+						<th>pair(Arg C)</th>
+						<td>It will return key-value pari i.e. first return key and then value of that key of specified JSON Object, while <b>Arg C</b> passed in <b>pair(Arg C)</b> will be passed by a value which we want to return. <b>Arg C</b> is explained below.</td>
+						<td>writeData<span></span>("exampleData['qualification']","value(x)")
+						<br/>
+						It will return all key-value pair from specified JSON location which are not an object</td>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<h3>Explanation of Arg C passed in wd-option/Arg B methods</h3>
+				<hr/>
+				<p><b>Arg C</b> is a parameter which will be passed in wd-option method to return our choice values. There are three types of values can be return.</p>
+				<h4 class="padding_horizontal-sm">Return All</h4>
+				<hr/>
+				<p>To return All key or value or pairs which are not an object, we will pass <b>x</b> inside wd-option methods i.e. Arg C will be <b>x</b> this time.</p>
+				<p>For example, below we passed a location of JSON object as Arg A, while Arg B is passed by key(x) i.e. we want to return all the keys of our specified object whose values are not an object type.</p>
+				<a href="exampledata/exampledata.js" target="_blank">JSON Object location</a>
+				<br/>
+				<span>Written Code</span>
+				<pre class="code code-html">
+<!-- <div class="write_data">
+	writeData\("exampleData['qualification']"\,"key(x)")
+</div> -->
+				</pre>
+				<span>Return Code</span>
+				<pre class="return-code code-html write_data">
+<!-- <div class>
+	writeData("exampleData['qualification']","key(x)")
+</div> -->
+				</pre>
+				<span>Executed Result</span>
+				<div class="code-result">
+					<div class="write_data">
+						writeData("exampleData['qualification']","key(x)")
+					</div>
+				</div>
+				<h4 class="padding_horizontal-sm">Return Continues</h4>
+				<hr/>
+				<p>To return Continues key or value or pairs which are not an object, we will pass <b><i>init point</i>-<i>final point</i></b> inside wd-option methods i.e. Arg C will be e.g. <b>0-3</b> this time.</p>
+				<p>For example, below we passed a location of JSON object as Arg A, while Arg B is passed by value(0-3) i.e. we want to return 0-3 values of our specified object whose values are not an object type.</p>
+				<a href="exampledata/exampledata.js" target="_blank">JSON Object location</a>
+				<br/>
+				<span>Written Code</span>
+				<pre class="code code-html">
+<!-- <div class="write_data">
+	writeData\("exampleData"\,"value(0-3)")
+</div> -->
+				</pre>
+				<span>Return Code</span>
+				<pre class="return-code code-html write_data">
+<!-- <div class>
+	writeData("exampleData","value(0-3)")
+</div> -->
+				</pre>
+				<span>Executed Result</span>
+				<div class="code-result">
+					<div class="write_data">
+						writeData("exampleData","value(0-3)")
+					</div>
+				</div>
+
+				<h4 class="padding_horizontal-sm">Return Distinct</h4>
+				<hr/>
+				<p>To return Distinct key or value or pairs which are not an object, we will pass <b><i>point-1</i>,<i>point-2</i>,...</b> inside wd-option methods i.e. Arg C will be e.g. <b>0,3</b> this time.</p>
+				<p>For example, below we passed a location of JSON object as Arg A, while Arg B is passed by pair(0,3) i.e. we want to return 0,3 values of our specified object whose values are not an object type.</p>
+				<p>This time we are calling pair() method which will return both key and their values.</p>
+				<a href="exampledata/exampledata.js" target="_blank">JSON Object location</a>
+				<br/>
+				<span>Written Code</span>
+				<pre class="code code-html">
+<!-- <div class="write_data">
+	writeData\("exampleData"\,"pair(0,3)")
+</div> -->
+				</pre>
+				<span>Return Code</span>
+				<pre class="return-code code-html write_data">
+<!-- <div class>
+	writeData("exampleData","pair(0,3)")
+</div> -->
+				</pre>
+				<span>Executed Result</span>
+				<div class="code-result">
+					<div class="write_data">
+						writeData("exampleData","pair(0,3)")
+					</div>
+				</div>
+				<h4 class="padding_horizontal-sm">Return Continues and Distinct</h4>
+				<hr/>
+				<p>To return continues and distinct key, value or pair we can pass both inside <b>wd-option</b>.</p>
+				<a href="exampledata/exampledata.js" target="_blank">JSON Object location</a>
+				<br/>
+				<span>Written Code</span>
+				<pre class="code code-html">
+<!-- <div class="write_data">
+	writeData\("exampleData"\,"value(0-2,3)")
+</div> -->
+				</pre>
+				<span>Return Code</span>
+				<pre class="return-code code-html write_data">
+<!-- <div class>
+	writeData("exampleData","value(0-2,3)")
+</div> -->
+				</pre>
+				<span>Executed Result</span>
+				<div class="code-result">
+					<div class="write_data">
+						writeData("exampleData","value(0-2,3)")
+					</div>
+				</div>
+			</div>
+			<div>
+				<h3>Nested writeData() inside writeData()</h3>
+				<hr/>
+				<p>As writeData() method return elements while finding maximum length of writeData() inside HTML element of class write_data. There is also an option to write Nested writeData() method inside writeData() which was initiated by write_data class.</p>
+				<p>To write Nested writeData(), an HTML element will be initiated by class <b>nested write_data</b> and then writeData() will be passed inside this nested element.</p>
+				<p>Here is an example to understand it. First, a div is initiated by write_data class and then some writeData() passed inside it and it created one clone, while another write_data is passed inside this whoose lenght is 2 which is initiated by <b>nested</b> class.</p>
+				<p>NOTE: Only one nested element is supported inside one <b>write_data</b> element, but another element can nested inside a nested element.</p>
+				<a href="exampledata/exampledata.js" target="_blank">JSON Object location</a>
+				<br/>
+				<span>Written Code</span>
+				<pre class="code code-html">
+<!-- <div class="write_data myclass">
+	my name is writeData\("exampleData['name']"\) and my father name is writeData\("exampleData['father name']"\) and I have qualifications
+	<span class="nested write_data myanotherclass">
+		writeData\("exampleData['qualification']","key(x)"\) From writeData\("exampleData['qualification']","value(x)"\) 
+	</span>
+</div> -->
+				</pre>
+				<span>Return Code</span>
+				<pre class="return-code code-html">
+<!-- <div class=" myclass">
+	my name is syed muhammad asad and my father name is syed mukhtar hussain and I have qualifications
+	<span class=" myanotherclass">
+		Matric From Govt School 
+	</span><span class=" myanotherclass">
+		FSc From Govt College Jhelum 
+	</span><span class=" myanotherclass">
+		BSc From Govt College Jhelum 
+	</span><span class=" myanotherclass">
+		MSc From University of Gujrat, Pakistan 
+	</span><span class=" myanotherclass">
+		MPhil From Not yet 
+	</span>
+</div> -->
+				</pre>
+				<span>Executed Result</span>
+				<div class="code-result">
+					<div class="write_data myclass">
+						my name is writeData("exampleData['name']") and my father name is writeData("exampleData['father name']") and I have qualifications
+						<span class="nested write_data myanotherclass">
+							writeData("exampleData['qualification']","key(x)") From writeData("exampleData['qualification']","value(x)") 
+						</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

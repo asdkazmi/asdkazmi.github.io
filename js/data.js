@@ -85,11 +85,11 @@ var main_data = {
 			"Progress Bar" : "components.html#progress-bar",
 			"Pagination" : "components.html#pagination"
 		},
-		"Dynamic CSS Classes" : "dynamic-css-classes.html",
+		"Dynamic CSS Classes" : "##dynamic-css-classes.html",
 		"writeData() Method" : "writedata.html",
-		"Responsive Attribute" : "responsive-attr.html",
-		"Child classes Attribute" : "child-classes.html",
-		"Hover Effect Attribute" : "hover-effect.html",
-		"Email/Password Format Validation" : "form-validation.html"
+		"Responsive Attribute" : "##responsive-attr.html",
+		"Child classes Attribute" : "##child-classes.html",
+		"Hover Effect Attribute" : "##hover-effect.html",
+		"Email/Password Format Validation" : "##form-validation.html"
 	}
 }

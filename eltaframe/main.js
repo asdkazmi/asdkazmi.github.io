@@ -92,6 +92,7 @@ $(document).ready(function () {
 						var splLine = splCom[x].split('-');
 						for (var i = parseInt(splLine[0]); i < (parseInt(splLine[1]) + 1); i++) {
 							if (whchOpt == "key") {
+								console.log('pl')
 								if ((typeof dataArray[i][1]) != 'object') {
 									result.push(dataArray[i][0]);
 								}
@@ -128,12 +129,12 @@ $(document).ready(function () {
 		return result;
 	}
 	$('.write_data').each(function(i, elA) {
-		write_data(elA)
+		write_data(i,elA)
 		$('.pending.write_data').each(function(j, elB) { // nested method
-			write_data(elB)
+			write_data(j,elB)
 		});
 	})
-	function write_data(elA) {
+	function write_data(i,elA) {
 		$(elA).append('<span class="wd-error-fix"></span>')	// A big error still not resolved
 		$(elA).removeClass('pending');
 		if ($(elA).find('.nested.write_data').html() != undefined) { // finding nested element and perfoming inital work
@@ -147,7 +148,7 @@ $(document).ready(function () {
 		$('.wd-error-fix').remove()
 		var elemClone = $(elA).prop('outerHTML').replace(/&quot;/g,'"');
 		// var ptrnForFunc = /(writeData\(['"].+['"][,]*['"]*.*['"]*\))/g;
-		var ptrnForFunc = /(writeData\(['"][^()]+['"][,]*['"]*((key|value|pair)\([x0-9]\))*['"]*[^()]*\))/g;
+		var ptrnForFunc = /(writeData\(['"][^()]+['"][,]*['"]*((key|value|pair)\([x0-9-,]*\))*['"]*[^()]*\))/g;
 		var match = '';
 		while ((match = ptrnForFunc.exec(elemClone)) != null) {
 			if (/\"\)(.*)writeData*/.exec(match[0]) != null) {
@@ -480,10 +481,10 @@ $(document).ready(function () {
 	    }
 	    return retStr;
 	};
-	$('.code.code-html').each(function(i, elA) {
+	$('.code-html').each(function(i, elA) {
 		var finalResult = [];
 		var matchResult = [];
-		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/style/g,'&yl$').replace(/\\\\/g,'&bsol;').replace(/\\/g,''); 
+		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/style/g,'&yl$').replace(/span/g,'&pa$').replace(/\\\\/g,'&bsol;').replace(/\\/g,''); 
 		var ptrnForHTML = /\<{1}([^<>]+)\>{1}/g;
 		var match = '';
 		while ((match = ptrnForHTML.exec(inhtml)) != null) {
@@ -508,7 +509,7 @@ $(document).ready(function () {
 		for (x in finalResult) {
 			inhtml = inhtml.replace(matchResult[x][0], finalResult[x])
 		}
-		$(this).html(inhtml.replace(/&yl\$/g,'style'))
+		$(this).html(inhtml.replace(/&yl\$/g,'style').replace(/&pa\$/g,'span'))
 	});
 	$('.code').each(function(i, elA) {
 		$(this).prepend('<h4 class="code_h">Code<h4>')
