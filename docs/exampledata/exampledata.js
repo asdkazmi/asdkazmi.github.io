@@ -1,19 +1,19 @@
 exampleData = {
-	"name" : "syed muhammad asad",
-	"father name" : "syed mukhtar hussain",
+	"name" : "John Doe",
+	"father name" : "Doe",
 	"qualification": {
 		"school" : {
 			"Matric":"Govt School"
 		},
 		"College" : {
-			"FSc": "Govt College Jhelum",
-			"BSc": "Govt College Jhelum"
+			"FSc": "STU College",
+			"BSc": "VWX College"
 		},
 		"Matric":"Govt School",
-		"FSc": "Govt College Jhelum",
-		"BSc": "Govt College Jhelum",
-		"MSc": "University of Gujrat, Pakistan",
+		"FSc": "STU College",
+		"BSc": "VWX College",
+		"MSc": "ABC University of XYZ",
 		"MPhil": "Not yet"
 	},
-	"Address": "Jhelum City"
+	"Address": "PQR City"
 }
