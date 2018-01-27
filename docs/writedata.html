@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ELTA Frame</title>
+	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- eltaframe sources -->
+	<script type="text/javascript" src="../eltaframe/jquery.min.js"></script>
+	<script type="text/javascript" src="../eltaframe/main.js"></script>
+	<script type="text/javascript" src="../eltaframe/canvas-icons.js"></script>
+	<link rel="stylesheet" type="text/css" href="../eltaframe/main.css" />
+
+	<!-- more files -->
+	<script type="text/javascript" src="../js/data.js"></script>
+	<link rel="stylesheet" type="text/css" href="../files/site.css">
+
+	<!-- example files -->
+	<script type="text/javascript" src="exampledata/exampledata.js"></script>
+</head>
+<body class="flat_theme">
+	<div class="navbar-drop_tb" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
+		<div class="navbar_title bg-main full-width hide-tb" data-responsive="height-nav-min_dt">
+			<img class="
+			item-center position-relative bg-main border_color-white animate
+			" src="../files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
+		</div>
+		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"4"}'></canvas>
+		</div>
+		<div class="navbar_menu">
+			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt">
+				<div class="padding_vertical-xs" data-responsive="auto-fix-min_dt auto-fix-navbar-min_dt" data-child="padding_horizontal-sm">
+					<li class="write_data">
+						<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
+							<span>
+								writeData("main_data['navbar_url']","key(x)")
+							</span>
+						</a>
+					</li>
+				</div>
+				<ul data-responsive="navbar-right-min_dt text_color-main_b-max_tb" class="text_color-white">
+					<li class="write_data">Initial Release of writeData("main_data['title']") writeData("main_data['version']")</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="leftbar_drawer" data-responsive="hide-min_dt">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
+		</div>
+		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
+			<ul class="list_dots-none">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
+				</li>
+				<div>
+					<div class="accordian">
+						<!-- grids container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(0)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Grids']","value(x)")>writeData("main_data['documentation']['Grids']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- css classes container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(1)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- components container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(2)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(2)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Components']","value(x)")>writeData("main_data['documentation']['Components']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<span data-child="hide-nth_chd(0)">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				</li>
+				</span>
+			</ul>
+		</div>
+		<!-- body here -->
+		<div class="col-9-dt right padding-sm text_size-sm font_family-calibri" data-child="left width-full"">
+			<div class="write_data">
+				<h3>writeData() Method</h3>
+				<hr/>
+				<p><span class="text_weight-bold">writeData<span></span>("Argument A", "Argument B") will be written in HTML and return JSON/(JS Object) data whose value is not a JS object. It will work as a loop. It will initated by a HTML class "write_data"</span>
+				<br/>
+				<b>Argument A</b> is necessary and will be JSON object location.
+				<br/>
+				<b>Argument B</b> is optional and will be option to choose which will be return from JSON Object, Key or Values.</p>
+				<p>One of the major developement of writeData("main_data['title']") is writeData() method which is very usefull for web development. It will return data from JSON or JS Object data whose value is not a JS object and it will work as a loop.</p>
+				<h3>How it works?</h3>
+				<hr/>
+				<p>writeData will be initiated by a HTML class <b>write_data</b> which will initiate a loop and then inside this HTML element, writeData<span></span>("Arg A","Arg B") will be passed which return data from JSON or JS Object</p>
+				<p>In <b>writeData<span></span>("Arg A","Arg B")</b> method <b>Arg A</b> is necessary and it will be a JSON object location i.e. which JSON object will return or JSON object key. While <b>Arg B</b> is optional and option for to use which keys or values will be return from considered JSON Object location.</p>
+				<h4>Arg A, JSON Object Location</h4>
+				<hr/>
+				<p>In Arg A we will pass JSON object location or JSON object key whose value is not a JS Object will be return.
+				<br/>
+				When we will choose JSON object key, then value will be return of specific key.
+				<br/>
+				When we will choose JSON object location while not choose any key, then <b>Arg B</b> will be an option to choose what is in specific JSON object, either keys or values or key-value pair and which keys, values or pair.</p>
+				<p>Here is an example, where JSON object key will be passed in <b>Arg A</b> and will return JSON object value which is not a JS Obect</p>
+				<a href="exampledata/exampledata.js" target="_blank">JSON Object location</a>
+				<pre class="code code-html">
+<!-- <div class="write_data">
+	writeData\("exampleData['name']"\)
+</div> -->
+				</pre>
+				<div class="code-result">
+					<div class="nested write_data">
+						writeData("exampleData['name']")
+					</div>
+				</div>
+				<p>Which is returning Value of JSON Object key <b>name</b>.</p>
+			</div>
+		</div>
+	</div>
+	<footer class="row bg-main_b">
+		<div class="text_align-center write_data padding_horizontal-sm padding_vertical-lg text_color-white">
+			writeData("main_data['title']") Responsive Front-end Framework with a lot other features
+			<br/>
+			<span>Do Less Get More</span>
+		</div>
+	</footer>
+</body>
+</html>

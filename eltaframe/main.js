@@ -128,10 +128,23 @@ $(document).ready(function () {
 		return result;
 	}
 	$('.write_data').each(function(i, elA) {
+		write_data(elA)
+		$('.pending.write_data').each(function(j, elB) { // nested method
+			write_data(elB)
+		});
+	})
+	function write_data(elA) {
+		$(elA).append('<span class="wd-error-fix"></span>')	// A big error still not resolved
+		$(elA).removeClass('pending');
+		if ($(elA).find('.nested.write_data').html() != undefined) { // finding nested element and perfoming inital work
+			var nestedData = $(elA).find('.nested.write_data').html();
+			$(elA).find('.nested.write_data').addClass('pending').empty();
+		}
 		var allFunc = [];
-		if ($(this).html().trim().match(/^writeData\(.*\)$/)) {
+		if ($(elA).html().trim().match(/^writeData\(.*\)$/)) {
 			allFunc.push($(elA).html().trim());
 		}
+		$('.wd-error-fix').remove()
 		var elemClone = $(elA).prop('outerHTML').replace(/&quot;/g,'"');
 		// var ptrnForFunc = /(writeData\(['"].+['"][,]*['"]*.*['"]*\))/g;
 		var ptrnForFunc = /(writeData\(['"][^()]+['"][,]*['"]*((key|value|pair)\([x0-9]\))*['"]*[^()]*\))/g;
@@ -168,8 +181,12 @@ $(document).ready(function () {
 			}
 			$(elA).before(resultElem.replace('write_data',''));
 		}
+		$('.pending.write_data').removeClass('nested').html(nestedData) // returning nested Data
+		// $('.pending').each(function(j, elB) {
+		// 	write_data(i, elB)
+		// });
 		$(elA).remove();
-	});
+	}
 
 
 	// Hide Url of element if url is openend by adding class to HTML tag "a" is "ifme-hideUrl"
@@ -466,7 +483,7 @@ $(document).ready(function () {
 	$('.code.code-html').each(function(i, elA) {
 		var finalResult = [];
 		var matchResult = [];
-		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/style/g,'&__yl_$')
+		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/style/g,'&yl$').replace(/\\\\/g,'&bsol;').replace(/\\/g,'');
 		var ptrnForHTML = /\<{1}([^<>]+)\>{1}/g;
 		var match = '';
 		while ((match = ptrnForHTML.exec(inhtml)) != null) {
@@ -491,7 +508,7 @@ $(document).ready(function () {
 		for (x in finalResult) {
 			inhtml = inhtml.replace(matchResult[x][0], finalResult[x])
 		}
-		$(this).html(inhtml.replace(/&__yl_\$/g,'style'))
+		$(this).html(inhtml.replace(/&yl\$/g,'style'))
 	});
 	$('.code').each(function(i, elA) {
 		$(this).prepend('<h4 class="code_h">Code<h4>')
