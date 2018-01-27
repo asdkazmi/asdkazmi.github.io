@@ -38,11 +38,11 @@ var main_data = {
 		Home: "./index.html",
 		Download: "./download.html",
 		Documentation: "./docs/intro-to-docs.html",
-		Canvas: "./canvas-icons.html",
+		// Canvas: "./canvas-icons.html",
 		// Examples : "example.html",
 		// Themes: 'themes.html',
-		Issues: './issues.html',
-		About: './about.html'
+		// Issues: './issues.html',
+		// About: './about.html'
 	},
 	home_urls: {
 		"Get Started" : '../documentation.html',
