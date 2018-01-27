@@ -483,7 +483,7 @@ $(document).ready(function () {
 	$('.code.code-html').each(function(i, elA) {
 		var finalResult = [];
 		var matchResult = [];
-		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/style/g,'&yl$').replace(/\\\\/g,'&bsol;').replace(/\\/g,'');
+		var inhtml = $(this).html().toString().trim().replace(/(\<\!\-\-)\s*\<{1}/g,'\<').replace(/\>{1}\s*(\-\-\>)/g,'\>').replace(/style/g,'&yl$').replace(/\\\\/g,'&bsol;').replace(/\\/g,''); 
 		var ptrnForHTML = /\<{1}([^<>]+)\>{1}/g;
 		var match = '';
 		while ((match = ptrnForHTML.exec(inhtml)) != null) {
