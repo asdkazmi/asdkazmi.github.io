@@ -141,6 +141,7 @@
 				<hr/>
 				<p>Arg B is called wd-option</p>
 				<p><b>Arg A</b> will be used for JSON object location, which can be a string, int, array or JS object. <b>wd-option</b> is best option when we want to return all values/keys/pairs from json object or only our choice value/keys/pairs. In <b>Arg A</b> JSON object location will be passes while in <b>Arg B</b> option will be passed what we want to return from the specific object.</p>
+				<p><span class="text_color-red">NOTE:</span> pair and value will be returned by only those whose values are not an object type, but keys can be returned by those whose value are abject.</p>
 				<p>There are three methods which can pass in <b>Arg B</b>. Here is a table which will explain <b>Arg B</b> methods</p>
 				<table class="table table-stripped-lgrey" border="1">
 					<thead>
@@ -153,7 +154,7 @@
 						<td>It will return keys of specified JSON Object, while <b>Arg C</b> passed in <b>key(Arg C)</b> will be passed by a value which we want to return. <b>Arg C</b> is explained below.</td>
 						<td>writeData<span></span>("exampleData['qualification']","key(x)")
 						<br/>
-						It will return all keys from specified JSON location whose values are not an object</td>
+						It will return all keys from specified JSON location</td>
 					</tr>
 					<tr>
 						<th>value(Arg C)</th>
