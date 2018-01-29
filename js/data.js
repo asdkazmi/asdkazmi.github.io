@@ -98,7 +98,7 @@ var main_data = {
 			"HTML Code Formator": "components.html#html-code-formator"
 		},
 		"Color": "##color.html",
-		"Dynamic CSS Classes" : "##dynamic-css-classes.html",
+		"Dynamic CSS Classes" : "dynamic-css-classes.html",
 		"writeData() Method" : "writedata.html",
 		"Responsive Attribute" : "##responsive-attr.html",
 		"Child classes Attribute" : "##child-classes.html",
