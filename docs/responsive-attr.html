@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ELTA Frame</title>
+	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- eltaframe sources -->
+	<script type="text/javascript" src="../eltaframe/jquery.min.js"></script>
+	<script type="text/javascript" src="../eltaframe/main.js"></script>
+	<script type="text/javascript" src="../eltaframe/canvas-icons.js"></script>
+	<link rel="stylesheet" type="text/css" href="../eltaframe/main.css" />
+
+	<!-- more files -->
+	<script type="text/javascript" src="../js/data.js"></script>
+	<link rel="stylesheet" type="text/css" href="../files/site.css">
+</head>
+<body class="flat_theme">
+	<div class="navbar-drop_tb" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
+		<div class="navbar_title bg-main full-width hide-tb" data-responsive="height-nav-min_dt">
+			<img class="
+			item-center position-relative bg-main border_color-white animate
+			" src="../files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
+		</div>
+		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"4"}'></canvas>
+		</div>
+		<div class="navbar_menu">
+			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt">
+				<div class="padding_vertical-xs" data-responsive="auto-fix-min_dt auto-fix-navbar-min_dt" data-child="padding_horizontal-sm">
+					<li class="write_data">
+						<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
+							<span>
+								writeData("main_data['navbar_url']","key(x)")
+							</span>
+						</a>
+					</li>
+				</div>
+				<ul data-responsive="navbar-right-min_dt text_color-main_b-max_tb" class="text_color-white">
+					<li class="write_data">Initial Release of writeData("main_data['title']") writeData("main_data['version']")</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="leftbar_drawer auto-fix" data-responsive="hide-min_dt">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
+		</div>
+		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
+			<ul class="list_dots-none">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
+				</li>
+				<div>
+					<div class="accordian">
+						<!-- grids container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(0)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Grids']","value(x)")>writeData("main_data['documentation']['Grids']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- css classes container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(1)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- components container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(2)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(2)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Components']","value(x)")>writeData("main_data['documentation']['Components']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<span data-child="hide-nth_chd(0)">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				</li>
+				</span>
+			</ul>
+		</div>
+		<!-- body here -->
+		<div class="col-9-dt right padding-sm text_size-sm font_family-calibri" data-child="left width-full"">
+			<div class="write_data">
+				<h3>Responsive Attribute</h3>
+				<hr/>
+				<p>Responsive attribute is an writeData("main_data['title']") <b>Effect</b> and provide responsive HTML attribute for adding HTML class to elements on different screen size. Classes written in responsive attribute will be defined by responsive suffix for different screen sizes. There are four different screen sizes defined by writeData("main_data['title']"), which are mbl for mobile screen size, tb for tablet screen size, dt for desktop and ldt for large desktop screen sizes. Classes defined in responsive attribute can be add to these four screen sizes either minimum or maximum screen size between these.</p>
+				<p>Read about screen sizes <a href="../docs/grids.html#screen-sizes">Here</a></p>
+				<p>To add classes in responsive attribute, an attribute <b>data-responsive</b> will be added to elements and then classes will be added inside this attribute value. For example</p>
+				<pre class="code code-html">
+<!-- <div data-responsive="..."></div> -->
+				</pre>
+				<p>To add reponsive class, just write class inside this attribute and then use suffix for screen size for which to add. For example</p>
+				<pre class="code code-html">
+<!-- <div data-responsive="myclass-condition_size"></div> -->
+				</pre>
+				<p><span class="text_color-red">NOTE:</span> Don't use <b>-</b>, because it's a separator of writeData("main_data['title']") classes between type, value and effect.</p>
+				<p>There are three different conditions for four different types of screen sizes. Every suffix of reponsive attribute screen sizes will be defined as <b><i>Condition</i>_<i>Size</i></b>. These conditions are</p>
+				<ul>
+					<li><b>min</b> for minimum screen size</li>
+					<li><b>max</b> for maximum screen size</li>
+					<li><b>only</b> for screen size only for defined <b><i>Size</i></b> i.e. both <b>min</b> and <b>max</b> conditions collectively.</li>
+				</ul>
+				<p>Four different screen sizes are</p>
+				<ul>
+					<li><b>mbl</b> screen size minimum 0px and maximum 767px</li>
+					<li><b>tb</b> screen size minimum 768px and maximum 991px</li>
+					<li><b>dt</b> screen size minimum 991px and maximum 1239px</li>
+					<li><b>ldt</b> screen size minimum 1240px.</li>
+				</ul>
+				<p>Here is a table which will explain about responsive classes written inside reponsive attribute in detail.</p>
+				<table class="table table-stripped-lgrey" border="1">
+					<thead>
+						<th>Sufix for Screen Size</th>
+						<th>Screen Size where class added</th>
+						<th>Description</th>
+						<th>Example</th>
+					</thead>
+					<tr>
+						<td colspan="4" class="text_align-center">Mobile Screen Sizes</td>
+					</tr>
+					<tr>
+						<th>min_mbl</th>
+						<td>Minimum 0px</td>
+						<td>On this suffix, prefix class will be added to element when minimum screen size will be 0px.</td>
+						<td>myclass-min_mbl<br/><b>myclass</b> will be added to element on minimum 0px screen size.</td>
+					</tr>
+					<tr>
+						<th>max_mbl</th>
+						<td>Maximum 767px</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be less than or equal to 767px.</td>
+						<td>myclass-max_mbl<br/><b>myclass</b> will be added to element on less than or equal to 767px screen size.</td>
+					</tr>
+					<tr>
+						<th>only_mbl</th>
+						<td>Screen Size between 0px and 767px</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be  between 0px and 767px.</td>
+						<td>myclass-only_mbl<br/><b>myclass</b> will be added to element on between 0px and 767px screen size.</td>
+					</tr>
+					<tr>
+						<td colspan="4" class="text_align-center">Tablet Screen Sizes</td>
+					</tr>
+					<tr>
+						<th>min_tb</th>
+						<td>Minimum 768px</td>
+						<td>On this suffix, prefix class will be added to element when minimum screen size will be 768px.</td>
+						<td>myclass-min_tb<br/><b>myclass</b> will be added to element on minimum 768px screen size.</td>
+					</tr>
+					<tr>
+						<th>max_tb</th>
+						<td>Maximum 991px</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be less than or equal to 991px.</td>
+						<td>myclass-max_tb<br/><b>myclass</b> will be added to element on less than or equal to 991px screen size.</td>
+					</tr>
+					<tr>
+						<th>only_tb</th>
+						<td>Screen Size between 768px and 991px</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be  between 768px and 991px.</td>
+						<td>myclass-only_tb<br/><b>myclass</b> will be added to element on between 768px and 991px screen size.</td>
+					</tr>
+					<tr>
+						<td colspan="4" class="text_align-center">Desktop Screen Sizes</td>
+					</tr>
+					<tr>
+						<th>min_dt</th>
+						<td>Minimum 992px</td>
+						<td>On this suffix, prefix class will be added to element when minimum screen size will be 992px.</td>
+						<td>myclass-min_dt<br/><b>myclass</b> will be added to element on minimum 992px screen size.</td>
+					</tr>
+					<tr>
+						<th>max_dt</th>
+						<td>Maximum 1239px</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be less than or equal to 1239px.</td>
+						<td>myclass-max_dt<br/><b>myclass</b> will be added to element on less than or equal to 1239px screen size.</td>
+					</tr>
+					<tr>
+						<th>only_dt</th>
+						<td>Screen Size between 992px and 1239px</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be  between 992px and 1239px.</td>
+						<td>myclass-only_dt<br/><b>myclass</b> will be added to element on between 992px and 1239px screen size.</td>
+					</tr>
+					<tr>
+						<td colspan="4" class="text_align-center">Large Desktop Screen Sizes</td>
+					</tr>
+					<tr>
+						<th>min_ldt</th>
+						<td>Minimum 1240px</td>
+						<td>On this suffix, prefix class will be added to element when minimum screen size will be 1240px.</td>
+						<td>myclass-min_ldt<br/><b>myclass</b> will be added to element on minimum 1240px screen size.</td>
+					</tr>
+					<tr>
+						<th>max_ldt</th>
+						<td>Maximum infinity (no maximum limit)</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be less than infinity (no maximum limit).</td>
+						<td>myclass-max_ldt<br/><b>myclass</b> will be added to element on less than infinity (no maximum limit) screen size.</td>
+					</tr>
+					<tr>
+						<th>only_ldt</th>
+						<td>Screen Size between 1240px and infinity (no maximum limit)</td>
+						<td>On this suffix, prefix class will be added to element when screen size will be  between 1240px and infinity (no maximum limit).</td>
+						<td>myclass-only_ldt<br/><b>myclass</b> will be added to element on between 1240px and infinity (no maximum limit) screen size.</td>
+					</tr>
+				</table>
+				<!-- Responsive classes using class attribute -->
+				<div>
+					<h3>Add Responsive Classes Using <i>class</i> Attribute</h3>
+					<hr/>
+					<p>writeData("main_data['title']") also provide an option to add these classes by just using <b>class</b> attribute. Using <b>class</b> attribute to add responsive classes just add class <b>on_responsive</b> first and then add these classes as defined above.</p>
+					<p>For example</p>
+					<pre class="code code-html">
+<!-- <div class="on_responsive myclass-min_dt"></div> -->
+					</pre>
+					Where <b>myclass</b> will be added when minimum screen size will be of <b>dt</b> screen size defined by writeData("main_data['title']").
+				</div>
+			</div>	
+		</div>
+	</div>
+	<footer class="row bg-main_b">
+		<div class="text_align-center write_data padding_horizontal-sm padding_vertical-lg text_color-white">
+			writeData("main_data['title']") Responsive Front-end Framework with a lot other features
+			<br/>
+			<span>Do Less Get More</span>
+		</div>
+	</footer>
+</body>
+</html>
