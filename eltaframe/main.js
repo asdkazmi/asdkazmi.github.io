@@ -35,7 +35,9 @@ $(document).ready(function () {
 						var splLine = splCom[x].split('-');
 						for (var i = parseInt(splLine[0]); i < (parseInt(splLine[1]) + 1); i++) {
 							if (whchOpt == "key") {
-								result.push(dataArray[i][0]);
+								if ((typeof dataArray[i][1]) != 'object') {
+									result.push(dataArray[i][0]);
+								}
 							} else if (whchOpt == "value") {
 								if ((typeof dataArray[i][1]) != 'object') {
 									result.push(dataArray[i][1]);
@@ -48,7 +50,9 @@ $(document).ready(function () {
 						}
 					} else {
 						if (whchOpt == "key") {
-							result.push(dataArray[splCom[x]][0]);
+							if ((typeof dataArray[splCom[x]][1]) != 'object') {
+								result.push(dataArray[splCom[x]][0]);
+							}
 						} else if (whchOpt == "value") {
 							if ((typeof dataArray[splCom[x]][1]) != 'object') {
 								result.push(dataArray[splCom[x]][1]);
