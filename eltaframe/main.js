@@ -183,26 +183,26 @@ $(document).ready(function () {
 		if (addchild != undefined) {
 			addchild = addchild.split(' ');
 			for (var i = 0; i < addchild.length; i++) {
-				if (addchild[i].match('-chd-')) {
-					$(this).children(addchild[i].split('-chd-')[1]).addClass(addchild[i].split('-chd-')[0])
-				} else if (addchild[i].match('-nth_chd')) {
-					var crntChd = addchild[i].split('-nth_chd(')[1].split(')')[0].split(',');
+				if (addchild[i].match(/-chd\(/)) {
+					$(this).children(addchild[i].split('-chd(')[1].split(')')[0]).addClass(addchild[i].split('-chd(')[0])
+				} else if (addchild[i].match('-nthChd')) {
+					var crntChd = addchild[i].split('-nthChd(')[1].split(')')[0].split(',');
 					var prnt = $(this)
 					$(crntChd).each(function(j, elA) {
-						$(prnt).children().eq(elA).addClass(addchild[i].split('-nth_chd')[0])
+						$(prnt).children().eq(elA).addClass(addchild[i].split('-nthChd')[0])
 					});
-				} else if (addchild[i].match('-last_chd')) {
-					$(this).children().last().addClass(addchild[i].split('-last_chd')[0])
-				} else if (addchild[i].match('-odd_chd')) {
-					$(this).children().filter(':even').addClass(addchild[i].split('-odd_chd')[0])
-				} else if (addchild[i].match('-even_chd')) {
-					$(this).children().filter(':odd').addClass(addchild[i].split('-even_chd')[0])
-				} else if (addchild[i].match('-not_chd')) {
-					var crntChd = addchild[i].split('-not_chd(')[1].split(')')[0].split(',');
+				} else if (addchild[i].match('-lastChd')) {
+					$(this).children().last().addClass(addchild[i].split('-lastChd')[0])
+				} else if (addchild[i].match('-oddChd')) {
+					$(this).children().filter(':odd').addClass(addchild[i].split('-oddChd')[0])
+				} else if (addchild[i].match('-evenChd')) {
+					$(this).children().filter(':even').addClass(addchild[i].split('-evenChd')[0])
+				} else if (addchild[i].match('-notChd')) {
+					var crntChd = addchild[i].split('-notChd(')[1].split(')')[0].split(',');
 					var prnt = $(this);
-					$(prnt).children().addClass(addchild[i].split('-not_chd')[0]);
+					$(prnt).children().addClass(addchild[i].split('-notChd')[0]);
 					$(crntChd).each(function(j, elA) {
-						$(prnt).children().eq(elA).removeClass(addchild[i].split('-not_chd')[0]);
+						$(prnt).children().eq(elA).removeClass(addchild[i].split('-notChd')[0]);
 					});
 				} else {
 					$(this).children().addClass(addchild[i])

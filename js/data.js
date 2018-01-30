@@ -76,6 +76,7 @@ var main_data = {
 			"Shadow/Text-Shadow": 'css_classes.html#shadow',
 			"Border" : 'css_classes.html#border',
 			"Radius": 'css_classes.html#radius',
+			"Color": "css_classes.html#color",
 			"Font Styling": 'css_classes.html#font-styling'
 		},
 		"Components" : {
@@ -94,14 +95,12 @@ var main_data = {
 			"Label and Badges":"components.html#label-and-badges",
 			"List Groups": "components.html#list-groups",
 			"Height Full":"components.html#height-full",
-			"Vertical Rotator": "components.html#vertical-rotator",
-			"HTML Code Formator": "components.html#html-code-formator"
+			"Vertical Rotator": "components.html#vertical-rotator"
 		},
-		"Color": "##color.html",
 		"Dynamic CSS Classes" : "dynamic-css-classes.html",
 		"writeData() Method" : "writedata.html",
+		"Add Classes to Child Attribute" : "child-classes.html",
 		"Responsive Attribute" : "responsive-attr.html",
-		"Child classes Attribute" : "##child-classes.html",
 		"Hover Effect Attribute" : "##hover-effect.html",
 		"Email/Password Format Validation" : "##form-validation.html"
 	}
