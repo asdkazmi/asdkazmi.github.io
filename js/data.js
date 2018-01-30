@@ -101,7 +101,7 @@ var main_data = {
 		"writeData() Method" : "writedata.html",
 		"Add Classes to Child Attribute" : "child-classes.html",
 		"Responsive Attribute" : "responsive-attr.html",
-		"Hover Effect Attribute" : "##hover-effect.html",
+		"Hover Effect Attribute" : "hover-effect.html",
 		"Email/Password Format Validation" : "##form-validation.html"
 	}
 }
