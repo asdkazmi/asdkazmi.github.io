@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example - Eltaframe Validations</title>
+	
+	<!-- eltaframe sources -->
+	<script type="text/javascript" src="../../eltaframe/jquery.min.js"></script>
+	<script type="text/javascript" src="../../eltaframe/main.js"></script>
+	<script type="text/javascript" src="../../eltaframe/canvas-icons.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../eltaframe/main.css" />
+	<link rel="stylesheet" type="text/css" href="../../eltaframe/more.css" />
+</head>
+<body>
+	<div class="row">
+		<div class="col-10 col-8-tb col-7-dt col-5-ldt item-center shadow-lg text_color-green padding-sm margin_vertical-lg">
+			<form class="margin_vertical-sm validate-form">
+				<canvas class="user-icon item-center" data-icon='{"size":"150","color":"green"}'></canvas>
+				<div data-child="col-12-fill">
+					<div data-child="width-full-chd(input) padding_vertical-sm-chd(input) padding_horizontal-xs-chd(input) bg-transparent padding_vertical-xs-chd(span) block-chd(span) text_size-sm border-no border_bottom-sm-chd(input) border-green-chd(input) text_color-green animate-chd(input)">
+						<span>Email or Username</span>
+						<input type="input" name="t-login" style="margin-bottom: 10px" data-validate="email" tabindex="0" />
+						<div class="validate-email">
+							<span class="empty-error">Email address is empty</span>
+							<span class="not-valid-error">Address not valid</span>
+							<span class="success">You have successfuly entered Email</span>
+						</div>
+						<span>Password</span>
+						<input type="password" name="t-password" data-validate='password' data-length='8' />
+						<div class="validate-password">
+							<span class="empty-error">Please enter your password</span>
+							<span class="length-error">There must be atleast 8 characters</span>
+							<span class="not-valid-error">Password should be same</span>
+							<span class="success">You have successfuly entered password</span>
+						</div>
+					</div>
+					<div class="padding_vertical-sm">
+						<div class="checkbox">
+							<input id="t-rememberMe" type="checkbox" name="t-rememberMe" />
+							<label></label>
+						</div>
+						<label for="t-rememberMe">Remember Me</label>
+					</div>
+				</div>
+				<button type="submit" class="button item-center padding_horizontal-md text_size-sm text_color-white bg-green text_weight-bold border-no">Login</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

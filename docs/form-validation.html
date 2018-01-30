@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ELTA Frame</title>
+	<link rel="icon" type="image/gif" href="../files/favicon-32x32.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- eltaframe sources -->
+	<script type="text/javascript" src="../eltaframe/jquery.min.js"></script>
+	<script type="text/javascript" src="../eltaframe/main.js"></script>
+	<script type="text/javascript" src="../eltaframe/canvas-icons.js"></script>
+	<link rel="stylesheet" type="text/css" href="../eltaframe/main.css" />
+
+	<!-- more files -->
+	<script type="text/javascript" src="../js/data.js"></script>
+	<link rel="stylesheet" type="text/css" href="../files/site.css">
+</head>
+<body class="flat_theme">
+	<div class="navbar-drop_tb" data-responsive="navbar-max_tb bg-main-max_tb text_color-white-max_tb">
+		<div class="navbar_title bg-main full-width hide-tb" data-responsive="height-nav-min_dt">
+			<img class="
+			item-center position-relative bg-main border_color-white animate
+			" src="../files/elta_icon.png" data-responsive="top-icon-min_dt width-icon-min_dt padding-icon-min_dt width-icon_small-max_tb border_radius-icon-min_dt border-sm-min_dt">
+		</div>
+		<div class="navbar_drawer padding_vertical-md padding_horizontal-sm">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "white", "lines":"4"}'></canvas>
+		</div>
+		<div class="navbar_menu">
+			<ul class="margin-no" data-responsive="navbar-min_dt dt-navdes-min_dt bg-main_b-min_dt">
+				<div class="padding_vertical-xs" data-responsive="auto-fix-min_dt auto-fix-navbar-min_dt" data-child="padding_horizontal-sm">
+					<li class="write_data">
+						<a href=../writeData("main_data['navbar_url']","value(x)") data-hover="bg-white text_color-main_b" class="animate">
+							<span>
+								writeData("main_data['navbar_url']","key(x)")
+							</span>
+						</a>
+					</li>
+				</div>
+				<ul data-responsive="navbar-right-min_dt text_color-main_b-max_tb" class="text_color-white">
+					<li class="write_data">Initial Release of writeData("main_data['title']") writeData("main_data['version']")</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="leftbar_drawer" data-responsive="hide-min_dt">
+			<canvas class="justify-icon" data-icon='{"size":"20", "color": "black", "lines":"5"}'></canvas>
+		</div>
+		<div class="col-3-dt shadow-sm leftbar auto-fix bg-white" data-responsive="margin_vertical-xs-min_dt">
+			<ul class="list_dots-none">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(0)")>writeData("main_data['documentation']","key(0)")</a>
+				</li>
+				<div>
+					<div class="accordian">
+						<!-- grids container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(0)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(0)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Grids']","value(x)")>writeData("main_data['documentation']['Grids']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- css classes container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(1)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(1)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['CSS_Classes']","value(x)")>writeData("main_data['documentation']['CSS_Classes']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+						<!-- components container -->
+						<a href=writeData("main_data['documentation']['allDocsUrl']","value(2)") class="padding-xs accordian_toggle write_data ifme-hideUrl"><span></span>writeData("main_data['documentation']['allDocsUrl']","key(2)")</a>
+						<div class="accordian_menu">
+							<ul>
+								<li class="write_data">
+									<a href=writeData("main_data['documentation']['Components']","value(x)")>writeData("main_data['documentation']['Components']","key(x)")</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<span data-child="hide-nthChd(0)">
+				<li class="padding-xs write_data">
+					<a class="ifme-hideUrl" href=writeData("main_data['documentation']","value(x)")>writeData("main_data['documentation']","key(x)")</a>
+				</li>
+				</span>
+			</ul>
+		</div>
+		<!-- body here -->
+		<div class="col-9-dt right padding-sm text_size-sm font_family-calibri" data-child="left width-full"">
+			<div class="write_data">
+				<h3>Email and Password Format Validation</h3>
+				<hr/>
+				<p>writeData("main_data['title']") this plugin to validate email and password inside a form, to validate form there is need to add class and it will work on submit of form event. It will verify that either email format is correct or not i.e. format of email should be example@mail.com and for registeration form the password are same or not and also password length is valid or not. Find example <a target="_blank" href="https://rawgit.com/asdkazmi/Email-Password-Validation/master/example/example.html">here</a></p>
+				<h3>Use Plugin</h3>
+				<hr/>
+				<p>Now to use this plugin we need to add class <b>validate-form</b> to your form which you want to validate. This class will fire an event to validate email and password. e.g.</p>
+				<pre class="code code-html">
+<!-- <form class="validate-form">
+&lt;!-- form goes here --&gt;
+</form> -->
+				</pre>
+				<h3>Email Validation</h3>
+				<hr/>
+				<p>To validate email we need to add attribute <b>data-validate="email"</b> to your input which you want to validate for email format. It will just validate email format but not check either your email exist in your database or not (Underprocess). This attribute will fire javascript to validate email. If email is in valid form then it will fire success message otherwise error message. e.g.</p>
+				<pre class="code code-html">
+<!-- <form class="validate-form">
+&lt;!-- form goes here --&gt;
+  <input type="input" name="email" data-validate="email" />
+</form> -->
+				</pre>
+				<p>To show messages on validation we need to add html element to show the messages. The main element will have class <b>validate-email</b> where we will add messages. Next we need to add child element for different type of messages.</p>
+				<pre class="code code-html">
+<div class="validate-email">
+<!-- Messages goes here -->
+</div>
+				</pre>
+				<p>There are three types of messages for email validation.</p>
+				<h4>Empty input message</h4>
+				<hr/>
+				<p>When input will be empty then this message will be display. To add this message we need to add element inside element having class <b>validate-email</b> with class <b>empty-error</b>. e.g.</p>
+				<pre class="code code-html">
+<!-- <div class="validate-email">
+	<span class="empty-error">Email address is empty</span>
+</div> -->
+				</pre>
+				<h4>Not Valid Email message</h4>
+				<hr/>
+				<p>When email will not be in valid format then this message will display. To add this message we need to add element inside element having class <b>validate-email</b> with class <b>not-valid-error</b>. e.g.</p>
+				<pre class="code code-html">
+<!-- <div class="validate-email">
+	<span class="empty-error">Email address is empty</span>
+	<span class="not-valid-error">Address not valid</span>
+</div> -->
+				</pre>
+				<h4>Success message</h4>
+				<hr/>
+				<p>When email will be in valid format then success message will display. To add this message we need to add element inside element having class <b>validate-email</b> with class <b>success</b>. e.g.</p>
+				<p>Here are all the email validation messages</p>
+				<pre class="code code-html">
+<!-- <div class="validate-email">
+	<span class="empty-error">Email address is empty</span>
+	<span class="not-valid-error">Address not valid</span>
+	<span class="success">You have successfuly entered Email</span>
+</div> -->
+				</pre>
+				<h3>Password Validation</h3>
+				<hr/>
+				<p>To validate password we need to add attribut <b>data-validate='password'</b> to password input to validate either the password input is empty/valid-length or not. If there is one password input with attribut <b>data-validate='password'</b> then it will just find either password input is empty/valid-length or not. If there are two or more input for password as we use during registeration form, then firstly it will find that either input are empty/valid-length or not, if input are not empty and there is in valid length then it will find that either password input has same password or not. If password are same then it will fire success message otherwise error message.</p>
+				<pre class="code code-html">
+<!-- <input type="password" data-validate='password' /> -->
+				</pre>
+				<p>To show messages on validation we need to add html element to show these messages. The main element will have class <b>validate-password</b> where we will add messages. Next we need to add child element for different type of messages.</p>
+				<pre class="code code-html">
+<!-- <div class="validate-password">
+&lt;-- Messages goes here --&gt;
+</div> -->
+				</pre>
+				<p>There are three types of messages for password validation</p>
+				<h4>Empty input message</h4>
+				<hr/>
+				<p>When input will be empty then this message will be display. To add this message we need to add element inside element having class <b>validate-password</b> with class <b>empty-error</b>. e.g.</p>
+				<pre class="code code-html">
+<!-- <div class="validate-password">
+	<span class="empty-error">Password is empty</span>
+</div> -->
+				</pre>
+				<h4>Length Error Message</h4>
+				<hr/>
+				<p>This error will be display when the length of message is not valid. For this first we need to add length of password. For this we will add attribute <b>data-length='n'</b> where n is replaced by length of password. Next we will add error message for not valid length, for this we need to add element inside element having class <b>validate-password</b> with class <b>length-error</b>. e.g.</p>
+				<pre class="code code-html">
+<!-- <input type="password" data-validate='password' data-length='8' />
+<div class="validate-password">
+	<span class="empty-error">Please enter your password</span>
+	<span class="length-error">There must be atleast 8 characters</span>
+</div> -->
+				</pre>
+				<h4>Password Not Same message</h4>
+				<hr/>
+				<p>When there are two password inputs and password are not same then this message will be fired. To add this message we need to add element inside element having class <b>validate-password</b> with class <b>not-valid-error</b>. e.g.</p>
+				<pre class="code code-html">
+<!-- <div class="validate-password">
+	<span class="empty-error">Please enter your password</span>
+	<span class="length-error">There must be atleast 8 characters</span>
+	<span class="not-valid-error">Password should be same</span>
+</div> -->
+				</pre>
+				<h4>Success message</h4>
+				<hr/>
+				<p>When password will be valid i.e. non-empty/required-length/same (when there are two password input) then success message will display. To add this message we need to add element inside element having class <b>validate-password</b> with class <b>success</b>. e.g.</p>
+				<p>Here are all the Password validation messages</p>
+				<pre class="code code-html">
+<!-- <div class="validate-password">
+	<span class="empty-error">Email address is empty</span>
+	<span class="length-error">There must be atleast 8 characters</span>
+	<span class="not-valid-error">Password should be same</span>
+  	<span class="success">You have successfuly entered Email</span>
+</div> -->
+				</pre>
+				<p>The complete form will be displayed as</p>
+				<pre class="code code-html">
+<!-- <form class="validate-form">
+	<input type="input" data-validate="email" />
+	<div class="validate-email">
+		<span class="empty-error">Email address is empty</span>
+		<span class="not-valid-error">Address not valid</span>
+		<span class="success">You have successfuly entered Email</span>
+	</div>
+	<input type="password" data-validate='password' data-length='8' />
+	<div class="validate-password">
+		<span class="empty-error">Please enter your password</span>
+		<span class="length-error">There must be atleast 8 characters</span>
+		<span class="not-valid-error">Password should be same</span>
+		<span class="success">You have successfuly entered password</span>
+	</div>
+	<button type="submit">Submit</button>
+</form> -->
+				</pre>
+				<div class="code-result">
+					<form class="validate-form">
+						<input type="input" data-validate="email" />
+						<div class="validate-email">
+							<span class="empty-error">Email address is empty</span>
+							<span class="not-valid-error">Address not valid</span>
+							<span class="success">You have successfuly entered Email</span>
+						</div>
+						<input type="password" data-validate='password' data-length='8' />
+						<div class="validate-password">
+							<span class="empty-error">Please enter your password</span>
+							<span class="length-error">There must be atleast 8 characters</span>
+							<span class="not-valid-error">Password should be same</span>
+							<span class="success">You have successfuly entered password</span>
+						</div>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="row bg-main_b">
+		<div class="text_align-center write_data padding_horizontal-sm padding_vertical-lg text_color-white">
+			writeData("main_data['title']") Responsive Front-end Framework with a lot other features
+			<br/>
+			<span>Do Less Get More</span>
+		</div>
+	</footer>
+</body>
+</html>
